@@ -1,0 +1,14 @@
+@import "./colors.scss";
+@import "./mixins.scss";
+
+.logoStyle{
+  color: $blue;
+  font-family: "Comic Sans";
+}
+
+.titleStyle{
+  color: $fontTitle;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}

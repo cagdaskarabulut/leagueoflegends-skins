@@ -1,0 +1,26 @@
+@import "../styles/mixins.scss";
+@import "../styles/colors.scss";
+@import "../styles/globals.scss";
+
+.header {
+  background-color: $white !important;
+  align-items: center !important;
+  max-width: 100% !important;
+  align-items: flex-start !important;
+  display: inline-grid !important;
+
+  :global {
+    .MuiGrid-container {
+      justify-content: space-between !important;
+    }
+  }
+  
+  .menuButton{
+      color: $font !important;
+  }
+
+  .floatRightStyle{
+    float: right !important;
+  }
+}
+

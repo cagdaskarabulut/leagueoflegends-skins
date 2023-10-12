@@ -1,0 +1,50 @@
+@import "../styles/mixins.scss";
+@import "../styles/colors.scss";
+@import "../styles/globals.scss";
+
+.BodyStyle {
+  min-height: 98vh !important;
+  margin: 0 !important;
+  background-color: $white !important;
+  color: $font !important;
+  font-family: 'Times New Roman' !important;
+  font-size: 14px !important;
+  
+  :global {
+    .MuiChip-label {
+      font-family: 'Times New Roman' !important;
+      font-size: 14px !important;
+    }
+    .MuiTypography-root {
+      font-family: 'Times New Roman' !important;
+      font-size: 14px !important;
+    }
+  }
+}
+
+.HeaderStyle {
+  min-height: 50px !important;
+  background: $orange !important;
+}
+
+.FooterStyle {
+  min-height: 50px !important;
+  background: $white !important;
+}
+
+.BodyStyle {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.ContentStyle {
+  flex: 1 !important;
+  background-color: $white !important;
+  padding: 30px !important;
+  padding-top: 5px !important;
+
+  @include tablet-or-less {
+    padding: 10px !important;
+    margin-top: 5vh !important;
+  }
+}

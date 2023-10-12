@@ -1,0 +1,17 @@
+@import "../styles/mixins.scss";
+@import "../styles/colors.scss";
+@import "../styles/globals.scss";
+
+.footerStyle {
+  background-color: $white !important;
+  background: linear-gradient(to bottom, $white, $orange);
+  .footerContentStyle {
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+
+    @include tablet-or-less {
+      padding: 10px;
+    }
+  }
+}
