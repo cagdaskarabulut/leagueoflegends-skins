@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
 import MetaPanel from "../components/MetaPanel";
-import PageTemplate from "@/components/PageTemplate";
-import MyGrid from "@/components/tools/MyGrid";
-import MyBreadcrumbs from "@/components/tools/MyBreadcrumbs";
-import { Hero } from "@/data/Hero";
-import { getHeroByNameAndSkin } from "@/data/getHeroByNameAndSkin";
-import { getHeroes } from "@/data/getHeroes";
+import PageTemplate from "../components/PageTemplate";
+import MyGrid from "../components/tools/MyGrid";
+import MyBreadcrumbs from "../components/tools/MyBreadcrumbs";
+import { Hero } from "../data/Hero";
+import { getHeroes } from "../data/getHeroes";
 import { GetServerSideProps } from "next";
-import { useRouter } from "next/router";
-import ImageViewer from "@/components/tools/ImageViewer";
 import {
   ref,
   uploadBytes,
@@ -20,7 +17,7 @@ import {
   replaceDashToSpace,
   replaceSpaceToDash,
 } from "../utils/StringUtils";
-import HeroesPanel from "@/components/HeroesPanel";
+import HeroesPanel from "../components/HeroesPanel";
 
 //_en başta nesnenin kendi skin i olacak sonra skin listesi dömdürülüp
 type HomePageProps = {
