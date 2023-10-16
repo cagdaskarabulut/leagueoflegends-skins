@@ -3,7 +3,7 @@
 // import { getHeroByNameAndSkin } from "@/data/getHeroByNameAndSkin";
 // import { GetServerSideProps } from "next";
 // import { useRouter } from "next/router";
-// import ImageViewer from "@/components/tools/ImageViewer";
+// import ImageViewerCloud from "@/components/tools/ImageViewerCloud";
 // import {
 //   ref,
 //   uploadBytes,
@@ -38,7 +38,7 @@
 //           return (
 //             <div>
 //               <p key={"p_" + activeKey}>{skinName}</p>
-//               <ImageViewer imagePath={skinObject.imageUrl} />
+//               <ImageViewerCloud imagePath={skinObject.imageUrl} />
 //             </div>
 //           );
 //         })}

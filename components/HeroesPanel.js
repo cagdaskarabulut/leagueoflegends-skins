@@ -1,28 +1,30 @@
 import styles from "./FooterPanel.module.scss";
 import React from "react";
-import {useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getHeroByName } from "../data/getHeroByName";
-import ImageViewer from "./tools/ImageViewer";
-import {
-  replaceDashToSpace,
-  replaceSpaceToDash,
-} from "@/utils/StringUtils";
+import ImageViewerCloud from "./tools/ImageViewerCloud";
+import { replaceDashToSpace, replaceSpaceToDash } from "@/utils/StringUtils";
 
-  const HeroesPanel = ({
-    heroList,
-  }) => {
-  
+const HeroesPanel = ({ heroList }) => {
+
   return (
     <div>
-      {heroList?.map((heroObject) => {
+      {heroList &&
+        heroList.lenght > 0 &&
+        heroList?.map((heroObject, index) => {
+          let key = Object.keys(heroObject)[0];
           return (
             <div>
-              <p key={"p_" + heroObject.name}>{heroObject.name}</p>
-              <ImageViewer imageName={replaceSpaceToDash(heroObject.name)} imagePath={heroObject?.skins[0].imageUrl} />
+              <div key={key}>
+                <h1>{heroObject[key]}</h1>
+                <h1>{key}</h1>
+              </div>
+              ;
+              {/* <p key={"p_" + heroObject.name}>{heroObject.name}</p>
+              <ImageViewerCloud imageName={replaceSpaceToDash(heroObject.name)} imagePath={heroObject?.skins[0].imageUrl} /> */}
             </div>
           );
-        })
-      }
+        })}
     </div>
   );
 };
