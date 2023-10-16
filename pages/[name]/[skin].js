@@ -9,8 +9,8 @@ import ImageViewerManuel from "../../components/tools/ImageViewerManuel";
 
 export default function SkinPage({ heroDetailsObject,startSkinId }) {
   const [activeSkinId, setActiveSkinId] = useState(startSkinId);
-  const [data, setData] = useState(null);
-  const [isLoading, setLoading] = useState(true);
+  // const [data, setData] = useState(null);
+  // const [isLoading, setLoading] = useState(true);
   let imageRootPath = "https://ddragon.leagueoflegends.com/cdn/img/champion/loading/";
 
   // const router = useRouter();
@@ -36,7 +36,7 @@ export default function SkinPage({ heroDetailsObject,startSkinId }) {
         let skinName = skin.name;
         let skinKey = skinName + "_" + skinNum;
         let skinImagePath = imageRootPath + heroDetailsObject.id + "_" + skinNum + ".jpg";
-        console.log("skinpath : " + skinImagePath);
+        // console.log("skinpath : " + skinImagePath);
         return (
         <div key={skinKey}>
           <p>{skinName}</p>

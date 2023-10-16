@@ -6,7 +6,7 @@ import {replaceStringForUrlFormat} from "../utils/StringUtils";
 const HomePage = () => {
   const router = useRouter();
   const [data, setData] = useState(null);
-  const [isLoading, setLoading] = useState(true);
+  // const [isLoading, setLoading] = useState(true);
   // let imageRootPath = "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/";
   let imageRootPath = "https://ddragon.leagueoflegends.com/cdn/13.20.1/img/champion/";
 
@@ -21,8 +21,8 @@ const HomePage = () => {
       });
   }, []);
 
-  if (isLoading) return <p>Loading...</p>;
-  if (!data) return <p>No profile data</p>;
+  // if (isLoading) return <p>Loading...</p>;
+  // if (!data) return <p>No profile data</p>;
 
   return (
     <div>
