@@ -1,0 +1,161 @@
+[
+  {
+    "name": "aatrox",
+    "description": "Lore: Once honored defenders of Shurima against the Void, Aatrox and his brethren would eventually become an even greater threat to Runeterra, and were defeated only by cunning mortal sorcery. But after centuries of imprisonment, Aatrox was the first to find freedom once more, corrupting and transforming those foolish enough to try and wield the magical weapon that contained his essence. Now, with stolen flesh, he walks Runeterra in a brutal approximation of his previous form, seeking an apocalyptic and long overdue vengeance.",
+    "activeSkin": "",
+    "activeImageUrl": "",
+    "activeVideoUrl": "",
+    "skins": [
+      {
+        "skin": "aatrox",
+        "imageUrl": "images/aatrox/aatrox.jpg",
+        "videoUrl": "https://www.youtube.com/embed/7Pn41Ecefm4?si=yIZimnf5VoHm1PWH&amp;start=1"
+      },
+      {
+        "skin": "justicar aatrox",
+        "imageUrl": "images/aatrox/justicar-aatrox.jpg",
+        "videoUrl": "https://www.youtube.com/embed/bRuK5ae8-5U?si=t18tiCz13CDrXOsZ&amp;start=1"
+      },
+      {
+        "skin": "mecha aatrox",
+        "imageUrl": "images/aatrox/mecha-aatrox.jpg",
+        "videoUrl": "https://www.youtube.com/embed/4Dqo30GnIBk?si=iXjV8o4cHT54cdsS&amp;start=1"
+      },
+      {
+        "skin": "sea hunter aatrox",
+        "imageUrl": "images/aatrox/sea-hunter-aatrox.jpg",
+        "videoUrl": "https://www.youtube.com/embed/NLzntj9ahJQ?si=wnZO-d5PEyCOzAbr&amp;start=1"
+      },
+      {
+        "skin": "blood moon aatrox",
+        "imageUrl": "images/aatrox/blood-moon-aatrox.jpg",
+        "videoUrl": "https://www.youtube.com/embed/zJuuUY1Cvb0?si=bz8yj7QL3cFaYKIa&amp;start=1"
+      },
+      {
+        "skin": "prestige blood moon aatrox",
+        "imageUrl": "images/aatrox/prestige-blood-moon-aatrox.jpg",
+        "videoUrl": "https://www.youtube.com/embed/XWrQUC-AYYI?si=fqDcH2bNVbe5I3ZN&amp;start=1"
+      },
+      {
+        "skin": "victorious aatrox",
+        "imageUrl": "images/aatrox/victorious-aatrox.jpg",
+        "videoUrl": "https://www.youtube.com/embed/w2-O6c9e-aE?si=wUCwGUksWuvDsIIz&amp;start=1"
+      },
+      {
+        "skin": "odyssey aatrox",
+        "imageUrl": "images/aatrox/odyssey-aatrox.jpg",
+        "videoUrl": "https://www.youtube.com/embed/HElpRB4J3yU?si=-bEruGt5TMuUZkrC&amp;start=1"
+      },
+      {
+        "skin": "lunar eclipse aatrox",
+        "imageUrl": "images/aatrox/lunar-eclipse-aatrox.jpg",
+        "videoUrl": "https://www.youtube.com/embed/Z0EliTUjGJU?si=oqNoJoMeDI00mWkd&amp;start=1"
+      },
+      {
+        "skin": "drx aatrox",
+        "imageUrl": "images/aatrox/drx-aatrox.jpg",
+        "videoUrl": "https://www.youtube.com/embed/dxngHkJhReY?si=hzoqCg0e2dpiR1hY&amp;start=1"
+      },
+      {
+        "skin": "prestige drx aatrox",
+        "imageUrl": "images/aatrox/prestige-drx-aatrox.jpg",
+        "videoUrl": "https://www.youtube.com/embed/L9uGgnCJmO4?si=1R41sOmPoVb5SUxK&amp;start=1"
+      }
+    ]
+  },
+
+  {
+    "name": "ahri",
+    "description": "Lore: Innately connected to the magic of the spirit realm, Ahri is a fox-like vastaya who can manipulate her prey‘s emotions and consume their essence—receiving flashes of their memory and insight from each soul she consumes. Once a powerful yet wayward predator, Ahri is now traveling the world in search of remnants of her ancestors while also trying to replace her stolen memories with ones of her own making.",
+    "activeSkin": "",
+    "activeImageUrl": "",
+    "activeVideoUrl": "",
+    "skins": [
+      {
+        "skin": "ahri",
+        "imageUrl": "images/ahri/ahri.jpg",
+        "videoUrl": "https://www.youtube.com/embed/4iiHl4ZuWRg?si=ZeYScepmciexnwwK&amp;start=1"
+      },
+      {
+        "skin": "dynasty ahri",
+        "imageUrl": "images/ahri/dynasty-ahri.jpg",
+        "videoUrl": "https://www.youtube.com/embed/939xfbTNdX0?si=bFjkc5Y73c4BTCbc&amp;start=1"
+      },
+      {
+        "skin": "midnight ahri",
+        "imageUrl": "images/ahri/midnight-ahri.jpg",
+        "videoUrl": "https://www.youtube.com/embed/Vjpk8uo7KQc?si=tcmPlhdhK9eKe0I_&amp;start=1"
+      },
+      {
+        "skin": "foxfire ahri",
+        "imageUrl": "images/ahri/foxfire-ahri.jpg",
+        "videoUrl": "https://www.youtube.com/embed/-EqDb7B2Xp8?si=1zrFQaUri6rLPZng&amp;start=1"
+      },
+      {
+        "skin": "popstar ahri",
+        "imageUrl": "images/ahri/popstar-ahri.jpg",
+        "videoUrl": "https://www.youtube.com/embed/lNcw1P7aZeY?si=v48LSmbFLpjBFIt5&amp;start=1"
+      },
+      {
+        "skin": "challenger ahri",
+        "imageUrl": "images/ahri/challenger-ahri.jpg",
+        "videoUrl": "https://www.youtube.com/embed/hARFrmeuTrI?si=SxBXqDDC9hhG16vL&amp;start=1"
+      },
+      {
+        "skin": "academy ahri",
+        "imageUrl": "images/ahri/academy-ahri.jpg",
+        "videoUrl": "https://www.youtube.com/embed/na124f35VLk?si=6XHvAZHMXRSDykxv&amp;start=1"
+      },
+      {
+        "skin": "arcade ahri",
+        "imageUrl": "images/ahri/arcade-ahri.jpg",
+        "videoUrl": "https://www.youtube.com/embed/eudS2cdsPPo?si=3haqYigBOVi1yOsg&amp;start=1"
+      },
+      {
+        "skin": "star guardian ahri",
+        "imageUrl": "images/ahri/star-guardian-ahri.jpg",
+        "videoUrl": "https://www.youtube.com/embed/5kRZrz9xIbY?si=wTpO7kEV7vqUnhiW&amp;start=1"
+      },
+      {
+        "skin": "kda ahri",
+        "imageUrl": "images/ahri/kda-ahri.jpg",
+        "videoUrl": "https://www.youtube.com/embed/f4E3dAKadOs?si=alyyi8GNz473LzzO&amp;start=1"
+      },
+      {
+        "skin": "prestige kda ahri",
+        "imageUrl": "images/ahri/prestige-kda-ahri.jpg",
+        "videoUrl": "https://www.youtube.com/embed/5k3BsKaFYAw?si=ciU7z6OUHvRzwdUY&amp;start=1"
+      },
+      {
+        "skin": "elderwood ahri",
+        "imageUrl": "images/ahri/elderwood-ahri.jpg",
+        "videoUrl": "https://www.youtube.com/embed/Szp6xV_9FWU?si=M3jlvGtFG9cSPEzc&amp;start=1"
+      },
+      {
+        "skin": "spirit blossom ahri",
+        "imageUrl": "images/ahri/spirit-blossom-ahri.jpg",
+        "videoUrl": "https://www.youtube.com/embed/bQFrqlRnIo8?si=ozEL-OqKd5HbWRh1&amp;start=1"
+      },
+      {
+        "skin": "kda all out ahri",
+        "imageUrl": "images/ahri/kda-all-out-ahri.jpg",
+        "videoUrl": "https://www.youtube.com/embed/7Ia5zMgrJpY?si=1MpBsmUuOI6G9itc&amp;start=1"
+      },
+      {
+        "skin": "coven ahri",
+        "imageUrl": "images/ahri/coven-ahri.jpg",
+        "videoUrl": "https://www.youtube.com/embed/0z7kfuJwGvs?si=Cp7IOv_wofb9Hrk6&amp;start=1"
+      },
+      {
+        "skin": "arcana ahri",
+        "imageUrl": "images/ahri/arcana-ahri.jpg",
+        "videoUrl": "https://www.youtube.com/embed/f9WsGCYm1ZE?si=d32rzuwBztKX90cH&amp;start=1"
+      },
+      {
+        "skin": "snow moon ahri",
+        "imageUrl": "images/ahri/snow-moon-ahri.jpg",
+        "videoUrl": "https://www.youtube.com/embed/EET-k8-PkGg?si=WtbxeXxpLPR9pOwa&amp;start=1"
+      }
+    ]
+  }
+]

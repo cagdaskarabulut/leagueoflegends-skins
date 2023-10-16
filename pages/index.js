@@ -15,7 +15,7 @@ const HomePage = () => {
       .then((res) => res.json())
       .then((resData) => {
         setData(Object.values(resData.data));
-        setLoading(false);
+        // setLoading(false);
       });
   }, []);
 

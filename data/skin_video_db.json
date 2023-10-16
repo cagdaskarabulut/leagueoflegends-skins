@@ -1,0 +1,64 @@
+{
+  "Aatrox": {
+    "id": "Aatrox",
+    "skins": [
+      { "id": "266000", "num": 0, "name": "default", "chromas": false },
+      {
+        "id": "266001",
+        "num": 1,
+        "name": "Justicar Aatrox",
+        "chromas": false
+      },
+      { "id": "266002", "num": 2, "name": "Mecha Aatrox", "chromas": true },
+      {
+        "id": "266003",
+        "num": 3,
+        "name": "Sea Hunter Aatrox",
+        "chromas": false
+      },
+      {
+        "id": "266007",
+        "num": 7,
+        "name": "Blood Moon Aatrox",
+        "chromas": false
+      },
+      {
+        "id": "266008",
+        "num": 8,
+        "name": "Prestige Blood Moon Aatrox",
+        "chromas": false
+      },
+      {
+        "id": "266009",
+        "num": 9,
+        "name": "Victorious Aatrox",
+        "chromas": true
+      },
+      {
+        "id": "266011",
+        "num": 11,
+        "name": "Odyssey Aatrox",
+        "chromas": true
+      },
+      {
+        "id": "266020",
+        "num": 20,
+        "name": "Prestige Blood Moon Aatrox (2022)",
+        "chromas": false
+      },
+      {
+        "id": "266021",
+        "num": 21,
+        "name": "Lunar Eclipse Aatrox",
+        "chromas": true
+      },
+      { "id": "266030", "num": 30, "name": "DRX Aatrox", "chromas": true },
+      {
+        "id": "266031",
+        "num": 31,
+        "name": "Prestige DRX Aatrox",
+        "chromas": false
+      }
+    ]
+  }
+}
