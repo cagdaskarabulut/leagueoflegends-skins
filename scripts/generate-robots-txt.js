@@ -21,6 +21,7 @@ function generateRobotsTxtAndSitemapXml() {
   // const championsList = JSON.parse(jsonStr); // as Hero[];
 
   let rootPath = `https://leagueoflegends-skins.com`;
+  let pagePathsFields = "";
   let now = getNowWithISOFormat();
   let dynamicRobotsTxtFields = "";
   let dynamicSitemapFields = `
@@ -68,11 +69,11 @@ daily
             skinList.map((skinObject, index3) => {
 
 
-              dynamicRobotsTxtFields = `${dynamicRobotsTxtFields}Allow: /${replaceStringForUrlFormat(champion.id
+            dynamicRobotsTxtFields = `${dynamicRobotsTxtFields}Allow: /${replaceStringForUrlFormat(champion.id
             )}/${replaceStringForUrlFormat(skinObject.name)}
 `;
 
-              dynamicSitemapFields = `${dynamicSitemapFields}
+            dynamicSitemapFields = `${dynamicSitemapFields}
 <url>
 <loc>
 ${rootPath}/${replaceStringForUrlFormat(champion.id)}/${replaceStringForUrlFormat(skinObject.name)}
@@ -88,8 +89,14 @@ daily
 </priority>
 </url>
 `;
-            });
-          });
+              pagePathsFields  = `${pagePathsFields} 
+    { 
+      "hero": "${champion.id}" ,
+      "path": "${replaceStringForUrlFormat(champion.id)}/${replaceStringForUrlFormat(skinObject.name)}" 
+    },`;
+
+  });
+});
 
 
             let robotsTxt = "";
@@ -111,9 +118,20 @@ ${dynamicSitemapFields}
 </urlset>
             `;
           
+            let pagePaths = "";
+            pagePaths = 
+`{
+  "data": [ ${pagePathsFields}
+    { 
+      "hero": "" ,
+      "path": "/" 
+    }
+  ]
+}`;
+
             fs.writeFileSync("public/robots.txt", robotsTxt);
             fs.writeFileSync("public/sitemap.xml", sitemapXml);
-
+            fs.writeFileSync("pagePaths.json", pagePaths);
           });
       });
     });

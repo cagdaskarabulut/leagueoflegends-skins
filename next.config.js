@@ -6,6 +6,9 @@ const nextConfig = {}
 module.exports = nextConfig
 
 module.exports = {
+  images: {
+    domains: ['ddragon.leagueoflegends.com'],
+},
   webpack(config, { isServer }) {
     if (isServer) {
       generateRobotsTxtAndSitemapXml();
