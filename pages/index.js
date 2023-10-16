@@ -8,12 +8,10 @@ const HomePage = () => {
   const [data, setData] = useState(null);
   // const [isLoading, setLoading] = useState(true);
   // let imageRootPath = "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/";
-  let imageRootPath = "https://ddragon.leagueoflegends.com/cdn/13.20.1/img/champion/";
-
+  let URL_imageRootPath = "https://ddragon.leagueoflegends.com/cdn/13.20.1/img/champion/";
+  let URL_allChampionsListPath = "https://ddragon.leagueoflegends.com/cdn/13.20.1/data/en_US/champion.json";
   useEffect(() => {
-    fetch(
-      "http://ddragon.leagueoflegends.com/cdn/13.20.1/data/en_US/champion.json"
-    )
+    fetch(URL_allChampionsListPath)
       .then((res) => res.json())
       .then((resData) => {
         setData(Object.values(resData.data));
@@ -31,7 +29,7 @@ const HomePage = () => {
         let activeHeroId = hero.id;
         let activeHeroName = hero.name;
         // let activeHeroMainImagePath = imageRootPath + activeHeroId + "_" + 0 + ".jpg";
-        let activeHeroMainImagePath = imageRootPath + hero.image.full;
+        let activeHeroMainImagePath = URL_imageRootPath + hero.image.full;
         let activeHeroRoute = "/"+ replaceStringForUrlFormat(activeHeroId) + "/default";
         return (
         <div key={activeHeroId}>
