@@ -11,6 +11,7 @@ function replaceStringForUrlFormat(myString) {
   myString = myString.replace(/ /g, "");
   myString = myString.replace(/'/g, "");
   myString = myString.replace(/"/g, "");
+  myString = myString.replace(/\//g, "");
   myString = myString.toLowerCase();
   return myString;
 }
@@ -22,6 +23,7 @@ function generateRobotsTxtAndSitemapXml() {
 
   let rootPath = `https://leagueoflegends-skins.com`;
   let pagePathsFields = "";
+  let mySkinDbFields = "";
   let now = getNowWithISOFormat();
   let dynamicRobotsTxtFields = "";
   let dynamicSitemapFields = `
@@ -50,6 +52,7 @@ daily
     .then((res) => res.json())
     .then((data) => {
       heroList = Object.values(data.data);
+      //_First Loop
       heroList.map((champion, index) => {
 
         fetch(
@@ -62,10 +65,14 @@ daily
 
             heroDetailsList = Object.values(data2.data);
             
+            //_Second Loop
             heroDetailsList.map((heroDetails, index2) => {
+
+              mySkinDbSubFields = "";
 
             skinList = heroDetails.skins;
 
+            //_Third Loop
             skinList.map((skinObject, index3) => {
 
 
@@ -73,10 +80,12 @@ daily
             )}/${replaceStringForUrlFormat(skinObject.name)}
 `;
 
+let activePath = `${replaceStringForUrlFormat(champion.id)}/${replaceStringForUrlFormat(skinObject.name)}`;
+
             dynamicSitemapFields = `${dynamicSitemapFields}
 <url>
 <loc>
-${rootPath}/${replaceStringForUrlFormat(champion.id)}/${replaceStringForUrlFormat(skinObject.name)}
+${rootPath}/${activePath}
 </loc>
 <lastmod>
 ${now}
@@ -92,11 +101,21 @@ daily
               pagePathsFields  = `${pagePathsFields} 
     { 
       "hero": "${champion.id}" ,
-      "path": "${replaceStringForUrlFormat(champion.id)}/${replaceStringForUrlFormat(skinObject.name)}" 
+      "path": "${activePath}" 
     },`;
 
+
+    mySkinDbFields = `${mySkinDbFields}
+  {
+    "pageUrl": "${activePath}", 
+    "videoUrl": "" 
+  },`;
+
   });
+
+
 });
+
 
 
             let robotsTxt = "";
@@ -129,9 +148,15 @@ ${dynamicSitemapFields}
   ]
 }`;
 
+let mySkinDb = "";
+mySkinDb = `[${mySkinDbFields.slice(0, -1)}
+]`;
+
+
             fs.writeFileSync("public/robots.txt", robotsTxt);
             fs.writeFileSync("public/sitemap.xml", sitemapXml);
             fs.writeFileSync("pagePaths.json", pagePaths);
+            fs.writeFileSync("helper/LATEST_my_skin_video_db.json", mySkinDb);
           });
       });
     });
