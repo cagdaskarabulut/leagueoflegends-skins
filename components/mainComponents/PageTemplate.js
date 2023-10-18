@@ -1,12 +1,10 @@
 import styles from "./PageTemplate.module.scss";
 import Header from "./Header";
-import MenuPanel from "./MenuPanel";
 import { useCallback, useContext, useEffect, useState } from "react";
-import { MOBILE_SCREEN_SIZE } from "../constants/GeneralConstants";
+import { MOBILE_SCREEN_SIZE } from "../../constants/GeneralConstants";
 import useWindowSize from "@rooks/use-window-size";
-import FooterPanel from "@/components/FooterPanel";
-import MyGrid from "./tools/MyGrid";
-import MyBreadcrumbs from "@/components/tools/MyBreadcrumbs";
+import FooterPanel from "../mainComponents/FooterPanel";
+import MyGrid from "../toolComponents/MyGrid";
 
 //- Açılış sayfası , Hizmetlerimiz sayfası
 const PageTemplate = ({ content }) => {
@@ -32,17 +30,17 @@ const PageTemplate = ({ content }) => {
 
   const LeftField = () => {
     return (
-      <>
-        <h3>Google Reklam</h3>
-      </>
+      <div>
+        <h3></h3>
+      </div>
     );
   };
 
   const RightField = () => {
     return (
-      <>
-        <h3>Google Reklam</h3>
-      </>
+      <div>
+        <h3></h3>
+      </div>
     );
   };
 
@@ -61,7 +59,17 @@ const PageTemplate = ({ content }) => {
       <div className={styles.FooterStyle}>
         <FooterPanel />
       </div>
+      <style jsx global>{`
+        body {
+          margin: 0 !important;
+          padding: 0 !important;
+          font-family: 'Times New Roman' !important;
+          font-size: 14px !important;
+        }
+      `}</style>
     </div>
+
+    
   );
 };
 

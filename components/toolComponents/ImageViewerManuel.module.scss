@@ -1,0 +1,31 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/colors.scss";
+@import "../../styles/globals.scss";
+
+
+.standartSize {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.smallSize {
+  width: 75px;
+  height: 75px;
+  position: relative;
+  transition-property: background-image, background-color, color;
+  transition: all 0.5s ease-out;
+}
+
+.standartSize:hover,
+.standartSize:focus,
+.smallSize:hover,
+.smallSize:focus,
+.standartSizeSelected,
+.smallSizeSelected {
+  position: relative;
+  padding: 15px;
+  margin: -15px;
+  position: relative;
+  z-index: 10 !important;
+}

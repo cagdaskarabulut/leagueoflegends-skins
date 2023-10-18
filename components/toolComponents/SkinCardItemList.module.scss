@@ -1,0 +1,19 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/colors.scss";
+@import "../../styles/globals.scss";
+
+.CardListContainerStyle{
+  display: flex !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  box-shadow: none !important;
+  .CardContainerStyle{
+    padding: 10px !important;
+  }
+  // .CardContainerStyle:hover, .CardContainerSelectedStyle {
+  //   border-width: 3px !important;
+  //   border-style: solid !important;
+  //   border-color: $blueDark !important;
+  //   border-image: linear-gradient(to bottom, $blueDark,rgba(0, 0, 0, 0)) 1 100% !important;
+  // }
+}

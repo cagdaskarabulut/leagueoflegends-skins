@@ -3,8 +3,8 @@ import { Grid } from "@mui/material";
 import React from "react";
 import { useCallback, useContext, useEffect, useState } from "react";
 import useWindowSize from "@rooks/use-window-size";
-import { MOBILE_SCREEN_SIZE } from "../constants/GeneralConstants";
-import MyGrid from "./tools/MyGrid";
+import { MOBILE_SCREEN_SIZE } from "../../constants/GeneralConstants";
+import MyGrid from "../toolComponents/MyGrid";
 
 const FooterPanel = () => {
   //_ MobilePart

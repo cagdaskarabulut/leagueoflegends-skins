@@ -1,44 +1,19 @@
-import { useState, useEffect } from "react";
-import ImageViewerManuel from "../components/tools/ImageViewerManuel";
-import { useRouter } from "next/navigation";
-import {replaceStringForUrlFormat} from "../utils/StringUtils";
+import MetaPanel from "../components/mainComponents/MetaPanel";
+import HomePagePanel from "../components/pageComponents/HomePagePanel";
+import PageTemplate from "../components/mainComponents/PageTemplate";
 
 const HomePage = () => {
-  const router = useRouter();
-  const [data, setData] = useState(null);
-  // const [isLoading, setLoading] = useState(true);
-  // let imageRootPath = "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/";
-  let URL_imageRootPath = "https://ddragon.leagueoflegends.com/cdn/13.20.1/img/champion/";
-  let URL_allChampionsListPath = "https://ddragon.leagueoflegends.com/cdn/13.20.1/data/en_US/champion.json";
-  useEffect(() => {
-    fetch(URL_allChampionsListPath)
-      .then((res) => res.json())
-      .then((resData) => {
-        setData(Object.values(resData.data));
-        // setLoading(false);
-      });
-  }, []);
-
-  // if (isLoading) return <p>Loading...</p>;
-  // if (!data) return <p>No profile data</p>;
-
   return (
-    <div>
-      <h1> Champions List </h1>
-      {data?.map((hero, index) => {
-        let activeHeroId = hero.id;
-        let activeHeroName = hero.name;
-        // let activeHeroMainImagePath = imageRootPath + activeHeroId + "_" + 0 + ".jpg";
-        let activeHeroMainImagePath = URL_imageRootPath + hero.image.full;
-        let activeHeroRoute = "/"+ replaceStringForUrlFormat(activeHeroId) + "/default";
-        return (
-        <div key={activeHeroId}>
-          <p>{activeHeroName}</p>
-          <ImageViewerManuel imageName={activeHeroId} imagePath={activeHeroMainImagePath} onClickAction={() => router.push(activeHeroRoute)}/>
-          </div>
-          );
-      })}
-    </div>
+    <>
+      <MetaPanel
+          title="Arabuluculuk nedir?"
+          descriptionContent="Arabulucu ve Arabuluculuk nedir sorularına detaylı açıklama içermektedir."
+          keywordsContent="arabulucu, arabuluculuk, arabulucuyuz, arabulucu, arabulucu nasıl bulurum, iyi bir arabulucu arıyorum, iyi bir avukat arıyorum, arabulucu bul, arabulucu ile anlaş, arabulucu tut"
+          imagePath="/images/Arabulucu.jpg"
+          imageAlt="Arabulucu"
+        />
+        <PageTemplate content={<HomePagePanel />} />
+      </>
   );
 };
 export default HomePage;

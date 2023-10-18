@@ -1,0 +1,45 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/colors.scss";
+@import "../../styles/globals.scss";
+
+.header {
+  align-items: center !important;
+  max-width: 100% !important;
+  align-items: flex-start !important;
+  display: inline-grid !important;
+
+  :global {
+    .MuiGrid-container {
+      justify-content: space-between !important;
+    }
+  }
+  
+  .logoStyle{
+    text-decoration: none;
+    color: $font;
+  }
+
+  .SearchBoxStyle{
+    width: 100% !important;
+    
+      :global {
+        .MuiInputBase-input {
+          caret-color: $font !important;
+          color: $font !important;
+        }
+
+        .MuiSvgIcon-root{
+          color: $font !important;
+        }
+      }
+  }
+  
+  .menuButton{
+      color: $font !important;
+  }
+
+  .floatRightStyle{
+    float: right !important;
+  }
+}
+

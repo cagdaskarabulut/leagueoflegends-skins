@@ -1,6 +1,6 @@
-@import "../styles/mixins.scss";
-@import "../styles/colors.scss";
-@import "../styles/globals.scss";
+@import "../../styles/mixins.scss";
+@import "../../styles/colors.scss";
+@import "../../styles/globals.scss";
 
 .BodyStyle {
   min-height: 98vh !important;
@@ -24,12 +24,28 @@
 
 .HeaderStyle {
   min-height: 50px !important;
-  background: $orange !important;
+  // background: linear-gradient(to top, $white, $yellow) !important;
+
+  // background-color: $font;
+  // background-image: linear-gradient(160deg, $white 0%, $yellow 63%, $orange 100%);
+
+  // background-color: $font;
+  // background-image: linear-gradient(to top, $white 0%, $blue 63%, $font 100%);
+  // background: linear-gradient(to top, $white, $yellow) !important;
+  background: rgb(2,83,157);
+background: linear-gradient(90deg, $font 25%, $blue 50%, $white 85%);
+  h1, h1 a{
+    color: $gold !important;
+  }
 }
 
 .FooterStyle {
   min-height: 50px !important;
-  background: $white !important;
+  font-weight: bold !important;
+  // background: linear-gradient(to bottom, $white, $yellow) !important;
+  color: $gold !important;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, $white 25%, $blue 50%, $font 90%);
 }
 
 .BodyStyle {
