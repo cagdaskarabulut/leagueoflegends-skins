@@ -1,15 +1,12 @@
 import MetaPanel from "../../components/mainComponents/MetaPanel";
-import HomePagePanel from "../../components/pageComponents/HomePagePanel";
 import PageTemplate from "../../components/mainComponents/PageTemplate";
-import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import fsPromises from "fs/promises";
 import path from "path";
-import { useRouter, usePathname } from "next/navigation";
-import {replaceStringForUrlFormat} from "../../utils/StringUtils";
 import { getSkinVideoByPageUrl } from "../../data/getSkinVideoByPageUrl";
 import SkinPagePanel from "../../components/pageComponents/SkinPagePanel";
 
-export default function SkinPage({ heroDetailsObject, skinVideo }) {
+export default function SkinPage({ heroDetailsObject, skinVideo, activePath }) {
   return (
     <>
         <MetaPanel
@@ -19,7 +16,7 @@ export default function SkinPage({ heroDetailsObject, skinVideo }) {
           imagePath="/images/Arabulucu.jpg"
           imageAlt="Arabulucu"
         />
-        <PageTemplate content={<SkinPagePanel heroDetailsObject={heroDetailsObject} skinVideo={skinVideo} />} />
+        <PageTemplate content={<SkinPagePanel heroDetailsObject={heroDetailsObject} skinVideo={skinVideo} activePath={activePath}/>} />
     </>
   )
 }
@@ -34,7 +31,6 @@ export async function getServerSideProps(ctx) {
   const objectDataList = Object.values(objectDataListAll.data);
   let isPageFound = false;
   let heroId = "";
-  
   objectDataList?.map((objectData,index) => {
     let activeHeroId = objectData.hero;
     let path = objectData.path;
@@ -58,7 +54,8 @@ export async function getServerSideProps(ctx) {
       return {
         props: {
           heroDetailsObject,
-          skinVideo
+          skinVideo,
+          activePath
         },
       };
   } else{

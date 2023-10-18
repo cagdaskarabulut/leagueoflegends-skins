@@ -36,7 +36,6 @@ const HeroesPanel = () => {
                 likeAction={() => console.log("hero liked ")}
                 shareAction={() => console.log("hero shared ")}
                 isSmallSize={true}
-                isSelected={false}
               />
             </div>
           );

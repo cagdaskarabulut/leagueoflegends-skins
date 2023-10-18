@@ -18,15 +18,26 @@ const CardItem = ({
   likeAction,
   shareAction,
   isSmallSize,
-  isSelected
+  isSelected,
 }) => {
+  isSmallSize = isSmallSize == undefined ? false : isSmallSize;
+  isSelected = isSelected == undefined ? false : isSelected;
   let activeWidth = isSmallSize ? 75 : 200;
   let displayMode = isSmallSize ? "none" : "";
-  let containerStyle = isSmallSize ? (isSelected ? styles.CardItemSmallSelectedStyle : styles.CardItemSmallStyle) : (isSelected ? styles.CardItemSelectedStyle :styles.CardItemStyle) ;
+  let containerStyle = isSmallSize
+    ? (isSelected
+      ? styles.CardItemSmallSelectedStyle
+      : styles.CardItemSmallStyle)
+    : (isSelected
+    ? styles.CardItemSelectedStyle
+    : styles.CardItemStyle);
   return (
     <div className={containerStyle}>
-      <Card sx={{ width: activeWidth }} >
-      {/* <Card> */}
+      {console.log(containerStyle)}
+      {console.log(isSmallSize)}
+      {console.log(isSelected)}
+      <Card sx={{ width: activeWidth }}>
+        {/* <Card> */}
         <ButtonBase
           onClick={() => onClickAction()}
           className={styles.ButtonBaseStyle}
@@ -36,8 +47,8 @@ const CardItem = ({
               imageName={imageAlt}
               imagePath={imageUrl}
               isSmallSize={isSmallSize}
-              isSelected={isSelected}
-              // onClickAction={onClickAction}
+              // isSelected={isSelected}
+              width={activeWidth}
             />
           </div>
         </ButtonBase>
@@ -49,20 +60,26 @@ const CardItem = ({
         >
           <CardContent>
             <h5>{title}</h5>
-            <p className={styles.descriptionStyle}>{description && <>{description}</>}</p>
+            <p className={styles.descriptionStyle}>
+              {description && <>{description}</>}
+            </p>
           </CardContent>
         </ButtonBase>
 
-        <CardActions disableSpacing style={{display: displayMode}}>
+        <CardActions disableSpacing style={{ display: displayMode }}>
           <IconButton
             aria-label="add to favorites"
-            onClick={() => {likeAction()}}
+            onClick={() => {
+              likeAction();
+            }}
           >
             <FavoriteIcon />
           </IconButton>
           <IconButton
             aria-label="share"
-            onClick={() => {shareAction()}}
+            onClick={() => {
+              shareAction();
+            }}
           >
             <ShareIcon />
           </IconButton>

@@ -1,14 +1,9 @@
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import styles from "./SkinPagePanel.module.scss";
 import React from "react";
 import SkinCardItemList from "../toolComponents/SkinCardItemList";
 
-const SkinPagePanel = ({ heroDetailsObject, skinVideo }) => {
-  const router = useRouter();
-  const { query } = useRouter();
-  let URL_imageRootPath =
-    "https://ddragon.leagueoflegends.com/cdn/img/champion/loading/";
+const SkinPagePanel = ({ heroDetailsObject, skinVideo, activePath}) => {
 
   return (
     <div className={styles.SkinPagePanelContainerStyle}>
@@ -53,6 +48,7 @@ const SkinPagePanel = ({ heroDetailsObject, skinVideo }) => {
       <SkinCardItemList
         skinList={heroDetailsObject.skins}
         heroDetailsObject={heroDetailsObject}
+        activeRoute={activePath}
       />
     </div>
   );

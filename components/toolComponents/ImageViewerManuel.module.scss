@@ -4,15 +4,15 @@
 
 
 .standartSize {
-  width: 200px;
-  height: 200px;
-  position: relative;
+  width: 200px !important;
+  height: 200px !important;
+  position: relative !important;
 }
 
 .smallSize {
-  width: 75px;
-  height: 75px;
-  position: relative;
+  width: 75px !important;
+  height: 75px !important;
+  position: relative !important;
   transition-property: background-image, background-color, color;
   transition: all 0.5s ease-out;
 }
@@ -23,9 +23,9 @@
 .smallSize:focus,
 .standartSizeSelected,
 .smallSizeSelected {
-  position: relative;
-  padding: 15px;
-  margin: -15px;
-  position: relative;
+  position: relative !important;
+  padding: 15px !important;
+  margin: -15px !important;
+  position: relative !important;
   z-index: 10 !important;
 }
