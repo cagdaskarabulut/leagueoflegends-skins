@@ -3,14 +3,14 @@
 @import "../../styles/globals.scss";
 
 .footerStyle {
-  
+  height: 100% !important;
   .footerContentStyle {
     width: 100%;
     text-align: center;
     padding: 30px;
-
     @include tablet-or-less {
       padding: 10px;
+      margin-top: 30px;
     }
   }
 }

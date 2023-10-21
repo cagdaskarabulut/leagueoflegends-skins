@@ -8,6 +8,10 @@
   align-items: flex-start !important;
   display: inline-grid !important;
 
+  @include tablet-or-less {
+    margin-top: -7px;
+  }
+
   :global {
     .MuiGrid-container {
       justify-content: space-between !important;

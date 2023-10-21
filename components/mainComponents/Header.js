@@ -19,11 +19,11 @@ const Header = ({}) => {
         justifyContent="center"
         alignItems="center"
       >
-        <Grid item xs={3}>
-          <h1><a className={styles.logoStyle} href="/">League of Legends - Skins</a></h1>
+        <Grid item xs={12}>
+          <h2><a className={styles.logoStyle} href="/">League of Legends - Skins</a></h2>
         </Grid>
-        <Grid item xs={6}>
-          {/* <TextField id="outlined-basic" label="Search in champions and skins" variant="outlined"
+        {/* <Grid item xs={6}>
+          <TextField id="outlined-basic" label="Search in champions and skins" variant="outlined"
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
@@ -31,11 +31,11 @@ const Header = ({}) => {
               </InputAdornment>
             ),
           }}
-           className={styles.SearchBoxStyle} /> */}
+           className={styles.SearchBoxStyle} />
         </Grid>
         <Grid item xs={3}>
 
-        </Grid>
+        </Grid> */}
       </Grid>
     </Container>
   );

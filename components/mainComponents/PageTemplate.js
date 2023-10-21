@@ -30,16 +30,16 @@ const PageTemplate = ({ content }) => {
 
   const LeftField = () => {
     return (
-      <div>
-        <h3></h3>
+      <div className={styles.GoogleAdsPanelStyle}>
+        <h3>Google Ads</h3>
       </div>
     );
   };
 
   const RightField = () => {
     return (
-      <div>
-        <h3></h3>
+      <div className={styles.GoogleAdsPanelStyle}>
+        <h3>Google Ads</h3>
       </div>
     );
   };

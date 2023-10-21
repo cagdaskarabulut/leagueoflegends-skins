@@ -33,9 +33,6 @@ const CardItem = ({
     : styles.CardItemStyle);
   return (
     <div className={containerStyle}>
-      {console.log(containerStyle)}
-      {console.log(isSmallSize)}
-      {console.log(isSelected)}
       <Card sx={{ width: activeWidth }}>
         {/* <Card> */}
         <ButtonBase

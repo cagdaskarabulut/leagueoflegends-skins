@@ -4,16 +4,15 @@ import { useRouter } from "next/router";
 
 //- Google için meta sayfası
 const MetaPanel = ({
-  title, descriptionContent, keywordsContent, authorContent, isDontFollowByRobots , imagePath, imageAlt
+  title, descriptionContent, keywordsContent, isDontFollowByRobots , imagePath, imageAlt
 }) => {
   const router = useRouter();
-  let siteName = "Arabulucuyuz";
-  let siteUrl = "https://www.arabulucuyuz.org";
+  let siteName = "leagueoflegends-skins";
+  let siteUrl = "https://www.leagueoflegends-skins.com";
   
   let currentFullPathUrl = siteUrl + router.asPath;
   let imageFullPathUrl = siteUrl + imagePath;
-  let iconHref = siteUrl + "/images/Arabulucu-icon.png";
-  authorContent = (authorContent == null || authorContent == "") ? "Öznur İlhan Karabulut" : authorContent;
+  let iconHref = siteUrl + "/images/lol-skins-icon.ico";
   return (
     <Head>
 
@@ -42,13 +41,6 @@ const MetaPanel = ({
         )
       }
 
-      {(authorContent != null && authorContent != "") && (
-        <>
-          <meta name="author" content={authorContent} />
-          <meta data-rh="true" property="article:author" content={authorContent} />
-        </>
-      )}
-
       {(siteName != null && siteName != "") && (
         <>
           <meta data-rh="true" property="og:site_name" content={siteName} />
@@ -72,8 +64,8 @@ const MetaPanel = ({
       {(imageAlt != null && imageAlt != "") && (<meta property="og:image:alt" content={imageAlt} />)}
       <link rel="icon" href={iconHref} />
 
-      <meta name="google-site-verification" content="ZqEtWJqvbP4hrjZXAHOhtMDausn70UMrPIHHIMQORDk" />
-      <meta name="yandex-verification" content="482b1df21423a716" />
+      {/* <meta name="google-site-verification" content="ZqEtWJqvbP4hrjZXAHOhtMDausn70UMrPIHHIMQORDk" />
+      <meta name="yandex-verification" content="482b1df21423a716" /> */}
       <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1" />
       <meta name="Language" content="tr" />
       <meta property="og:locale" content="tr_TR" />
@@ -82,8 +74,8 @@ const MetaPanel = ({
       <meta name="doc-class" content="Published" />
       <meta name="doc-rights" content="Public" />
       <meta property="og:type" content="website" />
-      <meta httpEquiv="Copyright" content="Copyright 2023 Arabulucuyuz.org" />
-      <meta httpEquiv="Reply-to" content="oznurilhan@windowslive.com" />
+      <meta httpEquiv="Copyright" content="Copyright 2023 leagueoflegends-skins.com" />
+      {/* <meta httpEquiv="Reply-to" content="oznurilhan@windowslive.com" /> */}
       <meta name="mobile-web-app-capable" content="yes" />
     </Head>
   );

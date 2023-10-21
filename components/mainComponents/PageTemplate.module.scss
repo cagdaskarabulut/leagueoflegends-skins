@@ -24,28 +24,32 @@
 
 .HeaderStyle {
   min-height: 50px !important;
-  // background: linear-gradient(to top, $white, $yellow) !important;
-
-  // background-color: $font;
-  // background-image: linear-gradient(160deg, $white 0%, $yellow 63%, $orange 100%);
-
-  // background-color: $font;
-  // background-image: linear-gradient(to top, $white 0%, $blue 63%, $font 100%);
-  // background: linear-gradient(to top, $white, $yellow) !important;
   background: rgb(2,83,157);
-background: linear-gradient(90deg, $font 25%, $blue 50%, $white 85%);
-  h1, h1 a{
+  background: linear-gradient(90deg, $font 25%, $blue 50%, $white 85%);
+
+  h1, h1 a, h2, h2 a{
     color: $gold !important;
   }
+
+  @include tablet-or-less {
+    background: linear-gradient(to top, $white 25%, $blue 50%, $font 90%);
+    min-height: 65px !important;
+  }
+  
 }
 
 .FooterStyle {
   min-height: 50px !important;
   font-weight: bold !important;
-  // background: linear-gradient(to bottom, $white, $yellow) !important;
   color: $gold !important;
   background: rgb(255,255,255);
   background: linear-gradient(180deg, $white 25%, $blue 50%, $font 90%);
+
+  @include tablet-or-less {
+    // background: linear-gradient(to top, $white 25%, $blue 50%, $font 90%);
+    background: linear-gradient(180deg, $white 15%, $blue 35%, $font 85%);
+    min-height: 100px !important;
+  }
 }
 
 .BodyStyle {
@@ -57,10 +61,22 @@ background: linear-gradient(90deg, $font 25%, $blue 50%, $white 85%);
   flex: 1 !important;
   background-color: $white !important;
   padding: 30px !important;
-  padding-top: 5px !important;
 
   @include tablet-or-less {
     padding: 10px !important;
-    margin-top: 5vh !important;
+    margin-top: -px !important;
+  
+    :global {
+      .MuiGrid-root {
+        padding-top: 0px !important;
+      }
+    }
   }
+
+  
+
+  .GoogleAdsPanelStyle{
+    max-height: 100px !important;
+  }
+
 }

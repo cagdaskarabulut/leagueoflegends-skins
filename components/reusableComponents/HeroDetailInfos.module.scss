@@ -1,0 +1,16 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/colors.scss";
+@import "../../styles/globals.scss";
+
+.HeroDetailInfosContainerStyle{
+
+  .HeaderStyle{
+    text-align: center;
+    color: $orangeDark;
+    
+  }
+  
+  @include desktop {
+    padding-bottom: 10px;
+  }
+}

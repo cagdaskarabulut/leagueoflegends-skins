@@ -32,7 +32,7 @@ const MyGrid = ({
   return (
     <div>
       {breadcrumbs}
-      {title != "" && (<h2 className={styles.titleStyle}>{title}</h2>)}
+      {title != undefined && (<h2 className={styles.titleStyle}>{title}</h2>)}
       <Grid
         spacing={2}
         container

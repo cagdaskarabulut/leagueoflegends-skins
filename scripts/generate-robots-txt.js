@@ -12,6 +12,7 @@ function replaceStringForUrlFormat(myString) {
   myString = myString.replace(/'/g, "");
   myString = myString.replace(/"/g, "");
   myString = myString.replace(/\//g, "");
+  myString = myString.replace(/&/g, "");
   myString = myString.toLowerCase();
   return myString;
 }
@@ -22,7 +23,7 @@ function generateRobotsTxtAndSitemapXml() {
   // const championsList = JSON.parse(jsonStr); // as Hero[];
 
   let rootPath = `https://leagueoflegends-skins.com`;
-  let pagePathsFields = "";
+  // let pagePathsFields = "";
   let mySkinDbFields = "";
   let now = getNowWithISOFormat();
   let dynamicRobotsTxtFields = "";
@@ -55,6 +56,47 @@ daily
       //_First Loop
       heroList.map((champion, index) => {
 
+        let heroBasePath = `${replaceStringForUrlFormat(champion.id)}/${replaceStringForUrlFormat(champion.id)}`;
+      
+        //-generate
+        dynamicRobotsTxtFields = `${dynamicRobotsTxtFields}Allow: /${heroBasePath}
+`;
+
+              //-generate
+        dynamicSitemapFields = `${dynamicSitemapFields}
+<url>
+<loc>
+${rootPath}/${heroBasePath}
+</loc>
+<lastmod>
+${now}
+</lastmod>
+<changefreq>
+daily
+</changefreq>
+<priority>
+0.7
+</priority>
+</url>
+`;
+
+//               //-generate
+// pagePathsFields  = `${pagePathsFields} 
+//     { 
+//       "hero": "${champion.id}" ,
+//       "path": "${heroBasePath}" 
+//     },`;
+
+    mySkinDbFields = `${mySkinDbFields}
+  {
+    "hero": "${replaceStringForUrlFormat(champion.id)}",
+    "heroName": "${champion.name}",
+    "skin": "${replaceStringForUrlFormat(champion.id)}",
+    "skinName": "${champion.name}",
+    "pageUrl": "${heroBasePath}",
+    "videoUrl": ""
+  },`;
+        
         fetch(
           "https://ddragon.leagueoflegends.com/cdn/13.20.1/data/en_US/champion/" +
             champion.id +
@@ -75,13 +117,14 @@ daily
             //_Third Loop
             skinList.map((skinObject, index3) => {
 
-
+            //-generate
             dynamicRobotsTxtFields = `${dynamicRobotsTxtFields}Allow: /${replaceStringForUrlFormat(champion.id
             )}/${replaceStringForUrlFormat(skinObject.name)}
 `;
 
 let activePath = `${replaceStringForUrlFormat(champion.id)}/${replaceStringForUrlFormat(skinObject.name)}`;
 
+            //-generate
             dynamicSitemapFields = `${dynamicSitemapFields}
 <url>
 <loc>
@@ -98,17 +141,22 @@ daily
 </priority>
 </url>
 `;
-              pagePathsFields  = `${pagePathsFields} 
-    { 
-      "hero": "${champion.id}" ,
-      "path": "${activePath}" 
-    },`;
+    //   //-generate
+    //           pagePathsFields  = `${pagePathsFields} 
+    // { 
+    //   "hero": "${champion.id}" ,
+    //   "path": "${activePath}" 
+    // },`;
 
-
+//-generate
     mySkinDbFields = `${mySkinDbFields}
   {
-    "pageUrl": "${activePath}", 
-    "videoUrl": "" 
+    "hero": "${replaceStringForUrlFormat(champion.id)}",
+    "heroName": "${champion.name}",
+    "skin": "${replaceStringForUrlFormat(skinObject.name)}",
+    "skinName": "${skinObject.name}",
+    "pageUrl": "${activePath}",
+    "videoUrl": ""
   },`;
 
   });
@@ -119,43 +167,50 @@ daily
 
 
             let robotsTxt = "";
-
+//-generate final
             robotsTxt = 
 `# *
 User-agent: *
-Allow: /
 ${dynamicRobotsTxtFields}
 Disallow: /AdminPanel
 Disallow: /AdminPanelLogin
 # Sitemaps
 Sitemap: https://www.leagueoflegends-skins.com/sitemap.xml`;
           
+//-generate final
             let sitemapXml = "";
             sitemapXml = 
 `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 ${dynamicSitemapFields}
 </urlset>
             `;
-          
-            let pagePaths = "";
-            pagePaths = 
-`{
-  "data": [ ${pagePathsFields}
-    { 
-      "hero": "" ,
-      "path": "/" 
-    }
-  ]
-}`;
+//           //-generate final
+//             let pagePaths = "";
+//             pagePaths = 
+// `{
+//   "data": [ ${pagePathsFields}
+//     { 
+//       "hero": "" ,
+//       "path": "/" 
+//     }
+//   ]
+// }`;
 
 let mySkinDb = "";
-mySkinDb = `[${mySkinDbFields.slice(0, -1)}
-]`;
+mySkinDb = 
+`{
+"data": [ ${mySkinDbFields.slice(0, -1)}
+]
+}`;
+// //-generate final
+// let mySkinDb = "";
+// mySkinDb = `[${mySkinDbFields.slice(0, -1)}
+// ]`;
 
 
             fs.writeFileSync("public/robots.txt", robotsTxt);
             fs.writeFileSync("public/sitemap.xml", sitemapXml);
-            fs.writeFileSync("pagePaths.json", pagePaths);
+            // fs.writeFileSync("pagePaths.json", pagePaths);
             fs.writeFileSync("helper/LATEST_my_skin_video_db.json", mySkinDb);
           });
       });

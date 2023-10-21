@@ -5,7 +5,8 @@ import { SkinVideo } from "./SkinVideo";
 export function getSkinVideoByPageUrl(pageUrl: string): SkinVideo | undefined {
   const dbDirectory = path.join(process.cwd(), "data", "my_skin_video_db.json");
   const jsonStr = readFileSync(dbDirectory).toString();
-  const fileContents = JSON.parse(jsonStr) as SkinVideo[];
+  const fileContentsData = JSON.parse(jsonStr);
+  const fileContents = Object.values(fileContentsData.data) as SkinVideo[];
   const skinVideoObject = fileContents.find((p) => p.pageUrl.toLowerCase() === pageUrl.toLowerCase());
   return skinVideoObject;
 }
