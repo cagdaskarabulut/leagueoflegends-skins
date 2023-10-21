@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 //- Google için meta sayfası
 const MetaPanel = ({
-  title, descriptionContent, keywordsContent, isDontFollowByRobots , imagePath, imageAlt
+  title, descriptionContent, keywordsContent, isDontFollowByRobots , imagePath, imageAlt, iconPath
 }) => {
   const router = useRouter();
   let siteName = "leagueoflegends-skins";
@@ -12,7 +12,7 @@ const MetaPanel = ({
   
   let currentFullPathUrl = siteUrl + router.asPath;
   let imageFullPathUrl = siteUrl + imagePath;
-  let iconHref = siteUrl + "/images/lol-skins-icon.ico";
+  let iconHref = iconPath ? iconPath : (siteUrl + "/images/favicon.ico");
   return (
     <Head>
 
