@@ -16,6 +16,8 @@ function replaceStringForUrlFormat(myString) {
   myString = myString.replace("(", "");
   myString = myString.replace(")", "");
   myString = myString.replace(/ó/g, "o");
+  myString = myString.replace(",", "");
+  myString = myString.replace(".", "");
   myString = myString.toLowerCase();
   return myString;
 }
