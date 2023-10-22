@@ -31,7 +31,7 @@ const PageTemplate = ({ content }) => {
   const LeftField = () => {
     return (
       <div className={styles.GoogleAdsPanelStyle}>
-        <h3>Google Ads</h3>
+        {/* <h3>Google Ads</h3> */}
       </div>
     );
   };
@@ -39,7 +39,7 @@ const PageTemplate = ({ content }) => {
   const RightField = () => {
     return (
       <div className={styles.GoogleAdsPanelStyle}>
-        <h3>Google Ads</h3>
+        {/* <h3>Google Ads</h3> */}
       </div>
     );
   };
