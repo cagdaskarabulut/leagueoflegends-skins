@@ -1,6 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
+// import { readFileSync } from "fs";
+
 function getNowWithISOFormat() {
   const today = new Date();
   return today.toISOString();
@@ -20,6 +22,20 @@ function replaceStringForUrlFormat(myString) {
   myString = myString.toLowerCase();
   return myString;
 }
+
+function getVideoPathByPageUrl(pageUrl){
+  const dbDirectory = path.join(process.cwd(), "data", "my_skin_video_db.json");
+  const jsonStr = fs.readFileSync(dbDirectory).toString();
+  const fileContentsData = JSON.parse(jsonStr);
+  const fileContents = Object.values(fileContentsData.data);
+  const skinVideoObject = fileContents.find((p) => p.pageUrl.toLowerCase() === pageUrl.toLowerCase());
+  let result = "";
+  if (skinVideoObject?.videoUrl != undefined && skinVideoObject?.videoUrl.length>0){
+    result = skinVideoObject.videoUrl;
+  }
+  return result;
+}
+
 
 function generateRobotsTxtAndSitemapXml() {
   // const dbDirectory = path.join(process.cwd(), "data", "db.json");
@@ -98,7 +114,7 @@ daily
     "skin": "${replaceStringForUrlFormat(champion.id)}",
     "skinName": "${champion.name}",
     "pageUrl": "${heroBasePath}",
-    "videoUrl": ""
+    "videoUrl": "${getVideoPathByPageUrl(heroBasePath)}"
   },`;
         
         fetch(
@@ -145,24 +161,27 @@ daily
 </priority>
 </url>
 `;
-    //   //-generate
-    //           pagePathsFields  = `${pagePathsFields} 
-    // { 
-    //   "hero": "${champion.id}" ,
-    //   "path": "${activePath}" 
-    // },`;
 
 //-generate
-    mySkinDbFields = `${mySkinDbFields}
+  //   mySkinDbFields = `${mySkinDbFields}
+  // {
+  //   "hero": "${replaceStringForUrlFormat(champion.id)}",
+  //   "heroName": "${champion.name}",
+  //   "skin": "${replaceStringForUrlFormat(skinObject.name)}",
+  //   "skinName": "${skinObject.name}",
+  //   "pageUrl": "${activePath}",
+  //   "videoUrl": ""
+  // },`;
+
+  mySkinDbFields = `${mySkinDbFields}
   {
     "hero": "${replaceStringForUrlFormat(champion.id)}",
     "heroName": "${champion.name}",
     "skin": "${replaceStringForUrlFormat(skinObject.name)}",
     "skinName": "${skinObject.name}",
     "pageUrl": "${activePath}",
-    "videoUrl": ""
+    "videoUrl": "${getVideoPathByPageUrl(activePath)}"
   },`;
-
   });
 
 
@@ -188,17 +207,6 @@ Sitemap: https://www.leagueoflegends-skins.com/sitemap.xml`;
 ${dynamicSitemapFields}
 </urlset>
             `;
-//           //-generate final
-//             let pagePaths = "";
-//             pagePaths = 
-// `{
-//   "data": [ ${pagePathsFields}
-//     { 
-//       "hero": "" ,
-//       "path": "/" 
-//     }
-//   ]
-// }`;
 
 let mySkinDb = "";
 mySkinDb = 
@@ -206,15 +214,9 @@ mySkinDb =
 "data": [ ${mySkinDbFields.slice(0, -1)}
 ]
 }`;
-// //-generate final
-// let mySkinDb = "";
-// mySkinDb = `[${mySkinDbFields.slice(0, -1)}
-// ]`;
-
 
             fs.writeFileSync("public/robots.txt", robotsTxt);
             fs.writeFileSync("public/sitemap.xml", sitemapXml);
-            // fs.writeFileSync("pagePaths.json", pagePaths);
             fs.writeFileSync("helper/LATEST_my_skin_video_db.json", mySkinDb);
           });
       });

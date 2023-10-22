@@ -51,7 +51,6 @@ export async function getServerSideProps(ctx) {
       .then((res) => res.json())
       .then((resData) => {
         heroDetailsObject = Object.values(resData.data)[0];
-        // skinVideo = getSkinVideoByPageUrl(activePath)
       });
       return {
         props: {
