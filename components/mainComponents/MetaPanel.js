@@ -78,7 +78,9 @@ const MetaPanel = ({
       {/* <meta httpEquiv="Reply-to" content="oznurilhan@windowslive.com" /> */}
       <meta name="mobile-web-app-capable" content="yes" />
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8764830534484668"
-     crossorigin="anonymous"></script>
+     crossOrigin="anonymous"></script>
+     {/* <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8764830534484668"
+     crossOrigin="anonymous" /> */}
     </Head>
   );
 };
