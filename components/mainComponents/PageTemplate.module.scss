@@ -9,12 +9,13 @@
   color: $font !important;
   font-family: 'Times New Roman' !important;
   font-size: 14px !important;
-  
+
   :global {
     .MuiChip-label {
       font-family: 'Times New Roman' !important;
       font-size: 14px !important;
     }
+
     .MuiTypography-root {
       font-family: 'Times New Roman' !important;
       font-size: 14px !important;
@@ -24,10 +25,13 @@
 
 .HeaderStyle {
   min-height: 50px !important;
-  background: rgb(2,83,157);
+  background: rgb(2, 83, 157);
   background: linear-gradient(90deg, $font 25%, $blue 50%, $white 85%);
 
-  h1, h1 a, h2, h2 a{
+  h1,
+  h1 a,
+  h2,
+  h2 a {
     color: $gold !important;
   }
 
@@ -35,14 +39,14 @@
     background: linear-gradient(to top, $white 25%, $blue 50%, $font 90%);
     min-height: 65px !important;
   }
-  
+
 }
 
 .FooterStyle {
   min-height: 50px !important;
   font-weight: bold !important;
   color: $gold !important;
-  background: rgb(255,255,255);
+  background: rgb(255, 255, 255);
   background: linear-gradient(180deg, $white 25%, $blue 50%, $font 90%);
 
   @include tablet-or-less {
@@ -65,7 +69,7 @@
   @include tablet-or-less {
     padding: 10px !important;
     margin-top: -px !important;
-  
+
     :global {
       .MuiGrid-root {
         padding-top: 0px !important;
@@ -73,10 +77,12 @@
     }
   }
 
-  
+  .GoogleAdsPanelStyle {
+    // background-color: red !important;
 
-  .GoogleAdsPanelStyle{
-    max-height: 100px !important;
+    @include tablet-or-less {
+      max-height: 100px !important;
+    }
   }
 
 }
