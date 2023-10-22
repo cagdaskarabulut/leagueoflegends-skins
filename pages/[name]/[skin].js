@@ -15,8 +15,8 @@ export default function SkinPage({ heroDetailsObject, skinVideo, activePath }) {
     <meta name="description" content="LoL skin Wild Card Shaco Skins &amp; Chromas / League of Legends / LoL WildCardShaco skin video en-US - LoL skin forEX US">
     <link rel="canonical" href="https://lol-skin.weblog.vc/en-US/35/7/Wild-Card-Shaco/"></link> */}
         <MetaPanel
-          title={`${skinVideo.skinName} (${skinVideo.heroName}) Skin`}
-          descriptionContent={`lol ${skinVideo.skinName} skin & league of legends ${skinVideo.skinName} skin & lol ${skinVideo.heroName} skins & ${skinVideo.skinName} skin video & ${skinVideo.heroName} skin videos`}
+          title={`${skinVideo.skinName} (${skinVideo.heroName}) Skin Video`}
+          descriptionContent={`lol ${skinVideo.skinName} skin video & league of legends ${skinVideo.skinName} skin video & lol ${skinVideo.heroName} skins & ${skinVideo.skinName} skin video & ${skinVideo.heroName} skin videos`}
           keywordsContent={`${skinVideo.skinName} skin, ${skinVideo.heroName} skins, ${skinVideo.skinName} skin videos, ${skinVideo.skinName} skin images, ${skinVideo.skinName} skin chromas`}
           imagePath="/images/lol-skins-icon.ico"
           imageAlt="League of Legends Skins"
