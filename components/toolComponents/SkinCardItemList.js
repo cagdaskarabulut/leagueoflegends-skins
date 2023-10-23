@@ -26,10 +26,10 @@ const SkinCardItemList = ({ skinList, heroDetailsObject, activeRoute }) => {
   }, [innerWidth]);
   
   async function cardClickAction(activeHeroRoute) {
-    setIsLoading(true);
+    // setIsLoading(true);
     // await wait(300);
-    router.push("/" + activeHeroRoute);
-    setIsLoading(false);
+    await router.push("/" + activeHeroRoute);
+    // setIsLoading(false);
   }
 
   return (
@@ -63,7 +63,6 @@ const SkinCardItemList = ({ skinList, heroDetailsObject, activeRoute }) => {
       <Backdrop
         sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={isLoading}
-        onClick={()=>setIsLoading(false)}
       >
         <CircularProgress color="inherit" />
       </Backdrop>

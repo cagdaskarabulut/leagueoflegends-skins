@@ -68,8 +68,6 @@ const PageTemplate = ({ content }) => {
         }
       `}</style>
     </div>
-
-    
   );
 };
 

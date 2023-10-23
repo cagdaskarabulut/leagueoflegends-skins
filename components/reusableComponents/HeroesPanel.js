@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import {replaceStringForUrlFormat} from "../../utils/StringUtils";
 import CardItem from "../toolComponents/CardItem";
 import { Backdrop, CircularProgress } from '@mui/material';
-// import {wait} from '../../utils/CommonUtils';
+import {wait} from '../../utils/CommonUtils';
 
 const HeroesPanel = () => {
   const router = useRouter();
@@ -27,9 +27,9 @@ const HeroesPanel = () => {
 
   async function cardClickAction(activeHeroRoute) {
     setIsLoading(true);
-    //await wait(1000);
+    // await wait(250);
     router.push(activeHeroRoute);
-    setIsLoading(false);
+    // setIsLoading(false);
   }
 
   return (
@@ -58,7 +58,6 @@ const HeroesPanel = () => {
       <Backdrop
         sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={isLoading}
-        onClick={()=>setIsLoading(false)}
       >
         <CircularProgress color="inherit" />
       </Backdrop>
