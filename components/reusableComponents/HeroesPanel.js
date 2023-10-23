@@ -22,12 +22,12 @@ const HeroesPanel = () => {
   }, []);
   
   // function wait(waitTime) {
-  //   return new Promise( res => setTimeout(res, waitTime) );
-// }
+  // return new Promise( res => setTimeout(res, waitTime) );
+  // }
 
   async function cardClickAction(activeHeroRoute) {
     setIsLoading(true);
-    // await wait(1000);
+    //await wait(1000);
     router.push(activeHeroRoute);
     setIsLoading(false);
   }
