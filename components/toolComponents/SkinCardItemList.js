@@ -6,6 +6,8 @@ import styles from "./SkinCardItemList.module.scss";
 import { useRouter } from "next/navigation";
 import useWindowSize from "@rooks/use-window-size";
 import { MOBILE_SCREEN_SIZE } from "../../constants/GeneralConstants";
+import { Backdrop, CircularProgress } from '@mui/material';
+// import {wait} from '../../utils/CommonUtils';
 
 const SkinCardItemList = ({ skinList, heroDetailsObject, activeRoute }) => {
   const router = useRouter();
@@ -13,6 +15,8 @@ const SkinCardItemList = ({ skinList, heroDetailsObject, activeRoute }) => {
     "https://ddragon.leagueoflegends.com/cdn/img/champion/loading/";
     const { innerWidth } = useWindowSize();
   const [isMobile, setIsMobile] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
   useEffect(() => {
     if (innerWidth === null) {
       setIsMobile(false);
@@ -20,13 +24,20 @@ const SkinCardItemList = ({ skinList, heroDetailsObject, activeRoute }) => {
       setIsMobile(innerWidth < MOBILE_SCREEN_SIZE);
     }
   }, [innerWidth]);
+  
+  async function cardClickAction(activeHeroRoute) {
+    setIsLoading(true);
+    // await wait(300);
+    router.push("/" + activeHeroRoute);
+    setIsLoading(false);
+  }
+
   return (
     <div className={styles.CardListContainerStyle}>
       {skinList?.map((skin, index) => {
         let skinNum = skin.num;
         let skinName = skin.name;
         let heroId = heroDetailsObject.id;
-        let heroName = heroDetailsObject.name;
         let skinKey = heroId + "_" + skinNum;
         let skinImagePath = URL_imageRootPath + skinKey + ".jpg";
         let activeHeroRoute =
@@ -39,16 +50,23 @@ const SkinCardItemList = ({ skinList, heroDetailsObject, activeRoute }) => {
               title={skinName}
               imageAlt={replaceStringForUrlFormat(skinName)}
               imageUrl={skinImagePath}
-              onClickAction={() => router.push("/" + activeHeroRoute)}
+              onClickAction={() => cardClickAction(activeHeroRoute)}
               likeAction={() => console.log("skin liked ")}
               shareAction={() => console.log("skin shared ")}
               isSelected={activeHeroRoute == activeRoute}
               isSmallSize={isMobile}
-
             />
           </div>
         );
       })}
+
+      <Backdrop
+        sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={isLoading}
+        onClick={()=>setIsLoading(false)}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
     </div>
   );
 };
