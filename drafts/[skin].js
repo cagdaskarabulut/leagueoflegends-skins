@@ -24,6 +24,8 @@ export default function SkinPage({ heroDetailsObject, skinVideo, activePath }) {
 
 // getServerSideProps
 export async function getStaticProps(ctx) {
+  try{
+  console.log('getStaticProps is running...');
   const name = ctx.params?.name;
   const skin = ctx.params?.skin;
   let activePath = name + "/" + skin;
@@ -65,28 +67,38 @@ export async function getStaticProps(ctx) {
       notFound: true,
     };
   }
+} catch (error) {
+  console.error('An error occurred in getStaticPaths:', error);
+  // Hata işleme veya geri kalan işlemleri devam ettirme
+}
 }
 
 export async function getStaticPaths() {
+  try{
+  console.log('getStaticPaths is running...');
   const filePath = path.join(process.cwd(), "data", "my_skin_video_db.json");
   const jsonData = await fsPromises.readFile(filePath);
   const objectDataListAll = JSON.parse(jsonData);
   const objectDataList = Object.values(objectDataListAll.data);
 
-  const paths = objectDataList?.map((objectData) => ({
-    params: { name: objectData.hero, skin: objectData.skin },
-  }));
+  // const paths = objectDataList?.map((objectData) => ({
+  //   params: { name: objectData.hero, skin: objectData.skin },
+  // }));
 
-  // const paths = [
-  //   { params: { name: 'aatrox', skin: 'aatrox' } },
-  //   { params: { name: 'aatrox', skin: 'default' } },
-  // ];
+  const paths = [
+    { params: { name: 'aatrox', skin: 'aatrox' } },
+    { params: { name: 'aatrox', skin: 'default' } },
+  ];
 
 
   return {
     paths,
     fallback: false, // Dinamik yollar oluşturulmadığı durumda da sayfanın çalışmasını sağlar.
   };
+} catch (error) {
+  console.error('An error occurred in getStaticPaths:', error);
+  // Hata işleme veya geri kalan işlemleri devam ettirme
+}
 }
 
 
