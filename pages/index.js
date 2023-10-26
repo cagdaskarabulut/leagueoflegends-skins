@@ -5,13 +5,10 @@ import PageTemplate from "../components/mainComponents/PageTemplate";
 const HomePage = () => {
   return (
     <>
-    {/* <title>▷ LoL skin</title>
-    <meta name="description" content="LoL skin video - League of Legends Skins &amp; Chromas / League of Legends skin preview videos wildrift - LoL skin">
-    <link rel="canonical" href="https://lol-skin.weblog.vc/en-US/LoL-skin/"> */}
       <MetaPanel
-          title="lol skins & League of Legends Skins"
-          descriptionContent="lol hero skin video and image - lol skin videos and images -  lol hero costumes - league of legends skin image and video - lol skins and chromas"
-          keywordsContent="lol skin, lol skins, lol costumes, league of legends skin, league of legends skins, lol hero skin, lol hero skins, league of legends hero skin, league of legends hero skins, lol skin video,league of legends hero skins, lol skin image, league of legends skin video,league of legends skin image "
+          title="League of Legends Champion Skins Showcase: Stunning Images and Videos"
+          descriptionContent="Explore the breathtaking world of League of Legends champion skins through our extensive collection of images and videos. Immerse yourself in the visual splendor of LoL champions as we showcase their incredible skins in action. From legendary to rare, discover the beauty and power of each skin in our curated galleries and videos."
+          keywordsContent="League of Legends, champion skins, LoL skins, skin images, skin videos, gaming aesthetics, champion customization, video game visuals, lol skin, lol skins, league of legends skin, league of legends skins"
           imagePath="/images/lol-skins-icon.ico"
           imageAlt="League of Legends Skins"
         />
