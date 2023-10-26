@@ -10,6 +10,7 @@ module.exports = {
   // webpack5: true,
   images: {
     domains: ["ddragon.leagueoflegends.com"],
+    unoptimized: true
   },
   webpack(config, { isServer }) {
     // config.resolve.fallback = { fs: false };
