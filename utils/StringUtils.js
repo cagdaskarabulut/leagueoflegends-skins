@@ -8,7 +8,7 @@ export const replaceStringForUrlFormat = (myString) => {
   myString = myString.replace(")", "");
   myString = myString.replace(/ó/g, "o");
   myString = myString.replace(/,/g, "");
-  myString = myString.toLowerCase();
+  // myString = myString.toLowerCase();
   return myString;
 };
 
