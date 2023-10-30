@@ -23,21 +23,7 @@ function replaceStringForUrlFormat(myString) {
   return myString;
 }
 
-function replaceStringForSearchQuery(myString) {
-  myString = myString.replace(/ /g, "+");
-  myString = myString.replace(/'/g, "");
-  myString = myString.replace(/"/g, "");
-  myString = myString.replace(/\//g, "");
-  myString = myString.replace(/&/g, "");
-  myString = myString.replace("(", "");
-  myString = myString.replace(")", "");
-  myString = myString.replace(/ó/g, "o");
-  myString = myString.replace(",", "");
-  // myString = myString.toLowerCase();
-  return myString;
-}
-
-function getExistingVideoPathByPageUrl(pageUrl){
+function getVideoPathByPageUrl(pageUrl){
   const dbDirectory = path.join(process.cwd(), "data", "my_skin_video_db.json");
   const jsonStr = fs.readFileSync(dbDirectory).toString();
   const fileContentsData = JSON.parse(jsonStr);
@@ -52,11 +38,6 @@ function getExistingVideoPathByPageUrl(pageUrl){
 
 
 function generateRobotsTxtAndSitemapXml() {
-
-    //- => Sadece skin videoları için kullanılır bu parametre ve console dan manuel alınıp kopyalanır. api kotası yetmezse yenisi alınır
-    let isManualyAddingSkinVideos = false;
-    let heroIdForManuallyAddingSkinVideos = 'Lucian';
-    let youtubeApiKey = 'AIzaSyDNmbFey2wYLhG_VDx0BWVWrADnvKoF6gQ';
   // const dbDirectory = path.join(process.cwd(), "data", "db.json");
   // const jsonStr = fs.readFileSync(dbDirectory).toString();
   // const championsList = JSON.parse(jsonStr); // as Hero[];
@@ -95,10 +76,6 @@ daily
       //_First Loop
       heroList.map((champion, index) => {
 
-        //TODO hero check sonradan kaldırılacak robotstxt ve sitemapxml için
-    //- => Sadece skin videoları için kullanılır bu parametre ve console dan manuel alınıp kopyalanır. api kotası yetmezse yenisi alınır
-    if(isManualyAddingSkinVideos==false ||(isManualyAddingSkinVideos && champion.id ==heroIdForManuallyAddingSkinVideos)){
-
         let heroBasePath = `${replaceStringForUrlFormat(champion.id)}/${replaceStringForUrlFormat(champion.id)}`;
       
         //-generate
@@ -130,27 +107,16 @@ daily
 //       "path": "${heroBasePath}" 
 //     },`;
 
-//todo düzeltilecek
-  //   mySkinDbFields = `${mySkinDbFields}
-  // {
-  //   "hero": "${replaceStringForUrlFormat(champion.id)}",
-  //   "heroName": "${champion.name}",
-  //   "skin": "${replaceStringForUrlFormat(champion.id)}",
-  //   "skinName": "${champion.name}",
-  //   "pageUrl": "${heroBasePath}",
-  //   "videoUrl": "${getExistingVideoPathByPageUrl(heroBasePath)}"
-  // },`;
-  //todo geçici    
-  mySkinDbFields = `${mySkinDbFields}
+    mySkinDbFields = `${mySkinDbFields}
   {
     "hero": "${replaceStringForUrlFormat(champion.id)}",
     "heroName": "${champion.name}",
     "skin": "${replaceStringForUrlFormat(champion.id)}",
     "skinName": "${champion.name}",
     "pageUrl": "${heroBasePath}",
-    "videoUrl": ""
+    "videoUrl": "${getVideoPathByPageUrl(heroBasePath)}"
   },`;
-
+        
         fetch(
           "https://ddragon.leagueoflegends.com/cdn/13.20.1/data/en_US/champion/" +
             champion.id +
@@ -207,73 +173,15 @@ daily
   //   "videoUrl": ""
   // },`;
 
-  if (isManualyAddingSkinVideos){
-    let videoUrlForActiveSkin = getExistingVideoPathByPageUrl(activePath);
-
-    if (videoUrlForActiveSkin == undefined || videoUrlForActiveSkin.length<1){
-      let searchTitle = replaceStringForSearchQuery(skinObject.name + champion.id);
-      if(activePath.includes('default')){
-       searchTitle = "classic+"+searchTitle;
-     }
-     let runQuery = `https://www.googleapis.com/youtube/v3/search?maxResults=1&key=${youtubeApiKey}&q=${searchTitle}`;
-     fetch(
-      runQuery
-    ).then((res3) => res3.json())
-      .then((data3) => {
-        let videoList = Object.values(data3.items);
-        // console.log(videoList);
-        let myVideoUrl = videoList[0]?.id?.videoId;
-        // console.log(myVideoUrl);
-        // console.log("searchTitle / result=> " + searchTitle + " / " +myVideoUrl);
-        mySkinDbFields = `${mySkinDbFields}
-      {
-        "hero": "${replaceStringForUrlFormat(champion.id)}",
-        "heroName": "${champion.name}",
-        "skin": "${replaceStringForUrlFormat(skinObject.name)}",
-        "skinName": "${skinObject.name}",
-        "pageUrl": "${activePath}",
-        "videoUrl": "${myVideoUrl}"
-      },`;
-      console.log(mySkinDbFields);
-    
-      });
-    } else {
-      mySkinDbFields = `${mySkinDbFields}
-    {
-      "hero": "${replaceStringForUrlFormat(champion.id)}",
-      "heroName": "${champion.name}",
-      "skin": "${replaceStringForUrlFormat(skinObject.name)}",
-      "skinName": "${skinObject.name}",
-      "pageUrl": "${activePath}",
-      "videoUrl": "${videoUrlForActiveSkin}"
-    },`;
-    }    
-  } else {
-    //eski yöntem
-    //todo düzeltilecek
-    mySkinDbFields = `${mySkinDbFields}
-    {
-      "hero": "${replaceStringForUrlFormat(champion.id)}",
-      "heroName": "${champion.name}",
-      "skin": "${replaceStringForUrlFormat(skinObject.name)}",
-      "skinName": "${skinObject.name}",
-      "pageUrl": "${activePath}",
-      "videoUrl": "${getExistingVideoPathByPageUrl(activePath)}"
-    },`;
-    //todo geçici 
-    mySkinDbFields = `${mySkinDbFields}
-    {
-      "hero": "${replaceStringForUrlFormat(champion.id)}",
-      "heroName": "${champion.name}",
-      "skin": "${replaceStringForUrlFormat(skinObject.name)}",
-      "skinName": "${skinObject.name}",
-      "pageUrl": "${activePath}",
-      "videoUrl": ""
-    },`;
-  }
-
-
-  
+  mySkinDbFields = `${mySkinDbFields}
+  {
+    "hero": "${replaceStringForUrlFormat(champion.id)}",
+    "heroName": "${champion.name}",
+    "skin": "${replaceStringForUrlFormat(skinObject.name)}",
+    "skinName": "${skinObject.name}",
+    "pageUrl": "${activePath}",
+    "videoUrl": "${getVideoPathByPageUrl(activePath)}"
+  },`;
   });
 
 
@@ -311,9 +219,6 @@ mySkinDb =
             fs.writeFileSync("public/sitemap.xml", sitemapXml);
             fs.writeFileSync("helper/LATEST_my_skin_video_db.json", mySkinDb);
           });
-
-        }
-
       });
     });
 

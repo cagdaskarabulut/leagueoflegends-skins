@@ -97,6 +97,8 @@ const HeroDetailInfos = ({ heroDetailsObject }) => {
           </Grid>
         </Grid>
       )}
+
+      <h5>Make Your Selection to Watch Skin Videos</h5>
     </div>
   );
 };

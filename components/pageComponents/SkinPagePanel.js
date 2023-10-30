@@ -30,7 +30,9 @@ const SkinPagePanel = ({ heroDetailsObject, skinVideo, activePath }) => {
         <iframe
           width="100%"
           height={iframeWidth}
-          src={skinVideo.videoUrl+"&autoplay=1"}
+          // src={skinVideo.videoUrl+"&autoplay=1"}
+          src={`https://www.youtube.com/embed/${skinVideo.videoUrl}?autoplay=1`}
+          // src={`https://www.youtube.com/embed/${skinVideo.videoUrl}?enablejsapi=1&autoplay=1&origin=http://www.leagueoflegends-skins.com`}
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
