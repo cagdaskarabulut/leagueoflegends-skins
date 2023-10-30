@@ -23,7 +23,7 @@ const CardItem = ({
   isSmallSize = isSmallSize == undefined ? false : isSmallSize;
   isSelected = isSelected == undefined ? false : isSelected;
   let activeWidth = isSmallSize ? 75 : 200;
-  let displayMode = isSmallSize ? "none" : "";
+  let displayMode = isSmallSize ? "none" : ((!likeAction && !shareAction) ? "none" : "");
   let containerStyle = isSmallSize
     ? (isSelected
       ? styles.CardItemSmallSelectedStyle
