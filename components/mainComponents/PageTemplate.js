@@ -5,6 +5,7 @@ import { MOBILE_SCREEN_SIZE } from "../../constants/GeneralConstants";
 import useWindowSize from "@rooks/use-window-size";
 import FooterPanel from "../mainComponents/FooterPanel";
 import MyGrid from "../toolComponents/MyGrid";
+import { Analytics } from '@vercel/analytics/react';
 
 //- Açılış sayfası , Hizmetlerimiz sayfası
 const PageTemplate = ({ content }) => {
@@ -59,6 +60,7 @@ const PageTemplate = ({ content }) => {
       <div className={styles.FooterStyle}>
         <FooterPanel />
       </div>
+      <Analytics />
       <style jsx global>{`
         body {
           margin: 0 !important;
