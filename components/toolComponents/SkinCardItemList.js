@@ -53,7 +53,7 @@ const SkinCardItemList = ({ skinList, heroDetailsObject, activeRoute }) => {
               onClickAction={() => cardClickAction(activeHeroRoute)}
               // likeAction={() => console.log("skin liked ")}
               // shareAction={() => console.log("skin shared ")}
-              isSelected={activeHeroRoute == activeRoute}
+              isSelected={activeHeroRoute.toLowerCase() == activeRoute.toLowerCase()}
               isSmallSize={isMobile}
             />
           </div>
