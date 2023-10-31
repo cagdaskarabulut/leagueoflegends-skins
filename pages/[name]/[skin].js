@@ -84,7 +84,8 @@ export async function getStaticProps(ctx) {
   objectDataList?.map((objectData,index) => {
     let activeHeroId = objectData.hero;
     let path = objectData.pageUrl;
-    if (path === activePath) {
+    // if (path === activePath) {
+    if (path.toLowerCase() === activePath.toLowerCase()) {
       isPageFound = true;
       heroId = activeHeroId;
     }
