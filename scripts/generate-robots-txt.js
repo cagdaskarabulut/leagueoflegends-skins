@@ -56,7 +56,7 @@ function generateRobotsTxtAndSitemapXml() {
     //- => Sadece skin videoları için kullanılır bu parametre ve console dan manuel alınıp kopyalanır. api kotası yetmezse yenisi alınır
     let isManualyAddingSkinVideos = false;
     let heroIdForManuallyAddingSkinVideos = '';
-    let youtubeApiKey = 'AIzaSyAdkfrmg-2t-xW05VKa4SWw-8b2Q6gFYbU';
+    let youtubeApiKey = '';
 
   // const dbDirectory = path.join(process.cwd(), "data", "db.json");
   // const jsonStr = fs.readFileSync(dbDirectory).toString();

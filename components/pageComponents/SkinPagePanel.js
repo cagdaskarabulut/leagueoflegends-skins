@@ -5,6 +5,7 @@ import SkinCardItemList from "../toolComponents/SkinCardItemList";
 import HeroDetailInfos from "../reusableComponents/HeroDetailInfos";
 import useWindowSize from "@rooks/use-window-size";
 import { MOBILE_SCREEN_SIZE } from "../../constants/GeneralConstants";
+import Link from '@mui/material/Link';
 
 const SkinPagePanel = ({ heroDetailsObject, skinVideo, activePath }) => {
   const { innerWidth } = useWindowSize();
@@ -26,6 +27,8 @@ const SkinPagePanel = ({ heroDetailsObject, skinVideo, activePath }) => {
 
   return (
     <div className={styles.SkinPagePanelContainerStyle}>
+      <Link href="/" underline="always">Back to champions list</Link>
+      <br /><br />
       {skinVideo != undefined &&  skinVideo.videoUrl.length>0 && (
         <iframe
           width="100%"

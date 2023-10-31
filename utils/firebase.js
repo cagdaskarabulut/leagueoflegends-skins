@@ -9,7 +9,6 @@ const firebaseConfig = {
   projectId: "leagueoflegends-skins-firebase",
   storageBucket: "leagueoflegends-skins-firebase.appspot.com",
   apiKey: "AIzaSyCEpmmY8u8q6Ow2JaghKJBx2z9MbULBLY0",
-  // apiKey: process.env.FIREBASE_API_KEY,
   measurementId: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS,
   authDomain: process.env.FIREBASE_AUTH_DOMAIN,
   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,

@@ -62,11 +62,8 @@ async function getVideoPathByPageUrl(pageUrl,searchTitle,isAddNewValue){
       searchTitle = "classic+"+searchTitle;
     }
 
-    // var key =  `AIzaSyAn6Q01ae2HXQjHzmVVenYNzdX1J0T7qks`;//process.env.YOUTUBE_KEY 
-    //AIzaSyBXwPN1fHU1et0oESEVBq1YZaatL5at6XI
-    //AIzaSyAl1_adv6WvrQHSiZxSjoUVDC0Bpwr9P_c
-    //AIzaSyDPmBZQzch4Gny5WdM0QLW0I4zSZ0qL3N4
-    let runQuery = `https://www.googleapis.com/youtube/v3/search?maxResults=1&key=AIzaSyB17qMGX2jO40ZNwPnKSYcJULdSiewvV38&q=${searchTitle}`;
+    // var key =  ``;//process.env.YOUTUBE_KEY 
+    let runQuery = `https://www.googleapis.com/youtube/v3/search?maxResults=1&key=...&q=${searchTitle}`;
     
     await fetch(runQuery).then((response) => {
       console.log("response: ");
@@ -242,7 +239,7 @@ daily
  if(activePath.includes('default')){
   searchTitle = "classic+"+searchTitle;
 }
-let runQuery = `https://www.googleapis.com/youtube/v3/search?maxResults=1&key=AIzaSyB17qMGX2jO40ZNwPnKSYcJULdSiewvV38&q=${searchTitle}`;
+let runQuery = `https://www.googleapis.com/youtube/v3/search?maxResults=1&key=...&q=${searchTitle}`;
 
 
 fetch(
