@@ -12,7 +12,7 @@ const HomePage = () => {
           imagePath="/images/lol-skins-icon.ico"
           imageAlt="League of Legends Skins"
         />
-        <PageTemplate content={<HomePagePanel />} />
+        <PageTemplate content={<HomePagePanel />}/>
       </>
   );
 };
