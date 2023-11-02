@@ -5,9 +5,9 @@ import { MOBILE_SCREEN_SIZE } from "../../constants/GeneralConstants";
 import useWindowSize from "@rooks/use-window-size";
 import FooterPanel from "../mainComponents/FooterPanel";
 import MyGrid from "../toolComponents/MyGrid";
-import { Analytics } from '@vercel/analytics/react';
-import Script from "next/script";
-import {Adsense} from '@ctrl/react-adsense';
+// import { Analytics } from '@vercel/analytics/react';
+// import Script from "next/script";
+// import {Adsense} from '@ctrl/react-adsense';
 
 //- Açılış sayfası , Hizmetlerimiz sayfası
 const PageTemplate = ({ content }) => {
@@ -45,12 +45,12 @@ const PageTemplate = ({ content }) => {
     // Google Ads
     return (
       <div className={styles.GoogleAdsPanelStyle}>
-        <ins className="adsbygoogle"
+        {/* <ins className="adsbygoogle"
         // style={{ display: 'block' }}
         data-ad-client="ca-pub-8764830534484668"
         data-ad-slot="9578340687"
         data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
+        data-full-width-responsive="true"></ins> */}
       </div>
     );
   };
@@ -59,20 +59,13 @@ const PageTemplate = ({ content }) => {
     // Google Ads
     return (
       <div className={styles.GoogleAdsPanelStyle}>
-        {/* <ins className="adsbygoogle"
-        style={{ display: 'block' }}
-        data-ad-client="ca-pub-8764830534484668"
-        data-ad-slot="9840412171"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins> */}
-
-        <Adsense
+        {/* <Adsense
           client="ca-pub-8764830534484668"
           slot="9840412171"
           style={{ display: 'block' }}
           layout="in-article"
           format="fluid"
-        />
+        /> */}
       </div>
     );
   };
@@ -92,7 +85,7 @@ const PageTemplate = ({ content }) => {
       <div className={styles.FooterStyle}>
         <FooterPanel />
       </div>
-      <Analytics />
+      {/* <Analytics /> */}
       <style jsx global>{`
         body {
           margin: 0 !important;
@@ -103,11 +96,11 @@ const PageTemplate = ({ content }) => {
       `}</style>
 
       {/* Google Ads */}
-      <Script
+      {/* <Script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
         strategy="afterInteractive"
-      />
+      /> */}
     </div>
   );
 };
