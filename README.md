@@ -1,4 +1,6 @@
 
+**Not:Yuklemeden önce dinamik üretilen dosyaların eksik kalmaması için localde çalıştırılması gerekiyor**
+
 # generate-robots-txt.js hakkında (Program çalışmadan önce çalıştırılan uygulama) :
 
 ## Standart yükleme için;
