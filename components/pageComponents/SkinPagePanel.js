@@ -6,8 +6,13 @@ import HeroDetailInfos from "../reusableComponents/HeroDetailInfos";
 import useWindowSize from "@rooks/use-window-size";
 import { MOBILE_SCREEN_SIZE } from "../../constants/GeneralConstants";
 import Link from '@mui/material/Link';
+import { Button } from "@mui/material";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { useRouter } from "next/navigation";
+import { Grid } from "@mui/material";
 
 const SkinPagePanel = ({ heroDetailsObject, skinVideo, activePath }) => {
+  const router = useRouter();
   const { innerWidth } = useWindowSize();
   const [isMobile, setIsMobile] = useState(false);
   const [iframeWidth, setIframeWidth] = useState("400");
@@ -27,8 +32,28 @@ const SkinPagePanel = ({ heroDetailsObject, skinVideo, activePath }) => {
 
   return (
     <div className={styles.SkinPagePanelContainerStyle}>
-      <Link href="/" underline="always">Back to champions list</Link>
-      <br /><br />
+      <div className={styles.SkinPageHeaderStyle}>
+      <Grid
+        spacing={2}
+        container
+        direction="row"
+        justifyContent="start"
+        alignItems="start"
+        columns={12}
+      >
+        <Grid item xs={12}>
+          <Button variant="text" startIcon={<ArrowBackIcon />} style={{color:"#02539D"}}
+          onClick={() => router.push("/")}>
+          Back to champions list
+          </Button>
+        </Grid>
+      </Grid>
+      
+      
+
+
+      </div>
+      
       {skinVideo != undefined &&  skinVideo.videoUrl.length>0 && (
         <iframe
           width="100%"

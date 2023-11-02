@@ -6,14 +6,14 @@ import styles from "./SkinCardItemList.module.scss";
 import { useRouter } from "next/navigation";
 import useWindowSize from "@rooks/use-window-size";
 import { MOBILE_SCREEN_SIZE } from "../../constants/GeneralConstants";
-import { Backdrop, CircularProgress } from '@mui/material';
-// import {wait} from '../../utils/CommonUtils';
+import { Backdrop, CircularProgress } from "@mui/material";
+import { wait } from "../../utils/CommonUtils";
 
 const SkinCardItemList = ({ skinList, heroDetailsObject, activeRoute }) => {
   const router = useRouter();
   let URL_imageRootPath =
     "https://ddragon.leagueoflegends.com/cdn/img/champion/loading/";
-    const { innerWidth } = useWindowSize();
+  const { innerWidth } = useWindowSize();
   const [isMobile, setIsMobile] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -24,12 +24,12 @@ const SkinCardItemList = ({ skinList, heroDetailsObject, activeRoute }) => {
       setIsMobile(innerWidth < MOBILE_SCREEN_SIZE);
     }
   }, [innerWidth]);
-  
+
   async function cardClickAction(activeHeroRoute) {
-    // setIsLoading(true);
-    // await wait(300);
-    await router.push("/" + activeHeroRoute);
-    // setIsLoading(false);
+    setIsLoading(true);
+    router.push("/" + activeHeroRoute);
+    await wait(300);
+    setIsLoading(false);
   }
 
   return (
@@ -47,13 +47,15 @@ const SkinCardItemList = ({ skinList, heroDetailsObject, activeRoute }) => {
         return (
           <div key={skinKey} className={styles.CardContainerStyle}>
             <CardItem
-              title={skinName}
+              title={skinName.toLowerCase() == "default" ? "Classic (default)" : skinName}
               imageAlt={replaceStringForUrlFormat(skinName)}
               imageUrl={skinImagePath}
               onClickAction={() => cardClickAction(activeHeroRoute)}
               // likeAction={() => console.log("skin liked ")}
               // shareAction={() => console.log("skin shared ")}
-              isSelected={activeHeroRoute.toLowerCase() == activeRoute.toLowerCase()}
+              isSelected={
+                activeHeroRoute.toLowerCase() == activeRoute.toLowerCase()
+              }
               isSmallSize={isMobile}
             />
           </div>
@@ -61,7 +63,7 @@ const SkinCardItemList = ({ skinList, heroDetailsObject, activeRoute }) => {
       })}
 
       <Backdrop
-        sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={isLoading}
       >
         <CircularProgress color="inherit" />

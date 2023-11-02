@@ -12,11 +12,11 @@ export default function SkinPage({ heroDetailsObject, skinVideo, activePath }) {
   let titleText = "";
   
   if(skinVideo.skinName == skinVideo.heroName){
-    titleText = `${skinVideo.heroName} All Skin Images and Videos: ${skinVideo.heroName} Cinematic / Trailer`;
+    titleText = `${skinVideo.heroName} All Skin Images and Skin Videos: ${skinVideo.heroName} Cinematic / Trailer`;
   } else if(skinVideo.skinName == 'default'){
-    titleText = `${skinVideo.heroName} Classic(default) Skin: ${skinVideo.heroName} Visual Showcase with Skin Images and Videos`;
+    titleText = `${skinVideo.heroName} Skin Video: ${skinVideo.heroName} Classic(default) Skin Images and Videos`;
   } else {
-    titleText = `${skinVideo.skinName} - ${skinVideo.heroName} Skin: ${skinVideo.heroName} Visual Showcase with Skin Images and Videos`;
+    titleText = `${skinVideo.skinName} Skin Video - ${skinVideo.heroName} : ${skinVideo.heroName} Visual Showcase with Skin Images and Videos`;
   }
   
   return (

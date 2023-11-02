@@ -50,20 +50,27 @@ function getExistingVideoPathByPageUrl(pageUrl){
   return result;
 }
 
+function returnXXXIfExistingVideoPathByPageUrl(pageUrl){
+  let result = "";
+    let videoUrlForActiveSkin = getExistingVideoPathByPageUrl(pageUrl);
+    if (videoUrlForActiveSkin == undefined || videoUrlForActiveSkin.length<1){
+      result = "";
+    } else {
+      result = "XXX";
+    }
+  return result;
+}
+
+
 
 function generateRobotsTxtAndSitemapXml() {
 
-    //- => Sadece skin videoları için kullanılır bu parametre ve console dan manuel alınıp kopyalanır. api kotası yetmezse yenisi alınır
-    let isManualyAddingSkinVideos = false;
-    let heroIdForManuallyAddingSkinVideos = '';
-    let youtubeApiKey = '';
-
-  // const dbDirectory = path.join(process.cwd(), "data", "db.json");
-  // const jsonStr = fs.readFileSync(dbDirectory).toString();
-  // const championsList = JSON.parse(jsonStr); // as Hero[];
-
+  //- => Sadece skin videoları için kullanılır bu parametre ve console dan manuel alınıp kopyalanır. api kotası yetmezse yenisi alınır
+  let isManualyAddingSkinVideos = false;
+  let heroIdForManuallyAddingSkinVideos = '';
+  let youtubeApiKey = '';
+  //- Common fields
   let rootPath = `https://leagueoflegends-skins.com`;
-  // let pagePathsFields = "";
   let mySkinDbFields = "";
   let now = getNowWithISOFormat();
   let dynamicRobotsTxtFields = "";
@@ -96,12 +103,10 @@ daily
       //_First Loop
       heroList.map((champion, index) => {
 
-        //TODO hero check sonradan kaldırılacak robotstxt ve sitemapxml için
     //- => Sadece skin videoları için kullanılır bu parametre ve console dan manuel alınıp kopyalanır. api kotası yetmezse yenisi alınır
-    if(isManualyAddingSkinVideos==false ||(isManualyAddingSkinVideos && champion.id ==heroIdForManuallyAddingSkinVideos)){
+    if(isManualyAddingSkinVideos == false ||(isManualyAddingSkinVideos && champion.id ==heroIdForManuallyAddingSkinVideos)){
 
         let heroBasePath = `${replaceStringForUrlFormat(champion.id)}/${replaceStringForUrlFormat(champion.id)}`;
-      
         //-generate
         dynamicRobotsTxtFields = `${dynamicRobotsTxtFields}Allow: /${heroBasePath}
 `;
@@ -132,24 +137,14 @@ daily
 //     },`;
 
 //todo düzeltilecek
-  //   mySkinDbFields = `${mySkinDbFields}
-  // {
-  //   "hero": "${replaceStringForUrlFormat(champion.id)}",
-  //   "heroName": "${champion.name}",
-  //   "skin": "${replaceStringForUrlFormat(champion.id)}",
-  //   "skinName": "${champion.name}",
-  //   "pageUrl": "${heroBasePath}",
-  //   "videoUrl": "${getExistingVideoPathByPageUrl(heroBasePath)}"
-  // },`;
-  //todo geçici    
-  mySkinDbFields = `${mySkinDbFields}
+    mySkinDbFields = `${mySkinDbFields}
   {
     "hero": "${replaceStringForUrlFormat(champion.id)}",
     "heroName": "${champion.name}",
     "skin": "${replaceStringForUrlFormat(champion.id)}",
     "skinName": "${champion.name}",
     "pageUrl": "${heroBasePath}",
-    "videoUrl": ""
+    "videoUrl": "${returnXXXIfExistingVideoPathByPageUrl(heroBasePath)}"
   },`;
 
         fetch(
@@ -207,11 +202,10 @@ daily
   //   "pageUrl": "${activePath}",
   //   "videoUrl": ""
   // },`;
-
+  
+  let fillVideoUrl = returnXXXIfExistingVideoPathByPageUrl(activePath);
   if (isManualyAddingSkinVideos){
-    let videoUrlForActiveSkin = getExistingVideoPathByPageUrl(activePath);
-
-    if (videoUrlForActiveSkin == undefined || videoUrlForActiveSkin.length<1){
+    if (fillVideoUrl == undefined || fillVideoUrl.length<1){
       let searchTitle = replaceStringForSearchQuery(skinObject.name + champion.id);
       if(activePath.includes('default')){
        searchTitle = "classic+"+searchTitle;
@@ -222,10 +216,7 @@ daily
     ).then((res3) => res3.json())
       .then((data3) => {
         let videoList = Object.values(data3.items);
-        // console.log(videoList);
         let myVideoUrl = videoList[0]?.id?.videoId;
-        // console.log(myVideoUrl);
-        // console.log("searchTitle / result=> " + searchTitle + " / " +myVideoUrl);
         mySkinDbFields = `${mySkinDbFields}
       {
         "hero": "${replaceStringForUrlFormat(champion.id)}",
@@ -246,12 +237,10 @@ daily
       "skin": "${replaceStringForUrlFormat(skinObject.name)}",
       "skinName": "${skinObject.name}",
       "pageUrl": "${activePath}",
-      "videoUrl": "${videoUrlForActiveSkin}"
+      "videoUrl": "${fillVideoUrl}"
     },`;
     }    
   } else {
-    //eski yöntem
-    //todo düzeltilecek
     mySkinDbFields = `${mySkinDbFields}
     {
       "hero": "${replaceStringForUrlFormat(champion.id)}",
@@ -259,18 +248,19 @@ daily
       "skin": "${replaceStringForUrlFormat(skinObject.name)}",
       "skinName": "${skinObject.name}",
       "pageUrl": "${activePath}",
-      "videoUrl": "${getExistingVideoPathByPageUrl(activePath)}"
+      "videoUrl": "${fillVideoUrl}"
     },`;
-    //todo geçici 
-    mySkinDbFields = `${mySkinDbFields}
-    {
-      "hero": "${replaceStringForUrlFormat(champion.id)}",
-      "heroName": "${champion.name}",
-      "skin": "${replaceStringForUrlFormat(skinObject.name)}",
-      "skinName": "${skinObject.name}",
-      "pageUrl": "${activePath}",
-      "videoUrl": ""
-    },`;
+
+    // todo geçici - Hata alması halinde kullanılıyor
+    // mySkinDbFields = `${mySkinDbFields}
+    // {
+    //   "hero": "${replaceStringForUrlFormat(champion.id)}",
+    //   "heroName": "${champion.name}",
+    //   "skin": "${replaceStringForUrlFormat(skinObject.name)}",
+    //   "skinName": "${skinObject.name}",
+    //   "pageUrl": "${activePath}",
+    //   "videoUrl": ""
+    // },`;
   }
 
 

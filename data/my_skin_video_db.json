@@ -3145,6 +3145,14 @@
       "videoUrl": "u_W5Aj8OiF0"
     },
     {
+      "hero": "Amumu",
+      "heroName": "Amumu",
+      "skin": "HextechAmumu",
+      "skinName": "Hextech Amumu",
+      "pageUrl": "Amumu/HextechAmumu",
+      "videoUrl": "OjcTrqt9PPI"
+    },
+    {
       "hero": "Blitzcrank",
       "heroName": "Blitzcrank",
       "skin": "VictoriousBlitzcrank",
@@ -5807,6 +5815,14 @@
       "skinName": "PROJECT: Ashe",
       "pageUrl": "Ashe/PROJECT:Ashe",
       "videoUrl": "dnqXhggpFUs"
+    },
+    {
+      "hero": "Ashe",
+      "heroName": "Ashe",
+      "skin": "CosmicQueenAshe",
+      "skinName": "Cosmic Queen Ashe",
+      "pageUrl": "Ashe/CosmicQueenAshe",
+      "videoUrl": "aGv21RB0HLo"
     },
     {
       "hero": "Illaoi",
