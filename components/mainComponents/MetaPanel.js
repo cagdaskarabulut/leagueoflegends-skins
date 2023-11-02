@@ -22,7 +22,7 @@ const MetaPanel = ({
   let iconHref = iconPath ? iconPath : siteUrl + "/images/favicon.ico";
   return (
     <Head>
-      {/* <Script src="https://www.googletagmanager.com/gtag/js?id=G-R8TDC7FSGG" />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-R8TDC7FSGG" />
       <Script id="google-analytics">
         {`
           window.dataLayer = window.dataLayer || [];
@@ -38,7 +38,7 @@ const MetaPanel = ({
         strategy="afterInteractive"
         crossOrigin="anonymous"
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8764830534484668"
-      > </Script> */}
+      > </Script>
 
       {title != null && title != "" && (
         <>
