@@ -46,7 +46,7 @@ const PageTemplate = ({ content }) => {
     return (
       <div className={styles.GoogleAdsPanelStyle}>
         <ins className="adsbygoogle"
-        style={{ display: 'block' }}
+        // style={{ display: 'block' }}
         data-ad-client="ca-pub-8764830534484668"
         data-ad-slot="9578340687"
         data-ad-format="auto"
