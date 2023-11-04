@@ -79,9 +79,7 @@
 
   .GoogleAdsPanelStyle {
     // background-color: red !important;
-    
-    width: 100px !important;
-    height: 400px !important;
+
     @include tablet-or-less {
       max-height: 50px !important;
     }
