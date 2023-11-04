@@ -22,13 +22,6 @@ const MetaPanel = ({
   let iconHref = iconPath ? iconPath : siteUrl + "/images/favicon.ico";
   return (
     <Head>
-      
-      <Script
-        id="adsbygoogle-init"
-        strategy="afterInteractive"
-        crossOrigin="anonymous"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8764830534484668"
-      > </Script>
 
       {title != null && title != "" && (
         <>
@@ -121,12 +114,7 @@ const MetaPanel = ({
 
       <meta name="google-adsense-account" content="ca-pub-8764830534484668" />
       
-      {/* Google Ads */}
-      {/* google adsense its enough for automatically adding ads */}
-      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8764830534484668"
-     crossOrigin="anonymous"
-     ></Script>
-    {/* strategy="afterInteractive" */}
+      
      
 
     </Head>

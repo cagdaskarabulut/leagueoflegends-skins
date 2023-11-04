@@ -5,9 +5,9 @@ import { MOBILE_SCREEN_SIZE } from "../../constants/GeneralConstants";
 import useWindowSize from "@rooks/use-window-size";
 import FooterPanel from "../mainComponents/FooterPanel";
 import MyGrid from "../toolComponents/MyGrid";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
-import {Adsense} from '@ctrl/react-adsense';
+import { Adsense } from "@ctrl/react-adsense";
 
 //- Açılış sayfası , Hizmetlerimiz sayfası
 const PageTemplate = ({ content }) => {
@@ -25,7 +25,7 @@ const PageTemplate = ({ content }) => {
 
   useEffect(() => {
     // Google Ads
-    var ads = document.getElementsByClassName('adsbygoogle').length;
+    var ads = document.getElementsByClassName("adsbygoogle").length;
     for (var i = 0; i < ads; i++) {
       try {
         (window.adsbygoogle = window.adsbygoogle || []).push({});
@@ -45,12 +45,14 @@ const PageTemplate = ({ content }) => {
     // Google Ads
     return (
       <div className={styles.GoogleAdsPanelStyle}>
-        <ins className="adsbygoogle"
-        // style={{ display: 'block' }}
-        data-ad-client="ca-pub-8764830534484668"
-        data-ad-slot="9578340687"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
+        {/* <ins
+          className="adsbygoogle"
+          // style={{ display: 'block' }}
+          data-ad-client="ca-pub-8764830534484668"
+          data-ad-slot="9578340687"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins> */}
       </div>
     );
   };
@@ -59,13 +61,13 @@ const PageTemplate = ({ content }) => {
     // Google Ads
     return (
       <div className={styles.GoogleAdsPanelStyle}>
-        <Adsense
+        {/* <Adsense
           client="ca-pub-8764830534484668"
           slot="9840412171"
-          style={{ display: 'block' }}
+          style={{ display: "block" }}
           layout="in-article"
           format="fluid"
-        />
+        /> */}
       </div>
     );
   };
@@ -82,6 +84,24 @@ const PageTemplate = ({ content }) => {
           gtag('config', 'G-R8TDC7FSGG');
         `}
       </Script>
+      {/* <Script
+        id="adsbygoogle-init"
+        strategy="afterInteractive"
+        crossOrigin="anonymous"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8764830534484668"
+      >
+        {" "}
+      </Script> */}
+
+      {/* Google Ads */}
+      {/* google adsense its enough for automatically adding ads */}
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8764830534484668"
+        crossOrigin="anonymous"
+      ></Script>
+      {/* strategy="afterInteractive" */}
+
       <div className={styles.HeaderStyle}>
         <HeaderField />
       </div>
@@ -100,7 +120,7 @@ const PageTemplate = ({ content }) => {
         body {
           margin: 0 !important;
           padding: 0 !important;
-          font-family: 'Times New Roman' !important;
+          font-family: "Times New Roman" !important;
           font-size: 14px !important;
         }
       `}</style>
