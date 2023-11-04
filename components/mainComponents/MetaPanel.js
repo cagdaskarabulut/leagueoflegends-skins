@@ -22,17 +22,7 @@ const MetaPanel = ({
   let iconHref = iconPath ? iconPath : siteUrl + "/images/favicon.ico";
   return (
     <Head>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-R8TDC7FSGG" />
-      <Script id="google-analytics">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
- 
-          gtag('config', 'G-R8TDC7FSGG');
-        `}
-      </Script>
-
+      
       <Script
         id="adsbygoogle-init"
         strategy="afterInteractive"
