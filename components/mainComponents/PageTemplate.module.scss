@@ -67,8 +67,8 @@
   padding: 30px !important;
 
   @include tablet-or-less {
-    padding: 10px !important;
-    margin-top: -px !important;
+    padding: 0px !important;
+    // margin-top: -px !important;
 
     :global {
       .MuiGrid-root {

@@ -16,6 +16,7 @@ const PageTemplate = ({ content }) => {
   const { innerWidth, innerHeight, outerHeight, outerWidth } = useWindowSize();
   const [isMobile, setIsMobile] = useState(false);
   const [isHuge, setIsHuge] = useState(false);
+  const [ contentSize, setContentSize] = useState("md");
 
   //_ Update when page resolution changes
   useEffect(() => {
@@ -25,6 +26,18 @@ const PageTemplate = ({ content }) => {
       setIsMobile(innerWidth < MOBILE_SCREEN_SIZE ? true : false);
       setIsHuge(innerWidth > HUGE_SCREEN_SIZE ? true : false);
     }
+
+    if(isHuge){
+      setContentSize("lg");
+      console.log("lg");
+    } else if(isMobile){
+      setContentSize("xl");
+      console.log("xl");
+    } else {
+      setContentSize("md");
+      console.log("md");
+    }
+    
   }, [innerWidth]);
 
   useEffect(() => {
@@ -104,15 +117,15 @@ const PageTemplate = ({ content }) => {
         <HeaderField />
       </div>
       <div className={styles.ContentStyle}>
-        <MyGrid
+        {/* <MyGrid
           leftContent={<LeftField />}
           middleContent={content}
           rightContent={<RightField />}
-        />
+        /> */}
         
-      {/* <Container maxWidth={isMobile ? "xl" : (isHuge ? "xl" : "md")}>
+      <Container maxWidth={contentSize} disableGutters={true}>
         {content}
-      </Container> */}
+      </Container>
 
       </div>
       <div className={styles.FooterStyle}>
