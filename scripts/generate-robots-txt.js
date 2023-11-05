@@ -10,7 +10,8 @@ function getNowWithISOFormat() {
 
 //- sadece api den gelen hero id leri kullanılarak sayfa path leri tanımlanabilir
 function replaceStringForUrlFormat(myString) {
-  myString = myString.replace(/ /g, "");
+  myString = myString.replace(/ /g, "-");
+  myString = myString.split('.').join('');
   myString = myString.replace(/'/g, "");
   myString = myString.replace(/"/g, "");
   myString = myString.replace(/\//g, "");
@@ -71,6 +72,8 @@ function generateRobotsTxtAndSitemapXml() {
   let youtubeApiKey = '';
   //- Common fields
   let rootPath = `https://leagueoflegends-skins.com`;
+  let subDomainrootPath = `https://www.leagueoflegends-skins.com`;
+  let otherSubDomainrootPath = `https://lol-skins.leagueoflegends-skins.com`;
   let mySkinDbFields = "";
   let now = getNowWithISOFormat();
   let dynamicRobotsTxtFields = "";
@@ -78,6 +81,34 @@ function generateRobotsTxtAndSitemapXml() {
 <url>
 <loc>
 ${rootPath}
+</loc>
+<lastmod>
+${now}
+</lastmod>
+<changefreq>
+daily
+</changefreq>
+<priority>
+0.7
+</priority>
+</url>
+<url>
+<loc>
+${subDomainrootPath}
+</loc>
+<lastmod>
+${now}
+</lastmod>
+<changefreq>
+daily
+</changefreq>
+<priority>
+0.7
+</priority>
+</url>
+<url>
+<loc>
+${otherSubDomainrootPath}
 </loc>
 <lastmod>
 ${now}
@@ -277,6 +308,7 @@ daily
             robotsTxt = 
 `# *
 User-agent: *
+Allow: /
 ${dynamicRobotsTxtFields}
 Disallow: /AdminPanel
 Disallow: /AdminPanelLogin

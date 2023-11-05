@@ -92,7 +92,7 @@ const PageTemplate = ({ content }) => {
   return (
     <div className={styles.BodyStyle}>
       {/* Google Analytics */}
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-R8TDC7FSGG" />
+      {/* <Script src="https://www.googletagmanager.com/gtag/js?id=G-R8TDC7FSGG" />
       <Script id="google-analytics">
         {`
           window.dataLayer = window.dataLayer || [];
@@ -101,7 +101,7 @@ const PageTemplate = ({ content }) => {
  
           gtag('config', 'G-R8TDC7FSGG');
         `}
-      </Script>
+      </Script> */}
       
       
 
