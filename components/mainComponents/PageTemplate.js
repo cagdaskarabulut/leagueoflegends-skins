@@ -104,15 +104,15 @@ const PageTemplate = ({ content }) => {
         <HeaderField />
       </div>
       <div className={styles.ContentStyle}>
-        {/* <MyGrid
+        <MyGrid
           leftContent={<LeftField />}
           middleContent={content}
           rightContent={<RightField />}
-        /> */}
+        />
         
-      <Container maxWidth={isMobile ? "xl" : (isHuge ? "xl" : "md")}>
+      {/* <Container maxWidth={isMobile ? "xl" : (isHuge ? "xl" : "md")}>
         {content}
-      </Container>
+      </Container> */}
 
       </div>
       <div className={styles.FooterStyle}>
