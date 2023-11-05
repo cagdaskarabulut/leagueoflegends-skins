@@ -8,6 +8,8 @@ import MyGrid from "../toolComponents/MyGrid";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 import { Adsense } from "@ctrl/react-adsense";
+import { Container, Grid } from "@mui/material";
+
 
 //- Açılış sayfası , Hizmetlerimiz sayfası
 const PageTemplate = ({ content }) => {
@@ -106,11 +108,16 @@ const PageTemplate = ({ content }) => {
         <HeaderField />
       </div>
       <div className={styles.ContentStyle}>
-        <MyGrid
+        {/* <MyGrid
           leftContent={<LeftField />}
           middleContent={content}
           rightContent={<RightField />}
-        />
+        /> */}
+        
+        <Container maxWidth="md">
+        {content}
+      </Container>
+
       </div>
       <div className={styles.FooterStyle}>
         <FooterPanel />
