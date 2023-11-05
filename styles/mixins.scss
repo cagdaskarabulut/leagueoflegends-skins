@@ -1,5 +1,11 @@
 @import "./colors.scss";
 
+@mixin desktopHuge {
+  @media (min-width: 1850px) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: 1025px) {
     @content;

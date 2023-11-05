@@ -1,7 +1,7 @@
 import styles from "./PageTemplate.module.scss";
 import Header from "./Header";
 import { useCallback, useContext, useEffect, useState } from "react";
-import { MOBILE_SCREEN_SIZE } from "../../constants/GeneralConstants";
+import { MOBILE_SCREEN_SIZE, HUGE_SCREEN_SIZE } from "../../constants/GeneralConstants";
 import useWindowSize from "@rooks/use-window-size";
 import FooterPanel from "../mainComponents/FooterPanel";
 import MyGrid from "../toolComponents/MyGrid";
@@ -15,6 +15,7 @@ import { Container, Grid } from "@mui/material";
 const PageTemplate = ({ content }) => {
   const { innerWidth, innerHeight, outerHeight, outerWidth } = useWindowSize();
   const [isMobile, setIsMobile] = useState(false);
+  const [isHuge, setIsHuge] = useState(false);
 
   //_ Update when page resolution changes
   useEffect(() => {
@@ -22,6 +23,7 @@ const PageTemplate = ({ content }) => {
       setIsMobile(false);
     } else {
       setIsMobile(innerWidth < MOBILE_SCREEN_SIZE ? true : false);
+      setIsHuge(innerWidth > HUGE_SCREEN_SIZE ? true : false);
     }
   }, [innerWidth]);
 
@@ -108,7 +110,7 @@ const PageTemplate = ({ content }) => {
           rightContent={<RightField />}
         /> */}
         
-      <Container maxWidth={isMobile ? "lg" : "md"}>
+      <Container maxWidth={isMobile ? "lg" : (isHuge ? "xl" : "md")}>
         {content}
       </Container>
 
