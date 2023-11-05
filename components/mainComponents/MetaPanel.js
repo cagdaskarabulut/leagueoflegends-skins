@@ -112,8 +112,7 @@ const MetaPanel = ({
       {/* <meta httpEquiv="Reply-to" content="oznurilhan@windowslive.com" /> */}
       <meta name="mobile-web-app-capable" content="yes" />
 
-      <meta name="google-adsense-account" content="ca-pub-8764830534484668" />
-      
+      <meta name="google-adsense-account" content="ca-pub-8764830534484668" />      
       
      
 

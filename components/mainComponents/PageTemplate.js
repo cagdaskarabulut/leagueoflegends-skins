@@ -76,6 +76,7 @@ const PageTemplate = ({ content }) => {
 
   return (
     <div className={styles.BodyStyle}>
+      {/* Google Analytics */}
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-R8TDC7FSGG" />
       <Script id="google-analytics">
         {`
@@ -86,22 +87,15 @@ const PageTemplate = ({ content }) => {
           gtag('config', 'G-R8TDC7FSGG');
         `}
       </Script>
-      {/* <Script
-        id="adsbygoogle-init"
-        strategy="afterInteractive"
-        crossOrigin="anonymous"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8764830534484668"
-      >
-        {" "}
-      </Script> */}
-
-      {/* Google Ads */}
+      
+      {/* Google Adsense */}
       {/* google adsense its enough for automatically adding ads */}
       <Script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8764830534484668"
         crossOrigin="anonymous"
       ></Script>
+
       {/* strategy="afterInteractive" */}
 
       <div className={styles.HeaderStyle}>
@@ -114,7 +108,7 @@ const PageTemplate = ({ content }) => {
           rightContent={<RightField />}
         /> */}
         
-        <Container maxWidth="md">
+      <Container maxWidth={isMobile ? "lg" : "md"}>
         {content}
       </Container>
 
