@@ -112,10 +112,16 @@ const MetaPanel = ({
       {/* <meta httpEquiv="Reply-to" content="oznurilhan@windowslive.com" /> */}
       <meta name="mobile-web-app-capable" content="yes" />
 
-      <meta name="google-adsense-account" content="ca-pub-8764830534484668" />      
+      {/* <meta name="google-adsense-account" content="ca-pub-8764830534484668" />       */}
       
      
-
+      {/* Google Adsense */}
+      {/* google adsense its enough for automatically adding ads */}
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8764830534484668"
+        crossOrigin="anonymous"
+      ></Script>
     </Head>
   );
 };

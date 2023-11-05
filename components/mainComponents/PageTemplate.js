@@ -7,7 +7,7 @@ import FooterPanel from "../mainComponents/FooterPanel";
 import MyGrid from "../toolComponents/MyGrid";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
-import { Adsense } from "@ctrl/react-adsense";
+// import { Adsense } from "@ctrl/react-adsense";
 import { Container, Grid } from "@mui/material";
 
 
@@ -29,13 +29,13 @@ const PageTemplate = ({ content }) => {
 
     if(isHuge){
       setContentSize("lg");
-      console.log("lg");
+      // console.log("lg");
     } else if(isMobile){
       setContentSize("xl");
-      console.log("xl");
+      // console.log("xl");
     } else {
       setContentSize("md");
-      console.log("md");
+      // console.log("md");
     }
     
   }, [innerWidth]);
@@ -103,13 +103,7 @@ const PageTemplate = ({ content }) => {
         `}
       </Script>
       
-      {/* Google Adsense */}
-      {/* google adsense its enough for automatically adding ads */}
-      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8764830534484668"
-        crossOrigin="anonymous"
-      ></Script>
+      
 
       {/* strategy="afterInteractive" */}
 
