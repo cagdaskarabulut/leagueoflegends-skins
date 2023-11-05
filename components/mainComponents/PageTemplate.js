@@ -110,7 +110,7 @@ const PageTemplate = ({ content }) => {
           rightContent={<RightField />}
         /> */}
         
-      <Container maxWidth={isMobile ? "lg" : (isHuge ? "xl" : "md")}>
+      <Container maxWidth={isMobile ? "xl" : (isHuge ? "xl" : "md")}>
         {content}
       </Container>
 
