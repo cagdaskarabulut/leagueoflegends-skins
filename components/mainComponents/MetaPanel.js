@@ -91,7 +91,7 @@ const MetaPanel = ({
       {/* <meta name="google-site-verification" content="ZqEtWJqvbP4hrjZXAHOhtMDausn70UMrPIHHIMQORDk" />
       <meta name="yandex-verification" content="482b1df21423a716" /> */}
 
-      <meta name="language" content="English" />
+      <meta name="language" content="devEnglish" />
       <meta name="author" content="gedadh" />
       <meta name="revisit-after" content="7 days" />
       <meta
@@ -117,11 +117,8 @@ const MetaPanel = ({
      
       {/* Google Adsense */}
       {/* google adsense its enough for automatically adding ads */}
-      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8764830534484668"
-        crossOrigin="anonymous"
-      ></Script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8764830534484668"
+     crossorigin="anonymous"></script>
     </Head>
   );
 };
