@@ -1,6 +1,5 @@
 export const replaceStringForUrlFormat = (myString) => {
-  myString = myString.replace(/ /g, "-");
-  myString = myString.split('.').join('');
+  myString = myString.replace(/ /g, "");
   myString = myString.replace(/'/g, "");
   myString = myString.replace(/"/g, "");
   myString = myString.replace(/\//g, "");
