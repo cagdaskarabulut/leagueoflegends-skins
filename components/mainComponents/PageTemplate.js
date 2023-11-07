@@ -70,6 +70,19 @@ const PageTemplate = ({ content }) => {
           data-ad-format="auto"
           data-full-width-responsive="true"
         ></ins> */}
+        <div id="yandex_rtb_R-A-3762197-3"></div>
+          <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.yaContextCb.push(()=>{
+              Ya.Context.AdvManager.render({
+                "blockId": "R-A-3762197-3",
+                "renderTo": "yandex_rtb_R-A-3762197-3"
+              })
+            })
+              `,
+          }}
+        />
       </div>
     );
   };
@@ -111,15 +124,15 @@ const PageTemplate = ({ content }) => {
         <HeaderField />
       </div>
       <div className={styles.ContentStyle}>
-        {/* <MyGrid
+        <MyGrid
           leftContent={<LeftField />}
           middleContent={content}
           rightContent={<RightField />}
-        /> */}
+        />
         
-      <Container maxWidth={contentSize} disableGutters={true}>
+      {/* <Container maxWidth={contentSize} disableGutters={true}>
         {content}
-      </Container>
+      </Container> */}
 
       </div>
       <div className={styles.FooterStyle}>

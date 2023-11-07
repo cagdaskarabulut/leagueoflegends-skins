@@ -19,7 +19,16 @@ const App = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-
+        {/* Yandex Ads - Start       */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.yaContextCb=window.yaContextCb||[]
+            `,
+          }}
+        />
+        <script src="https://yandex.ru/ads/system/context.js" async></script>
+        {/* Yandex Ads - End       */}
 
         {/* Google Ads - Start */}
         <script
@@ -42,26 +51,7 @@ const App = ({ Component, pageProps }) => {
           }}
         />
         {/* Google - End */}
-
-
-
-
-        {/* Yandex Ads - Start       */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.yaContextCb=window.yaContextCb||[]
-            `,
-          }}
-        />
-        <script src="https://yandex.ru/ads/system/context.js" async></script>
-        {/* Yandex Ads - End       */}
-
-
-
       </Head>
-
-
 
       {/* Google Analytics - Start */}
       <Script
@@ -70,10 +60,19 @@ const App = ({ Component, pageProps }) => {
       />
       {/* Google Analytics - End */}
 
-
-
-
       {/* Yandex Ads - Start */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.yaContextCb.push(()=>{
+              Ya.Context.AdvManager.render({
+                "blockId": "R-A-3762197-2",
+                "type": "topAd"
+              })
+            })
+            `,
+        }}
+      />
       <script
         dangerouslySetInnerHTML={{
           __html: `
@@ -88,9 +87,6 @@ const App = ({ Component, pageProps }) => {
         }}
       />
       {/* Yandex Ads - End */}
-
-
-      
 
       <Component {...pageProps} />
     </>
