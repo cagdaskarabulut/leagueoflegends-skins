@@ -19,17 +19,6 @@ const App = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        {/* Yandex Ads - Start       */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.yaContextCb=window.yaContextCb||[]
-            `,
-          }}
-        />
-        <script src="https://yandex.ru/ads/system/context.js" async></script>
-        {/* Yandex Ads - End       */}
-
         {/* Google Ads - Start */}
         <script
           async
@@ -59,34 +48,6 @@ const App = ({ Component, pageProps }) => {
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
       />
       {/* Google Analytics - End */}
-
-      {/* Yandex Ads - Start */}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.yaContextCb.push(()=>{
-              Ya.Context.AdvManager.render({
-                "blockId": "R-A-3762197-2",
-                "type": "topAd"
-              })
-            })
-            `,
-        }}
-      />
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.yaContextCb.push(()=>{
-              Ya.Context.AdvManager.render({
-                "blockId": "R-A-3762197-1",
-                "type": "floorAd",
-                "platform": "desktop"
-              })
-            })
-            `,
-        }}
-      />
-      {/* Yandex Ads - End */}
 
       <Component {...pageProps} />
     </>
