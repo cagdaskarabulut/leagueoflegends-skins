@@ -9,25 +9,21 @@ import { MOBILE_SCREEN_SIZE } from "../../constants/GeneralConstants";
 import { Backdrop, CircularProgress } from "@mui/material";
 import { wait } from "../../utils/CommonUtils";
 
-const SkinCardItemList = ({ skinList, heroDetailsObject, activeRoute }) => {
+const SkinCardItemList = ({ skinList, heroDetailsObject, activeRoute, isMobile }) => {
   const router = useRouter();
   let URL_imageRootPath =
     "https://ddragon.leagueoflegends.com/cdn/img/champion/loading/";
   const { innerWidth } = useWindowSize();
-  const [isMobile, setIsMobile] = useState(false);
-  const [isSmallSize, setIsSmallSize] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    if (innerWidth === null) {
-      setIsMobile(false);
-      setIsSmallSize(false);
-    } else {
-      setIsMobile(innerWidth < MOBILE_SCREEN_SIZE);
-      setIsSmallSize(innerWidth < MOBILE_SCREEN_SIZE);
-    }
-    
-  }, [innerWidth]);
+  // useEffect(() => {
+  //   if (innerWidth === null) {
+  //     setIsMobile(false);
+  //   } else {
+  //     setIsMobile(innerWidth < MOBILE_SCREEN_SIZE);
+  //   }
+  // }, [innerWidth]);
 
   async function cardClickAction(activeHeroRoute) {
     setIsLoading(true);
@@ -58,7 +54,7 @@ const SkinCardItemList = ({ skinList, heroDetailsObject, activeRoute }) => {
               isSelected={
                 activeHeroRoute.toLowerCase() == activeRoute.toLowerCase()
               }
-              isSmallSize={isSmallSize}
+              isSmallSize={isMobile}
             />
           </div>
         );

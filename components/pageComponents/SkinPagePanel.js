@@ -55,6 +55,7 @@ const SkinPagePanel = ({
           skinList={heroDetailsObject.skins}
           heroDetailsObject={heroDetailsObject}
           activeRoute={activePath}
+          isMobile={isMobile}
         />
       </div>
     );
