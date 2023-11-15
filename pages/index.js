@@ -43,7 +43,7 @@ export default function HomePage({ allSkinsList }) {
             position: fixed !important;
             z-index: -1;
           }
-          @keyframes animate {
+          @-webkit-keyframes animate {
             0% {
               background-image: url("images/indexBackground.jpg");
             }
