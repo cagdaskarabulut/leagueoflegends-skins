@@ -18,10 +18,7 @@
   
 }
 
-.standartSize:hover,
-.standartSize:focus,
-.smallSize:hover,
-.smallSize:focus,
+
 .standartSizeSelected,
 .smallSizeSelected {
   position: relative !important;
@@ -29,4 +26,17 @@
   margin: -15px !important;
   position: relative !important;
   z-index: 10 !important;
+}
+
+@include desktop {
+  .standartSize:hover,
+  .standartSize:focus,
+  .smallSize:hover,
+  .smallSize:focus {
+    position: relative !important;
+    padding: 15px !important;
+    margin: -15px !important;
+    position: relative !important;
+    z-index: 10 !important;
+  }
 }
