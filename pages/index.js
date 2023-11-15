@@ -46,15 +46,15 @@ export default function HomePage({ allSkinsList }) {
           // }
           @-webkit-keyframes animate {
             0% {
-              background-image: url("images/indexBackground.jpg");
+              background-image: url("images/indexBackground.jpg") !important;
             }
 
             50% {
-              background-image: url("images/indexBackground1.jpg");
+              background-image: url("images/indexBackground1.jpg") !important;
             }
 
             100% {
-              background-image: url("images/indexBackground2.jpg");
+              background-image: url("images/indexBackground2.jpg") !important;
             }
           }
         `}</style>
