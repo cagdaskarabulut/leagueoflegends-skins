@@ -248,35 +248,7 @@ const SkinPagePanel = ({
           <FooterPanel />
         </div>
         <Analytics />
-        <style jsx global>{`
-          body {
-            margin: 0 !important;
-            padding: 0 !important;
-            font-size: 14px !important;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100vh;
-            background-size: cover;
-            background-image: url(${splashPath}) !important;
-          }
-          body::after {
-            content: "";
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100vh;
-            background-size: cover;
-            background-color: black !important;
-            opacity: 0.5 !important;
-            position: fixed !important;
-            z-index: -1;
-          }
-        `}</style>
+       
       </div>
     </>
   );

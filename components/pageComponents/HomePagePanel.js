@@ -218,50 +218,7 @@ const HomePagePanel = ({ allSkinsList }) => {
         <FooterPanel />
 
         <Analytics />
-        <style jsx global>{`
-          body {
-            margin: 0 !important;
-            padding: 0 !important;
-            font-size: 14px !important;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100vh;
-            background-size: cover;
-            -ms-animation: animate 30s ease infinite alternate;
-            -webkit-animation: animate 30s ease infinite alternate;
-            -moz-animation: animate 30s ease infinite alternate;
-          }
-          body::after {
-            content: "";
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100vh;
-            background-size: cover;
-            background-color: black !important;
-            opacity: 0.5 !important;
-            position: fixed !important;
-            z-index: -1;
-          }
-          @keyframes animate {
-            0% {
-              background-image: url("images/indexBackground.jpg");
-            }
-
-            50% {
-              background-image: url("images/indexBackground1.jpg");
-            }
-
-            100% {
-              background-image: url("images/indexBackground2.jpg");
-            }
-          }
-        `}</style>
+        
       </div>
     </>
   );
