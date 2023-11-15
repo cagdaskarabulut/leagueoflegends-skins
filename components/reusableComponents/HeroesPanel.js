@@ -43,7 +43,6 @@ const HeroesPanel = () => {
             <div key={activeHeroId} className={styles.CardContainerStyle}> 
               <CardItem
                 title={activeHeroName}
-                // description={hero.title}
                 imageAlt={replaceStringForUrlFormat(activeHeroName)}
                 imageUrl={activeHeroMainImagePath}
                 onClickAction={() => cardClickAction(activeHeroRoute)}

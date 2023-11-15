@@ -15,14 +15,18 @@ const SkinCardItemList = ({ skinList, heroDetailsObject, activeRoute }) => {
     "https://ddragon.leagueoflegends.com/cdn/img/champion/loading/";
   const { innerWidth } = useWindowSize();
   const [isMobile, setIsMobile] = useState(false);
+  const [isSmallSize, setIsSmallSize] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     if (innerWidth === null) {
       setIsMobile(false);
+      setIsSmallSize(false);
     } else {
       setIsMobile(innerWidth < MOBILE_SCREEN_SIZE);
+      setIsSmallSize(innerWidth < MOBILE_SCREEN_SIZE);
     }
+    
   }, [innerWidth]);
 
   async function cardClickAction(activeHeroRoute) {
@@ -54,7 +58,7 @@ const SkinCardItemList = ({ skinList, heroDetailsObject, activeRoute }) => {
               isSelected={
                 activeHeroRoute.toLowerCase() == activeRoute.toLowerCase()
               }
-              isSmallSize={isMobile}
+              isSmallSize={isSmallSize}
             />
           </div>
         );

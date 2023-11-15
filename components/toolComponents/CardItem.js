@@ -63,7 +63,7 @@ const CardItem = ({
           </CardContent>
         </ButtonBase>
 
-        <CardActions disableSpacing style={{ display: displayMode }}>
+        {/* <CardActions disableSpacing style={{ display: displayMode }}>
           <IconButton
             aria-label="add to favorites"
             onClick={() => {
@@ -80,7 +80,7 @@ const CardItem = ({
           >
             <ShareIcon />
           </IconButton>
-        </CardActions>
+        </CardActions> */}
       </Card>
     </div>
   );
