@@ -25,9 +25,10 @@ export default function HomePage({ allSkinsList }) {
             width: 100%;
             height: 100vh;
             background-size: cover;
-            -ms-animation: animate 5s ease infinite alternate;
-            -webkit-animation: animate 5s ease infinite alternate;
-            -moz-animation: animate 5s ease infinite alternate;
+            background-image: url("images/indexBackground1.jpg") !important;
+            // -ms-animation: animate 5s ease infinite alternate;
+            // -webkit-animation: animate 5s ease infinite alternate;
+            // -moz-animation: animate 5s ease infinite alternate;
           }
           // body::after {
           //   content: "";
@@ -43,24 +44,24 @@ export default function HomePage({ allSkinsList }) {
           //   position: fixed !important;
           //   z-index: -1;
           // }
-          @keyframes animate {
-            0%,
-            100% {
-              background-image: url("images/indexBackground.jpg");
-            }
+          // @keyframes animate {
+          //   0%,
+          //   100% {
+          //     background-image: url("images/indexBackground.jpg") !important;
+          //   }
 
-            0%{
-              background-image: url("images/indexBackground.jpg");
-            }
+          //   0%{
+          //     background-image: url("images/indexBackground.jpg") !important;
+          //   }
 
-            50% {
-              background-image: url("images/indexBackground1.jpg");
-            }
+          //   50% {
+          //     background-image: url("images/indexBackground1.jpg") !important;
+          //   }
 
-            100% {
-              background-image: url("images/indexBackground2.jpg");
-            }
-          }
+          //   100% {
+          //     background-image: url("images/indexBackground2.jpg") !important;
+          //   }
+          // }
         `}</style>
 
 {/* <style jsx global>{`
