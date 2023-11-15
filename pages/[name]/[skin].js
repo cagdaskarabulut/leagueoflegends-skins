@@ -43,20 +43,20 @@ export default function SkinPage({ heroDetailsObject, skinVideo, activePath, spl
             background-size: cover;
             background-image: url(${splashPath}) !important;
           }
-          body::after {
-            content: "";
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100vh;
-            background-size: cover;
-            background-color: black !important;
-            opacity: 0.5 !important;
-            position: fixed !important;
-            z-index: -1;
-          }
+          // body::after {
+          //   content: "";
+          //   background-repeat: no-repeat;
+          //   background-attachment: fixed;
+          //   left: 0;
+          //   top: 0;
+          //   width: 100%;
+          //   height: 100vh;
+          //   background-size: cover;
+          //   background-color: black !important;
+          //   opacity: 0.5 !important;
+          //   position: fixed !important;
+          //   z-index: -1;
+          // }
         `}</style>
     </>
   )

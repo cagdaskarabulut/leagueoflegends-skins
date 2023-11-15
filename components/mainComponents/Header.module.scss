@@ -14,7 +14,7 @@
   
   .logoStyle{
     text-decoration: none;
-    color: $gold;
+    color: $orangeDark;
     display: flex;
     justify-content: center;
   }
@@ -28,7 +28,7 @@
         }
         .MuiInputBase-input {
           font-family: inherit !important;
-          color: gold !important;
+          color: $orangeDark !important;
         }
         .MuiSvgIcon-root{
           color: black !important;
@@ -39,7 +39,7 @@
         }
         .MuiAutocomplete-input{
           font-family: inherit !important;
-          color: gold !important;
+          color: $orangeDark !important;
         }
       }
       @include tablet-or-less {

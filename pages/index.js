@@ -26,24 +26,24 @@ export default function HomePage({ allSkinsList }) {
             height: 100vh;
             background-size: cover;
             background-image: url("images/indexBackground1.jpg");
-            // -ms-animation: animate 30s ease infinite alternate;
-            // -webkit-animation: animate 30s ease infinite alternate;
-            // -moz-animation: animate 30s ease infinite alternate;
+            -ms-animation: animate 30s ease infinite alternate;
+            -webkit-animation: animate 30s ease infinite alternate;
+            -moz-animation: animate 30s ease infinite alternate;
           }
-          body::after {
-            content: "";
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100vh;
-            background-size: cover;
-            background-color: black !important;
-            opacity: 0.5 !important;
-            position: fixed !important;
-            z-index: -1;
-          }
+          // body::after {
+          //   content: "";
+          //   background-repeat: no-repeat;
+          //   background-attachment: fixed;
+          //   left: 0;
+          //   top: 0;
+          //   width: 100%;
+          //   height: 100vh;
+          //   background-size: cover;
+          //   background-color: black !important;
+          //   opacity: 0.5 !important;
+          //   position: fixed !important;
+          //   z-index: -1;
+          // }
           @-webkit-keyframes animate {
             0% {
               background-image: url("images/indexBackground.jpg");
