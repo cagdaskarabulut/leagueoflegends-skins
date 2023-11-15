@@ -3,14 +3,12 @@
 @import "../../styles/globals.scss";
 
 .footerStyle {
-  height: 100% !important;
+  position: inherit;
+  background: transparent !important;
+  font-weight: bold !important;
+  color: $gold !important;
   .footerContentStyle {
     width: 100%;
     text-align: center;
-    padding: 30px;
-    margin-top: 30px;
-    @include tablet-or-less {
-      padding: 10px;
-    }
   }
 }

@@ -1,89 +1,284 @@
 import { useState, useEffect } from "react";
 import styles from "./SkinPagePanel.module.scss";
-import React from "react";
 import SkinCardItemList from "../toolComponents/SkinCardItemList";
 import HeroDetailInfos from "../reusableComponents/HeroDetailInfos";
 import useWindowSize from "@rooks/use-window-size";
-import { MOBILE_SCREEN_SIZE } from "../../constants/GeneralConstants";
-import Link from '@mui/material/Link';
-import { Button } from "@mui/material";
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useRouter } from "next/navigation";
-import { Grid } from "@mui/material";
+import Header from "../mainComponents/Header";
+import {
+  MOBILE_SCREEN_SIZE,
+  HUGE_SCREEN_SIZE,
+} from "../../constants/GeneralConstants";
+import FooterPanel from "../mainComponents/FooterPanel";
+import MyGrid from "../toolComponents/MyGrid";
+import { Analytics } from "@vercel/analytics/react";
 
-const SkinPagePanel = ({ heroDetailsObject, skinVideo, activePath }) => {
+const SkinPagePanel = ({
+  heroDetailsObject,
+  skinVideo,
+  activePath,
+  splashPath,
+  skinBigImageObject,
+  allSkinsList,
+}) => {
   const router = useRouter();
   const { innerWidth } = useWindowSize();
   const [isMobile, setIsMobile] = useState(false);
-  const [iframeWidth, setIframeWidth] = useState("400");
+  const [iframeWidth, setIframeWidth] = useState("800");
+  const [iframeHeight, setIframeHeight] = useState("400");
 
   useEffect(() => {
     if (innerWidth === null) {
       setIsMobile(false);
-      setIframeWidth("400");
+      setIframeWidth("800");
+      setIframeHeight("400");
     } else {
+      setIsMobile(innerWidth < MOBILE_SCREEN_SIZE ? true : false);
       let result = innerWidth < MOBILE_SCREEN_SIZE;
-      setIsMobile(result);
-      setIframeWidth(result ? "200" : "400");
+      setIframeWidth(result ? "350" : "800");
+      setIframeHeight(result ? "200" : "400");
     }
-
-    
   }, [innerWidth]);
 
-  return (
-    <div className={styles.SkinPagePanelContainerStyle}>
-      <div className={styles.SkinPageHeaderStyle}>
-      <Grid
-        spacing={2}
-        container
-        direction="row"
-        justifyContent="start"
-        alignItems="start"
-        columns={12}
-      >
-        <Grid item xs={12}>
-          <Button variant="text" startIcon={<ArrowBackIcon />} style={{color:"#02539D"}}
-          onClick={() => router.push("/")}>
-          Back to champions list
-          </Button>
-        </Grid>
-      </Grid>
-      
-      
-
-
+  const LeftField = () => {
+    return (
+      <div className={styles.PanelContainerStyle}>
+        <HeroDetailInfos heroDetailsObject={heroDetailsObject} skinBigImageObject={skinBigImageObject} />
       </div>
-      
-      {skinVideo != undefined &&  skinVideo.videoUrl.length>0 && (
-        <iframe
-          width="100%"
-          height={iframeWidth}
-          // src={skinVideo.videoUrl+"&autoplay=1"}
-          src={`https://www.youtube.com/embed/${skinVideo.videoUrl}?autoplay=1`}
-          // src={`https://www.youtube.com/embed/${skinVideo.videoUrl}?enablejsapi=1&autoplay=1&origin=http://www.leagueoflegends-skins.com`}
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
-      )}
+    );
+  };
 
-{skinVideo == undefined || skinVideo.videoUrl.length<1 && (
-  <>
-  <br />
-  <h3 style={{textAlign:"center"}}>Sorry, there is no uploaded video yet...</h3>
-  <br />
-  </>
-)}
+  const RightField = () => {
+    return (
+      <div className={styles.PanelContainerStyle}>
+        <SkinCardItemList
+          skinList={heroDetailsObject.skins}
+          heroDetailsObject={heroDetailsObject}
+          activeRoute={activePath}
+        />
+      </div>
+    );
+  };
 
-      <HeroDetailInfos heroDetailsObject={heroDetailsObject} />
+  const VideoHeaderField = () => {
+    return (
+      <div>
+        <MyGrid isOneFullContent leftContent={
+          <div className={styles.VideoHeaderStyle}>
+              {heroDetailsObject?.name != skinBigImageObject?.skinName &&(
+                <h1>
+                  {heroDetailsObject.name} - {skinBigImageObject.skinName}
+                </h1>
+              )}
+              {heroDetailsObject?.name === skinBigImageObject?.skinName &&(
+                <h1>
+                  {heroDetailsObject.name}
+                </h1>
+              )}
+              
 
-      <SkinCardItemList
-        skinList={heroDetailsObject.skins}
-        heroDetailsObject={heroDetailsObject}
-        activeRoute={activePath}
+          </div>
+        } />
+        
+      </div>
+    );
+  };
+
+  const VideoField = () => {
+    return (
+      <MyGrid
+        isOneFullContent
+        leftContent={
+          <div>
+              <div className={styles.PanelContainerStyle}>
+              <VideoHeaderField />
+            <div className={styles.VideoContainerStyle}>
+                
+                <div className={styles.IframeContainer}>
+                  {skinVideo != undefined && skinVideo.videoUrl.length > 0 && (
+                    <iframe
+                      width={iframeWidth}
+                      height={iframeHeight}
+                      src={`https://www.youtube.com/embed/${skinVideo.videoUrl}?autoplay=1`}
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    ></iframe>
+                  )}
+
+                  {skinVideo == undefined ||
+                    (skinVideo.videoUrl.length < 1 && (
+                      <div>
+                        <br />
+                        <h3 style={{ textAlign: "center" }}>
+                          Sorry, there is no uploaded video yet...
+                        </h3>
+                        <br />
+                      </div>
+                    ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        }
       />
-    </div>
+    );
+  };
+
+  return (
+    <>
+      <div className={styles.ContainerPageContainerStyle}>
+        {/* <BackgroundImage
+          height="70vh"
+          content={
+            <>
+              <div className={styles.ContentStyle}>
+                <div className={styles.PanelContainerStyle}>
+                  <div className={styles.IframeContainer}>
+                    {skinVideo != undefined &&
+                      skinVideo.videoUrl.length > 0 && (
+                        <iframe
+                          width={iframeWidth}
+                          height={iframeHeight}
+                          src={`https://www.youtube.com/embed/${skinVideo.videoUrl}?autoplay=1`}
+                          title="YouTube video player"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                        ></iframe>
+                      )}
+
+                    {skinVideo == undefined ||
+                      (skinVideo.videoUrl.length < 1 && (
+                        <>
+                          <br />
+                          <h3 style={{ textAlign: "center" }}>
+                            Sorry, there is no uploaded video yet...
+                          </h3>
+                          <br />
+                        </>
+                      ))}
+                  </div>
+                </div>
+              </div>
+            </>
+          }
+        /> */}
+
+        <div className={styles.HeaderStyle}>
+          <Header allSkinsList={allSkinsList} />
+        </div>
+
+        <VideoField />
+
+
+        {!isMobile && (
+          <MyGrid leftContent={<LeftField />} rightContent={<RightField />} />
+        )}
+        {isMobile && (
+          <MyGrid leftContent={<RightField />} rightContent={<LeftField />} />
+        )}
+        
+
+        {/* //TODO İlk reklam sayfa başına be sonun eklenecek sonra sağ tarafa Reklam Alınınca tasarım bu şekilde değişecek */}
+        {/* <Grid
+          spacing={2}
+          container
+          direction="row"
+          justifyContent="start"
+          alignItems="start"
+          columns={12}
+        >
+          <Grid item xs={9}>
+            <div className={styles.PanelContainerStyle}>
+              <div>
+                <h1>{heroDetailsObject.name}</h1>
+              </div>
+            </div>
+            <div className={styles.PanelContainerStyle}>
+              <div className={styles.IframeContainer}>
+                {skinVideo != undefined && skinVideo.videoUrl.length > 0 && (
+                  <iframe
+                    width={iframeWidth}
+                    height={iframeHeight}
+                    src={`https://www.youtube.com/embed/${skinVideo.videoUrl}?autoplay=1`}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  ></iframe>
+                )}
+                {skinVideo == undefined ||
+                  (skinVideo.videoUrl.length < 1 && (
+                    <>
+                      <br />
+                      <h3 style={{ textAlign: "center" }}>
+                        Sorry, there is no uploaded video yet...
+                      </h3>
+                      <br />
+                    </>
+                  ))}
+              </div>
+            </div>
+            <Grid
+          spacing={2}
+          container
+          direction="row"
+          justifyContent="start"
+          alignItems="start"
+          columns={12}
+        >
+          <Grid item xs={4}>
+            <LeftField />
+          </Grid>
+          <Grid item xs={8}>
+            <RightField />
+          </Grid>
+        </Grid>
+          </Grid>
+          <Grid item xs={3}>
+            <div className={styles.PanelContainerStyle}>
+              Reklam
+            </div>
+          </Grid>
+        </Grid> */}
+
+        <div className={styles.FooterStyle}>
+          <FooterPanel />
+        </div>
+        <Analytics />
+        <style jsx global>{`
+          body {
+            margin: 0 !important;
+            padding: 0 !important;
+            font-size: 14px !important;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-image: url(${splashPath}) !important;
+          }
+          body::after {
+            content: "";
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-color: black !important;
+            opacity: 0.5 !important;
+            position: fixed !important;
+            z-index: -1;
+          }
+        `}</style>
+      </div>
+    </>
   );
 };
 

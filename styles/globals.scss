@@ -3,7 +3,6 @@
 
 .logoStyle{
   color: $blue;
-  font-family: "Comic Sans";
 }
 
 .titleStyle{
@@ -11,4 +10,11 @@
   text-align: center;
   margin-top: 0px;
   margin-bottom: 20px;
+}
+
+.PanelContainerStyle{
+  background-color: $containerBackground;
+  border-radius: 25px; 
+  margin: 10px;
+  padding: 20px;
 }

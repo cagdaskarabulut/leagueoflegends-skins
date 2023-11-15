@@ -1,43 +1,93 @@
 import styles from "./Header.module.scss";
+import { useRouter } from "next/navigation";
 import {
+  Autocomplete,
   Chip,
   Container,
   Grid,
   InputAdornment,
   TextField,
 } from "@mui/material";
-import React from "react";
-import EmailIcon from "@mui/icons-material/Email";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { useEffect, useState } from "react";
+import { wait } from "/utils/CommonUtils";
+import { Backdrop, CircularProgress } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import SearchPanel from "../reusableComponents/SearchPanel";
-// import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-// import InstagramIcon from "@mui/icons-material/Instagram";
-// import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import MyGrid from "../toolComponents/MyGrid";
 
-const Header = ({}) => {
+export default function Header({ allSkinsList }) {
+  const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
+  async function selectAction(event, newValue) {
+    setIsLoading(true);
+    let selectedSkin = null;
+    allSkinsList?.map((option) =>
+      option.searchField.toLowerCase() == newValue.toLowerCase()
+        ? (selectedSkin = option)
+        : ""
+    );
+    console.log(selectedSkin);
+    if (selectedSkin !== null) {
+      router.push("/" + selectedSkin.pageUrl);
+    }
+    await wait(200);
+    setIsLoading(false);
+  }
+
   return (
-    <Container className={styles.header}>
-      <Grid
-        container
-        columns={12}
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
+    <div className={styles.PanelContainerStyle}>
+    <Container className={styles.header} maxWidth={100}>
+      
+        <MyGrid
+          isOneFullContent
+          leftContent={
+            <>
+              <h1>
+                <a className={styles.logoStyle} href="/">
+                  LeagueofLegends-Skins
+                </a>
+              </h1>
+            </>
+          }
+        />
+        <MyGrid
+          isOneFullContent
+          leftContent={
+            <div className={styles.SearchBoxStyle}>
+              <Autocomplete
+                id="free-solo-demo"
+                freeSolo
+                onChange={(event, newValue) => selectAction(event, newValue)}
+                multiple={false}
+                fullWidth={true}
+                clearOnBlur={true}
+                options={allSkinsList?.map((option) => option.searchField)}
+                renderInput={(params) => (
+                  <TextField
+                    {...params}
+                    label="Search hero or skin name"
+                    fullWidth
+                    InputProps={{
+                      ...params.InputProps,
+                      endAdornment: (
+                        <InputAdornment position="end">
+                          <SearchIcon />
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
+                )}
+              />
+            </div>
+          }
+        />
+      
+      <Backdrop
+        sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={isLoading}
       >
-        <Grid item xs={12}>
-          <h2>
-            <a className={styles.logoStyle} href="/">
-              League of Legends - Skins
-            </a>
-          </h2>
-        </Grid>
-        {/* <Grid item xs={6}>
-          <SearchPanel/>
-        </Grid> */}
-      </Grid>
+        <CircularProgress color="inherit" />
+      </Backdrop>
     </Container>
+    </div>
   );
-};
-
-export default Header;
+}

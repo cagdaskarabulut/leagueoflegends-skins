@@ -3,11 +3,19 @@
 @import "../../styles/globals.scss";
 
 .HeroDetailInfosContainerStyle{
+  color: black;
+  
+  h1,h2,h3,h4,p {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+
+  h4 {
+    text-decoration: underline;
+  }
 
   .HeaderStyle{
     text-align: center;
-    color: $orangeDark;
-    
   }
   
   @include desktop {

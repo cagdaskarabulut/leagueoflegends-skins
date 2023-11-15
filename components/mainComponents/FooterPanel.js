@@ -21,10 +21,12 @@ const FooterPanel = () => {
   const LeftContent = () => {
     return (
       <>
-        <div className={styles.footerContentStyle}>
-          © Copyright 2023 leagueoflegends-skins.com
-          {isMobile ? " " : <br />}
-          Designed by Karabulut Software.
+        <div className={styles.PanelContainerStyle}>
+          <div className={styles.footerContentStyle}>
+            © Copyright 2023 leagueoflegends-skins.com
+            {isMobile ? " " : <br />}
+            Designed by Karabulut Software.
+          </div>
         </div>
       </>
     );

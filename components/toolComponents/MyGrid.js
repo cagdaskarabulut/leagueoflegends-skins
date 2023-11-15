@@ -48,23 +48,23 @@ const MyGrid = ({
         )}
         {!isOneFullContent && !middleContent && (
           <>
-            <Grid item xs={isMobile ? 12 : 8}>
+            <Grid item xs={isMobile ? 12 : 5}>
               {leftContent}
             </Grid>
-            <Grid item xs={isMobile ? 12 : 8}>
+            <Grid item xs={isMobile ? 12 : 7}>
               {rightContent}
             </Grid>
           </>
         )}
         {!isOneFullContent && middleContent && (
           <>
-            <Grid item xs={isMobile ? 12 : 2}>
+            <Grid item xs={isMobile ? 12 : 3}>
               {leftContent}
             </Grid>
-            <Grid item xs={isMobile ? 12 : 8}>
+            <Grid item xs={isMobile ? 12 : 6}>
               {middleContent}
             </Grid>
-            <Grid item xs={isMobile ? 12 : 2}>
+            <Grid item xs={isMobile ? 12 : 3}>
               {rightContent}
             </Grid>
           </>

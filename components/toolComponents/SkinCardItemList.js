@@ -51,8 +51,6 @@ const SkinCardItemList = ({ skinList, heroDetailsObject, activeRoute }) => {
               imageAlt={replaceStringForUrlFormat(skinName)}
               imageUrl={skinImagePath}
               onClickAction={() => cardClickAction(activeHeroRoute)}
-              // likeAction={() => console.log("skin liked ")}
-              // shareAction={() => console.log("skin shared ")}
               isSelected={
                 activeHeroRoute.toLowerCase() == activeRoute.toLowerCase()
               }

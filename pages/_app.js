@@ -3,6 +3,20 @@ import { useRouter } from "next/router";
 import Script from "next/script";
 import { useEffect } from "react";
 import * as gtag from "../lib/gtag";
+// import { Dancing_Script } from "@next/font/google";
+// const dancingScript = Dancing_Script({
+//   subsets: ["latin"],
+// });
+// import { Pacifico } from "@next/font/google";
+// const pacifico = Pacifico({
+//   subsets: ["latin"],
+//   weight: ['400']
+// });
+import { Permanent_Marker } from "@next/font/google";
+const permanentMarker = Permanent_Marker({
+  subsets: ["latin"],
+    weight: ['400']
+});
 
 const App = ({ Component, pageProps }) => {
   const router = useRouter();
@@ -49,7 +63,9 @@ const App = ({ Component, pageProps }) => {
       />
       {/* Google Analytics - End */}
 
-      <Component {...pageProps} />
+      <main className={permanentMarker.className}>
+        <Component {...pageProps} />
+      </main>
     </>
   );
 };

@@ -74,6 +74,7 @@ function generateRobotsTxtAndSitemapXml() {
   let subDomainrootPath = `https://www.leagueoflegends-skins.com`;
   let otherSubDomainrootPath = `https://lol-skins.leagueoflegends-skins.com`;
   let mySkinDbFields = "";
+  let mySkinBigImagesDbFields = "";
   let now = getNowWithISOFormat();
   let dynamicRobotsTxtFields = "";
   let dynamicSitemapFields = `
@@ -177,6 +178,16 @@ daily
     "videoUrl": "${returnXXXIfExistingVideoPathByPageUrl(heroBasePath)}"
   },`;
 
+  mySkinBigImagesDbFields = `${mySkinBigImagesDbFields}
+  {
+    "pageUrl": "${heroBasePath}",
+    "skinName": "${replaceStringForUrlFormat(champion.name)}",
+    "splashNumber": "0",
+    "searchField": "${champion.name}"
+  },`;
+
+
+
         fetch(
           "https://ddragon.leagueoflegends.com/cdn/13.20.1/data/en_US/champion/" +
             champion.id +
@@ -230,6 +241,7 @@ daily
   //   "skin": "${replaceStringForUrlFormat(skinObject.name)}",
   //   "skinName": "${skinObject.name}",
   //   "pageUrl": "${activePath}",
+  //   "splashNumber": "0",
   //   "videoUrl": ""
   // },`;
   
@@ -256,7 +268,6 @@ daily
         "pageUrl": "${activePath}",
         "videoUrl": "${myVideoUrl}"
       },`;
-      console.log(mySkinDbFields);
     
       });
     } else {
@@ -291,6 +302,16 @@ daily
     //   "pageUrl": "${activePath}",
     //   "videoUrl": ""
     // },`;
+
+
+    mySkinBigImagesDbFields = `${mySkinBigImagesDbFields}
+    {
+      "pageUrl": "${activePath}",
+      "skinName": "${skinObject.name}",
+      "splashNumber": "${skinObject.num}",
+      "searchField": "${champion.name} - ${skinObject.name}"
+    },`;
+    
   }
 
 
@@ -328,9 +349,17 @@ mySkinDb =
 ]
 }`;
 
+let mySkinBigImagesDb = "";
+mySkinBigImagesDb  = 
+`{
+"data": [ ${mySkinBigImagesDbFields.slice(0, -1)}
+]
+}`;
+
             fs.writeFileSync("public/robots.txt", robotsTxt);
             fs.writeFileSync("public/sitemap.xml", sitemapXml);
             fs.writeFileSync("helper/LATEST_my_skin_video_db.json", mySkinDb);
+            fs.writeFileSync("helper/LATEST_my_skin_video_db_ForSkinsBigImages.json", mySkinBigImagesDb);
           });
 
         }
@@ -340,5 +369,6 @@ mySkinDb =
 
 
 }
+
 
 module.exports = generateRobotsTxtAndSitemapXml;

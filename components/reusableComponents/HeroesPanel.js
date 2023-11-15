@@ -33,7 +33,7 @@ const HeroesPanel = () => {
   }
 
   return (
-    <div className={styles.HeroesPanelContainerStyle}>
+    <div className={styles.PanelContainerStyle}>
       {data?.map((hero, index) => {
         let activeHeroId = hero.id;
         let activeHeroName = hero.name;
