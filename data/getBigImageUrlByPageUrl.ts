@@ -7,6 +7,9 @@ export function getBigImageUrlByPageUrl(pageUrl: string): SkinBigImage | undefin
   const jsonStr = readFileSync(dbDirectory).toString();
   const fileContentsData = JSON.parse(jsonStr);
   const fileContents = Object.values(fileContentsData.data) as SkinBigImage[];
-  const skinBigImageObject = fileContents.find((p) => p.pageUrl.toLowerCase() === pageUrl.toLowerCase());
+  let skinBigImageObject = fileContents.find((p) => p.newPageUrl.toLowerCase() === pageUrl.toLowerCase());
+  if(skinBigImageObject === undefined || skinBigImageObject === null) {
+    skinBigImageObject = fileContents.find((p) => p.pageUrl.toLowerCase() === pageUrl.toLowerCase());
+  }
   return skinBigImageObject;
 }

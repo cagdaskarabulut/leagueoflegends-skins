@@ -25,9 +25,8 @@ export default function Header({ allSkinsList }) {
         ? (selectedSkin = option)
         : ""
     );
-    console.log(selectedSkin);
     if (selectedSkin !== null) {
-      router.push("/" + selectedSkin.pageUrl);
+      router.push("/" + selectedSkin.newPageUrl);
     }
     await wait(200);
     setIsLoading(false);

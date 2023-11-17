@@ -2,10 +2,10 @@ import MetaPanel from "../../components/mainComponents/MetaPanel";
 import { useRouter } from "next/router";
 import fsPromises from "fs/promises";
 import path from "path";
-import { getSkinVideoByPageUrl } from "../../data/getSkinVideoByPageUrl";
+import { getSkinVideoByOldPageUrl, getSkinVideoByPageUrl } from "../../data/getSkinVideoByPageUrl";
 import { getBigImageUrlByPageUrl } from "../../data/getBigImageUrlByPageUrl";
 import SkinPagePanel from "../../components/pageComponents/SkinPagePanel";
-import {capitalizeFirstChar} from "../../utils/StringUtils";
+import {capitalizeFirstChar, replaceStringForUrlFormat} from "../../utils/StringUtils";
 
 
 export default function SkinPage({ heroDetailsObject, skinVideo, activePath, splashPath, skinBigImageObject, allSkinsList }) {
@@ -64,6 +64,7 @@ export default function SkinPage({ heroDetailsObject, skinVideo, activePath, spl
 
 
 export async function getStaticProps(ctx) {
+  
   const name = ctx.params?.name;
   const skin = ctx.params?.skin;
   let activePath = name + "/" + skin;
@@ -79,19 +80,31 @@ export async function getStaticProps(ctx) {
   const jsonData2 = await fsPromises.readFile(filePath2);
   const objectDataListAll2 = JSON.parse(jsonData2);
   const allSkinsList = Object.values(objectDataListAll2.data);
-  
-
   let isPageFound = false;
   let heroId = "";
-  objectDataList?.map((objectData,index) => {
-    let activeHeroId = objectData.hero;
-    let path = objectData.pageUrl;
-    // if (path === activePath) {
+
+  allSkinsList?.map((objectData,index) => {
+    // let activeHeroId = objectData.hero;
+    let path = objectData.newPageUrl;
     if (path.toLowerCase() === activePath.toLowerCase()) {
+      console.log("found2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
       isPageFound = true;
-      heroId = activeHeroId;
+      heroId = getSkinVideoByOldPageUrl(objectData.pageUrl).hero;
     }
   });
+
+  if(!isPageFound){
+    objectDataList?.map((objectData,index) => {
+      let activeHeroId = objectData.hero;
+      let path = objectData.pageUrl;
+      // if (path === activePath) {
+      if (path.toLowerCase() === activePath.toLowerCase()) {
+        console.log("found1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        isPageFound = true;
+        heroId = activeHeroId;
+      }
+    });
+  }
 
   if (isPageFound){
     try{
@@ -104,7 +117,7 @@ export async function getStaticProps(ctx) {
         .then((res) => res.json())
         .then((resData) => {
           heroDetailsObject = Object.values(resData.data)[0];
-          skinVideo = getSkinVideoByPageUrl(activePath)
+          skinVideo = getSkinVideoByPageUrl(activePath);
           splashPath =  `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${heroIdWithCapitalizedFirstChar}_${getBigImageUrlByPageUrl(activePath).splashNumber}.jpg` 
           skinBigImageObject = getBigImageUrlByPageUrl(activePath);
         });
@@ -118,7 +131,7 @@ export async function getStaticProps(ctx) {
             allSkinsList
           },
           // revalidate: 10, // Next.js will attempt to re-generate the page: // When a request comes in // At most once every 10 seconds
-        };
+        }
     } catch {
       return {
         notFound: true,
@@ -132,6 +145,35 @@ export async function getStaticProps(ctx) {
   }
 }
  
+//- if new version doesn't work, try this
+// export async function getStaticPaths() {
+//   const filePath = path.join(process.cwd(),"data" ,"my_skin_video_db.json");
+//   const jsonData = await fsPromises.readFile(filePath);
+//   const objectDataListAll = JSON.parse(jsonData);
+//   const objectDataList = Object.values(objectDataListAll.data);
+//   let t1 = objectDataList.map((objectData) => {
+//     return {
+//         params: {
+//           name: replaceStringForUrlFormat(objectData.heroName),
+//           skin: replaceStringForUrlFormat(objectData.skinName),
+//         },
+//     };
+//   });
+//   let t2 = objectDataList.map((objectData) => {
+//     return {
+//         params: {
+//           name: objectData.hero,
+//           skin: objectData.skin,
+//         },
+//     };
+//   });
+//     return {
+//       paths: [...t1, ...t2],
+//       fallback: 'blocking',
+//   };
+// }
+
+//-new version
 export async function getStaticPaths() {
   const filePath = path.join(process.cwd(),"data" ,"my_skin_video_db.json");
   const jsonData = await fsPromises.readFile(filePath);
@@ -141,12 +183,33 @@ export async function getStaticPaths() {
     paths: objectDataList.map((objectData) => {
         return {
             params: {
-              name: objectData.hero,
-              skin: objectData.skin,
+              name: replaceStringForUrlFormat(objectData.heroName),
+              skin: replaceStringForUrlFormat(objectData.skinName),
             },
         };
     }),
     fallback: 'blocking',
 };
 }
+
+
+ 
+//-oldest
+// export async function getStaticPaths() {
+//   const filePath = path.join(process.cwd(),"data" ,"my_skin_video_db.json");
+//   const jsonData = await fsPromises.readFile(filePath);
+//   const objectDataListAll = JSON.parse(jsonData);
+//   const objectDataList = Object.values(objectDataListAll.data);
+//   return {
+//     paths: objectDataList.map((objectData) => {
+//         return {
+//             params: {
+//               name: objectData.hero,
+//               skin: objectData.skin,
+//             },
+//         };
+//     }),
+//     fallback: 'blocking',
+// };
+// }
  

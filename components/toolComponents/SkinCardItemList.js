@@ -41,7 +41,7 @@ const SkinCardItemList = ({ skinList, heroDetailsObject, activeRoute, isMobile }
         let skinKey = heroId + "_" + skinNum;
         let skinImagePath = URL_imageRootPath + skinKey + ".jpg";
         let activeHeroRoute =
-          replaceStringForUrlFormat(heroId) +
+          replaceStringForUrlFormat(heroDetailsObject.name) +
           "/" +
           replaceStringForUrlFormat(skinName);
         return (

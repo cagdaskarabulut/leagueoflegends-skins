@@ -38,7 +38,7 @@ const HeroesPanel = () => {
         let activeHeroId = hero.id;
         let activeHeroName = hero.name;
         let activeHeroMainImagePath = URL_imageRootPath + hero.image.full;
-        let activeHeroRoute = "/"+ replaceStringForUrlFormat(activeHeroId) + "/" + replaceStringForUrlFormat(activeHeroId);
+        let activeHeroRoute = "/"+ replaceStringForUrlFormat(activeHeroName) + "/" + replaceStringForUrlFormat(activeHeroName);
         return (
             <div key={activeHeroId} className={styles.CardContainerStyle}> 
               <CardItem

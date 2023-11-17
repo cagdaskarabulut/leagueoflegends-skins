@@ -25,7 +25,6 @@ export default function SkinPage({ heroDetailsObject, skinVideo, activePath }) {
 // getServerSideProps
 export async function getStaticProps(ctx) {
   try{
-  console.log('getStaticProps is running...');
   const name = ctx.params?.name;
   const skin = ctx.params?.skin;
   let activePath = name + "/" + skin;
@@ -75,7 +74,6 @@ export async function getStaticProps(ctx) {
 
 export async function getStaticPaths() {
   try{
-  console.log('getStaticPaths is running...');
   const filePath = path.join(process.cwd(), "data", "my_skin_video_db.json");
   const jsonData = await fsPromises.readFile(filePath);
   const objectDataListAll = JSON.parse(jsonData);

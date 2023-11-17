@@ -122,7 +122,6 @@ export async function getStaticProps() {
   const jsonData2 = await fsPromises.readFile(filePath2);
   const objectDataListAll2 = JSON.parse(jsonData2);
   const allSkinsList = Object.values(objectDataListAll2.data);
-
   return {
     props: {
       allSkinsList,

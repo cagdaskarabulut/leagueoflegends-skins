@@ -34,12 +34,16 @@ const App = ({ Component, pageProps }) => {
     <>
       <Head>
         {/* Google Ads - Start */}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8764830534484668"
-          crossorigin="anonymous"
-        ></script>
-
+        {/* Google Adsense */}
+        {/* google adsense its enough for automatically adding ads */}
+        <Script
+          id="adsbygoogle-init"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+          src= "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8764830534484668"
+        />
+        {/* Google Ads - End */}
+        
         <script
           dangerouslySetInnerHTML={{
             __html: `

@@ -6,7 +6,6 @@ export function getHeroes(): Hero[] | undefined {
   const dbDirectory = path.join(process.cwd(), "data", "db.json");
   const jsonStr = readFileSync(dbDirectory).toString();
   const fileContents = JSON.parse(jsonStr) as Hero[];
-  console.log(fileContents[0].skins.length);
   return fileContents;
 }
 

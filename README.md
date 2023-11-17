@@ -19,4 +19,8 @@
 3. let youtubeApiKey = 'XXX'; youtube videosu da eklenecek ise apiKey eklenir. (https://console.cloud.google.com/apis/library?pli=1 adresinden alınır api key)
 4. Console da gelen en son liste çıktısı "my_skin_video_db.json" dosyasındaki yeriyle güncellenir.
 
+----------------------------------------------------------------
 
+# Genel Bilgiler
+### Nesne bağlantıları
+1. Sayfa adresleri olarak my_skin_video_db_ForSkinsBigImages dosyasındaki newPageUrl alanları kullanılıyor fakat my_skin_video_db nesnesine bağlantı yapmak için primary key olarak pageUrl alanı kullanıyor.  
