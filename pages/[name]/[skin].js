@@ -8,7 +8,7 @@ import SkinPagePanel from "../../components/pageComponents/SkinPagePanel";
 import {capitalizeFirstChar, replaceStringForUrlFormat} from "../../utils/StringUtils";
 
 
-export default function SkinPage({ heroDetailsObject, skinVideo, activePath, splashPath, skinBigImageObject, allSkinsList }) {
+export default function SkinPage({ heroDetailsObject, skinVideo, activePath, splashPath, skinBigImageObject, allSkinsList, pageContent }) {
   let titleText = "";
   
   if(skinVideo.skinName == skinVideo.heroName){
@@ -24,11 +24,11 @@ export default function SkinPage({ heroDetailsObject, skinVideo, activePath, spl
        <MetaPanel
           title={titleText}
           descriptionContent={`Explore the enchanting world of ${skinVideo.heroName} in League of Legends through our captivating collection of skin images and videos. Witness the transformation of this iconic champion with a variety of skins, from classic to legendary. Immerse yourself in the visual delight of ${skinVideo.heroName}'s champion customizations in our comprehensive gallery.`}
-          keywordsContent={`${skinVideo.skinName} skin, ${skinVideo.heroName} skins, ${skinVideo.skinName} skin videos, ${skinVideo.skinName} skin images, ${skinVideo.skinName} cinematic, ${skinVideo.skinName} trailer, ${skinVideo.skinName} skin chromas, ${skinVideo.heroName} Skins, ${skinVideo.heroName} Champion Skins, ${skinVideo.heroName} Skin Images, ${skinVideo.heroName} Skin Videos, League of Legends ${skinVideo.heroName} Skins, Champion Customization, In-Game Cosmetics, Visual Transformations, Gaming Aesthetics, ${skinVideo.heroName} Cosmetics, ${skinVideo.heroName} Skin Showcase, Video Game Visuals, Rare ${skinVideo.heroName} Skins, Legendary ${skinVideo.heroName} Skins, ${skinVideo.heroName} Skin Gallery, ${skinVideo.heroName} Character Skins, Gaming Artistry, LoL Skin Collection, ${skinVideo.heroName}'s Beauty.`}
+          keywordsContent={`${skinVideo.skinName} skin, ${skinVideo.heroName} skin, ${skinVideo.heroName} Skin, ${skinVideo.heroName} skins, ${skinVideo.skinName} skin videos, ${skinVideo.skinName} skin images, ${skinVideo.skinName} cinematic, ${skinVideo.skinName} trailer, ${skinVideo.skinName} skin chromas, ${skinVideo.heroName} Skins, ${skinVideo.heroName} Champion Skins, ${skinVideo.heroName} Skin Images, ${skinVideo.heroName} Skin Videos, League of Legends ${skinVideo.heroName} Skins, Champion Customization, In-Game Cosmetics, Visual Transformations, Gaming Aesthetics, ${skinVideo.heroName} Cosmetics, ${skinVideo.heroName} Skin Showcase, Video Game Visuals, Rare ${skinVideo.heroName} Skins, Legendary ${skinVideo.heroName} Skins, ${skinVideo.heroName} Skin Gallery, ${skinVideo.heroName} Character Skins, Gaming Artistry, LoL Skin Collection, ${skinVideo.heroName}'s Beauty.`}
           imagePath="/images/lol-skins-icon.ico"
           imageAlt="League of Legends Skins"
         />
-        <SkinPagePanel heroDetailsObject={heroDetailsObject} skinVideo={skinVideo} activePath={activePath} splashPath={splashPath} skinBigImageObject={skinBigImageObject} allSkinsList={allSkinsList}/>
+        <SkinPagePanel heroDetailsObject={heroDetailsObject} skinVideo={skinVideo} activePath={activePath} splashPath={splashPath} skinBigImageObject={skinBigImageObject} allSkinsList={allSkinsList} pageContent={pageContent} />
         <style jsx global>{`
           body {
             margin: 0 !important;
@@ -87,19 +87,18 @@ export async function getStaticProps(ctx) {
     // let activeHeroId = objectData.hero;
     let path = objectData.newPageUrl;
     if (path.toLowerCase() === activePath.toLowerCase()) {
-      console.log("found2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
       isPageFound = true;
       heroId = getSkinVideoByOldPageUrl(objectData.pageUrl).hero;
     }
   });
 
+  //_ileride - içeren sayfaların indexlemeleri bitince burası kapatılabilir
   if(!isPageFound){
     objectDataList?.map((objectData,index) => {
       let activeHeroId = objectData.hero;
       let path = objectData.pageUrl;
       // if (path === activePath) {
       if (path.toLowerCase() === activePath.toLowerCase()) {
-        console.log("found1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         isPageFound = true;
         heroId = activeHeroId;
       }
@@ -107,6 +106,27 @@ export async function getStaticProps(ctx) {
   }
 
   if (isPageFound){
+
+    //_ skin sayfasının contentini getir
+      let pageContent = "";
+      const filePathContent = path.join(process.cwd(),"data/pageContent" , name+".json");
+      const jsonDataContent = await fsPromises.readFile(filePathContent);
+      if(jsonDataContent !== undefined && jsonDataContent != null && jsonDataContent.length>0){
+        const objectDataListAllContent = JSON.parse(jsonDataContent);
+        const allSelectedHeroContentsList = Object.values(objectDataListAllContent.data);
+        
+        allSelectedHeroContentsList?.map((objectData,index) => {
+            let path = objectData.newPageUrl;
+            if (path.toLowerCase() === activePath.toLowerCase()) {
+              pageContent = objectData.content;
+            }
+          });
+      } else {
+        pageContent = "";
+      }
+      
+
+    //- sayfaya döndürülecek verileri hazırlayıp, döndür
     try{
       let heroDetailsObject;
       let skinVideo;
@@ -128,7 +148,8 @@ export async function getStaticProps(ctx) {
             activePath,
             splashPath,
             skinBigImageObject,
-            allSkinsList
+            allSkinsList,
+            pageContent
           },
           // revalidate: 10, // Next.js will attempt to re-generate the page: // When a request comes in // At most once every 10 seconds
         }

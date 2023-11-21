@@ -20,6 +20,7 @@ const SkinPagePanel = ({
   splashPath,
   skinBigImageObject,
   allSkinsList,
+  pageContent,
 }) => {
   const router = useRouter();
   const { innerWidth } = useWindowSize();
@@ -43,7 +44,7 @@ const SkinPagePanel = ({
   const LeftField = () => {
     return (
       <div className={styles.PanelContainerStyle}>
-        <HeroDetailInfos heroDetailsObject={heroDetailsObject} skinBigImageObject={skinBigImageObject} />
+        <HeroDetailInfos heroDetailsObject={heroDetailsObject} skinBigImageObject={skinBigImageObject} pageContent={pageContent} />
       </div>
     );
   };

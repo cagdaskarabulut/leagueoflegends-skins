@@ -10,6 +10,20 @@ function getNowWithISOFormat() {
 
 //- sadece api den gelen hero id leri kullanılarak sayfa path leri tanımlanabilir
 function replaceStringForUrlFormat(myString) {
+  myString = myString.replace(/ /g, "-");
+  myString = myString.replace(/'/g, "");
+  myString = myString.replace(/"/g, "");
+  myString = myString.replace(/\//g, "");
+  myString = myString.replace(/&/g, "");
+  myString = myString.replace("(", "");
+  myString = myString.replace(")", "");
+  myString = myString.replace(/ó/g, "o");
+  myString = myString.replace(",", "");
+  // myString = myString.toLowerCase();
+  return myString;
+}
+
+function oldReplaceStringForUrlFormat(myString) {
   myString = myString.replace(/ /g, "");
   myString = myString.replace(/'/g, "");
   myString = myString.replace(/"/g, "");
@@ -137,7 +151,9 @@ daily
     //- => Sadece skin videoları için kullanılır bu parametre ve console dan manuel alınıp kopyalanır. api kotası yetmezse yenisi alınır
     if(isManualyAddingSkinVideos == false ||(isManualyAddingSkinVideos && champion.id ==heroIdForManuallyAddingSkinVideos)){
 
-        let heroBasePath = `${replaceStringForUrlFormat(champion.id)}/${replaceStringForUrlFormat(champion.id)}`;
+        // let heroBasePath = `${replaceStringForUrlFormat(champion.id)}/${replaceStringForUrlFormat(champion.id)}`;
+        let heroBasePath = `${replaceStringForUrlFormat(champion.name)}/${replaceStringForUrlFormat(champion.name)}`;
+        let oldHeroBasePath = `${oldReplaceStringForUrlFormat(champion.id)}/${oldReplaceStringForUrlFormat(champion.id)}`;
         //-generate
         dynamicRobotsTxtFields = `${dynamicRobotsTxtFields}Allow: /${heroBasePath}
 `;
@@ -174,14 +190,15 @@ daily
     "heroName": "${champion.name}",
     "skin": "${replaceStringForUrlFormat(champion.id)}",
     "skinName": "${champion.name}",
-    "pageUrl": "${heroBasePath}",
+    "pageUrl": "${oldHeroBasePath}",
     "videoUrl": "${returnXXXIfExistingVideoPathByPageUrl(heroBasePath)}"
   },`;
 
   mySkinBigImagesDbFields = `${mySkinBigImagesDbFields}
   {
-    "pageUrl": "${heroBasePath}",
-    "skinName": "${replaceStringForUrlFormat(champion.name)}",
+    "pageUrl": "${oldHeroBasePath}",
+    "newPageUrl": "${heroBasePath}",
+    "skinName": "${champion.name}",
     "splashNumber": "0",
     "searchField": "${champion.name}"
   },`;
@@ -213,7 +230,8 @@ daily
             )}/${replaceStringForUrlFormat(skinObject.name)}
 `;
 
-let activePath = `${replaceStringForUrlFormat(champion.id)}/${replaceStringForUrlFormat(skinObject.name)}`;
+let activePath = `${replaceStringForUrlFormat(champion.name)}/${replaceStringForUrlFormat(skinObject.name)}`;
+let oldActivePath = `${oldReplaceStringForUrlFormat(champion.id)}/${oldReplaceStringForUrlFormat(skinObject.name)}`;
 
             //-generate
             dynamicSitemapFields = `${dynamicSitemapFields}
@@ -234,18 +252,8 @@ daily
 `;
 
 //-generate
-  //   mySkinDbFields = `${mySkinDbFields}
-  // {
-  //   "hero": "${replaceStringForUrlFormat(champion.id)}",
-  //   "heroName": "${champion.name}",
-  //   "skin": "${replaceStringForUrlFormat(skinObject.name)}",
-  //   "skinName": "${skinObject.name}",
-  //   "pageUrl": "${activePath}",
-  //   "splashNumber": "0",
-  //   "videoUrl": ""
-  // },`;
   
-  let fillVideoUrl = returnXXXIfExistingVideoPathByPageUrl(activePath);
+  let fillVideoUrl = returnXXXIfExistingVideoPathByPageUrl(oldActivePath);
   if (isManualyAddingSkinVideos){
     if (fillVideoUrl == undefined || fillVideoUrl.length<1){
       let searchTitle = replaceStringForSearchQuery(skinObject.name + champion.id);
@@ -265,7 +273,7 @@ daily
         "heroName": "${champion.name}",
         "skin": "${replaceStringForUrlFormat(skinObject.name)}",
         "skinName": "${skinObject.name}",
-        "pageUrl": "${activePath}",
+        "pageUrl": "${oldActivePath}",
         "videoUrl": "${myVideoUrl}"
       },`;
     
@@ -277,7 +285,7 @@ daily
       "heroName": "${champion.name}",
       "skin": "${replaceStringForUrlFormat(skinObject.name)}",
       "skinName": "${skinObject.name}",
-      "pageUrl": "${activePath}",
+      "pageUrl": "${oldActivePath}",
       "videoUrl": "${fillVideoUrl}"
     },`;
     }    
@@ -288,7 +296,7 @@ daily
       "heroName": "${champion.name}",
       "skin": "${replaceStringForUrlFormat(skinObject.name)}",
       "skinName": "${skinObject.name}",
-      "pageUrl": "${activePath}",
+      "pageUrl": "${oldActivePath}",
       "videoUrl": "${fillVideoUrl}"
     },`;
 
@@ -306,7 +314,8 @@ daily
 
     mySkinBigImagesDbFields = `${mySkinBigImagesDbFields}
     {
-      "pageUrl": "${activePath}",
+      "pageUrl": "${oldActivePath}",
+      "newPageUrl": "${activePath}",
       "skinName": "${skinObject.name}",
       "splashNumber": "${skinObject.num}",
       "searchField": "${champion.name} - ${skinObject.name}"

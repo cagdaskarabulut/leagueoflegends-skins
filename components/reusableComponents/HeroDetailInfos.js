@@ -12,7 +12,7 @@ import styles from "./HeroDetailInfos.module.scss";
 import useWindowSize from "@rooks/use-window-size";
 import { MOBILE_SCREEN_SIZE } from "../../constants/GeneralConstants";
 
-const HeroDetailInfos = ({ heroDetailsObject, skinBigImageObject }) => {
+const HeroDetailInfos = ({ heroDetailsObject, skinBigImageObject, pageContent }) => {
   const { innerWidth } = useWindowSize();
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
@@ -61,6 +61,14 @@ const HeroDetailInfos = ({ heroDetailsObject, skinBigImageObject }) => {
       <h4>Enemy tips:</h4>
       <p>{heroDetailsObject.enemytips}</p>
       <br />
+      
+      {pageContent && (
+          <div dangerouslySetInnerHTML={ {__html: pageContent} } /> 
+        )
+      }
+
+    {!pageContent && (
+      <>
       <h4>About:</h4>
       {heroDetailsObject?.name != skinBigImageObject?.skinName && (
         <>
@@ -118,7 +126,9 @@ const HeroDetailInfos = ({ heroDetailsObject, skinBigImageObject }) => {
         </p>
       )}
       <br />
-
+      </>
+      )
+      }
       
 
       {/* {!isMobile && (
