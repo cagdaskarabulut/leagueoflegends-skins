@@ -25,7 +25,7 @@ const HeroDetailInfos = ({ heroDetailsObject, skinBigImageObject, pageContent })
   return (
     <div className={styles.HeroDetailInfosContainerStyle}>
       
-      <div className={styles.HeaderStyle}>
+      {/* <div className={styles.HeaderStyle}>
         {heroDetailsObject?.name != skinBigImageObject?.skinName && (
           <h2>
             {heroDetailsObject.name} - {skinBigImageObject.skinName}
@@ -34,9 +34,9 @@ const HeroDetailInfos = ({ heroDetailsObject, skinBigImageObject, pageContent })
         {heroDetailsObject?.name === skinBigImageObject?.skinName && (
           <h1>{heroDetailsObject.name}</h1>
         )}
-      </div>
+      </div> */}
 
-      <h3 className={styles.HeaderStyle}>
+      {/* <h3 className={styles.HeaderStyle}>
         {heroDetailsObject.title + " "}(
         {heroDetailsObject.tags
           .filter((item) => {
@@ -44,23 +44,9 @@ const HeroDetailInfos = ({ heroDetailsObject, skinBigImageObject, pageContent })
           })
           .join(", ")}
         )
-      </h3>
+      </h3> */}
 
-      <h4>Lore:</h4>
-      <p>{heroDetailsObject.lore}</p>
-      <br />
-      <h4>Ally tips:</h4>
-      <p>
-        {heroDetailsObject.allytips
-          .filter((item) => {
-            return item;
-          })
-          .join(" ")}
-      </p>
-      <br />
-      <h4>Enemy tips:</h4>
-      <p>{heroDetailsObject.enemytips}</p>
-      <br />
+      
       
       {pageContent && (
           <div dangerouslySetInnerHTML={ {__html: pageContent} } /> 
@@ -130,6 +116,22 @@ const HeroDetailInfos = ({ heroDetailsObject, skinBigImageObject, pageContent })
       )
       }
       
+      <br />
+      <h4 style={{color: "#d34600"}}>Lore:</h4>
+      <p>{heroDetailsObject.lore}</p>
+      <br />
+      <h4 style={{color: "#d34600"}}>Ally tips:</h4>
+      <p>
+        {heroDetailsObject.allytips
+          .filter((item) => {
+            return item;
+          })
+          .join(" ")}
+      </p>
+      <br />
+      <h4 style={{color: "#d34600"}}>Enemy tips:</h4>
+      <p>{heroDetailsObject.enemytips}</p>
+      <br />
 
       {/* {!isMobile && (
         <Grid spacing={2} container direction="row" columns={12}>

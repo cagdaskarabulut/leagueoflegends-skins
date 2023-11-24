@@ -13,6 +13,11 @@ import { wait } from "/utils/CommonUtils";
 import { Backdrop, CircularProgress } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import MyGrid from "../toolComponents/MyGrid";
+import { Permanent_Marker } from "@next/font/google";
+const permanentMarker = Permanent_Marker({
+  subsets: ["latin"],
+    weight: ['400']
+});
 
 export default function Header({ allSkinsList }) {
   const router = useRouter();
@@ -40,7 +45,7 @@ export default function Header({ allSkinsList }) {
           isOneFullContent
           leftContent={
             <>
-              <h1>
+              <h1  className={permanentMarker.className}>
                 <a className={styles.logoStyle} href="/">
                   LeagueofLegends-Skins
                 </a>

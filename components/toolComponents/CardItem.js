@@ -23,18 +23,21 @@ const CardItem = ({
   isSmallSize = isSmallSize == undefined ? false : isSmallSize;
   isSelected = isSelected == undefined ? false : isSelected;
   let activeWidth = isSmallSize ? 75 : 200;
-  let displayMode = isSmallSize ? "none" : ((!likeAction && !shareAction) ? "none" : "");
+  let displayMode = isSmallSize
+    ? "none"
+    : !likeAction && !shareAction
+    ? "none"
+    : "";
   let containerStyle = isSmallSize
-    ? (isSelected
+    ? isSelected
       ? styles.CardItemSmallSelectedStyle
-      : styles.CardItemSmallStyle)
-    : (isSelected
+      : styles.CardItemSmallStyle
+    : isSelected
     ? styles.CardItemSelectedStyle
-    : styles.CardItemStyle);
+    : styles.CardItemStyle;
   return (
     <div className={containerStyle}>
       <Card sx={{ width: activeWidth }}>
-        {/* <Card> */}
         <ButtonBase
           onClick={() => onClickAction()}
           className={styles.ButtonBaseStyle}
@@ -44,7 +47,6 @@ const CardItem = ({
               imageName={imageAlt}
               imagePath={imageUrl}
               isSmallSize={isSmallSize}
-              // isSelected={isSelected}
               width={activeWidth}
             />
           </div>
@@ -56,31 +58,14 @@ const CardItem = ({
           className={styles.ButtonBaseStyle}
         >
           <CardContent>
-            <h5>{title}</h5>
+            {isSmallSize && <h5>{title}</h5>}
+            {!isSmallSize && <h4>{title}</h4>}
+
             <p className={styles.descriptionStyle}>
               {description && <>{description}</>}
             </p>
           </CardContent>
         </ButtonBase>
-
-        {/* <CardActions disableSpacing style={{ display: displayMode }}>
-          <IconButton
-            aria-label="add to favorites"
-            onClick={() => {
-              likeAction();
-            }}
-          >
-            <FavoriteIcon />
-          </IconButton>
-          <IconButton
-            aria-label="share"
-            onClick={() => {
-              shareAction();
-            }}
-          >
-            <ShareIcon />
-          </IconButton>
-        </CardActions> */}
       </Card>
     </div>
   );

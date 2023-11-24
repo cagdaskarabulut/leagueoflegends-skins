@@ -12,6 +12,13 @@ import {
 import FooterPanel from "../mainComponents/FooterPanel";
 import MyGrid from "../toolComponents/MyGrid";
 import { Analytics } from "@vercel/analytics/react";
+import { Permanent_Marker } from "@next/font/google";
+import { Grid } from "@mui/material";
+import DialogItem from "../toolComponents/DialogItem";
+const permanentMarker = Permanent_Marker({
+  subsets: ["latin"],
+    weight: ['400']
+});
 
 const SkinPagePanel = ({
   heroDetailsObject,
@@ -68,16 +75,98 @@ const SkinPagePanel = ({
         <MyGrid isOneFullContent leftContent={
           <div className={styles.VideoHeaderStyle}>
               {heroDetailsObject?.name != skinBigImageObject?.skinName &&(
-                <h1>
+                <h1 className={permanentMarker.className}>
                   {heroDetailsObject.name} - {skinBigImageObject.skinName}
                 </h1>
               )}
               {heroDetailsObject?.name === skinBigImageObject?.skinName &&(
-                <h1>
+                <h1 className={permanentMarker.className}>
                   {heroDetailsObject.name}
                 </h1>
               )}
               
+              
+{/* <div>
+      <h3 className={styles.HeaderStyle}>
+        {heroDetailsObject.title + " "}(
+        {heroDetailsObject.tags
+          .filter((item) => {
+            return item;
+          })
+          .join(", ")}
+        )
+      </h3>
+
+      {!isMobile && (
+        <Grid spacing={2} container direction="row" columns={12}>
+          <Grid item xs={4} style={{ textAlign: "right" }}>
+            <DialogItem
+              buttonLabel="Lore"
+              title="Lore"
+              content={heroDetailsObject.lore}
+            />
+          </Grid>
+          <Grid item xs={4} style={{ textAlign: "center" }}>
+            <DialogItem
+              buttonLabel="Ally tips"
+              title="Ally tips"
+              content={heroDetailsObject.allytips
+                .filter((item) => {
+                  return item;
+                })
+                .join(" ")}
+            />
+          </Grid>
+          <Grid item xs={4} style={{ textAlign: "left" }}>
+            <DialogItem
+              buttonLabel="Enemy tips"
+              title="Enemy tips"
+              content={heroDetailsObject.enemytips
+                .filter((item) => {
+                  return item;
+                })
+                .join(" ")}
+            />
+          </Grid>
+        </Grid>
+      )}
+
+      {isMobile && (
+        <Grid container direction="row" columns={12}>
+          <Grid item xs={4} style={{ textAlign: "right" }}>
+            <DialogItem
+              buttonLabel="Lore"
+              title="Lore"
+              content={heroDetailsObject.lore}
+            />
+          </Grid>
+          <Grid item xs={4} style={{ textAlign: "center" }}>
+            <DialogItem
+              buttonLabel="Ally tips"
+              title="Ally tips"
+              content={heroDetailsObject.allytips
+                .filter((item) => {
+                  return item;
+                })
+                .join(" ")}
+            />
+          </Grid>
+          <Grid item xs={4} style={{ textAlign: "left" }}>
+            <DialogItem
+              buttonLabel="Enemy tips"
+              title="Enemy tips"
+              content={heroDetailsObject.enemytips
+                .filter((item) => {
+                  return item;
+                })
+                .join(" ")}
+            />
+          </Grid>
+        </Grid>
+      )}
+</div> */}
+
+
 
           </div>
         } />
@@ -86,12 +175,24 @@ const SkinPagePanel = ({
     );
   };
 
+
+
   const VideoField = () => {
     return (
+      
       <MyGrid
         isOneFullContent
         leftContent={
           <div>
+
+
+
+
+
+
+
+
+
               <div className={styles.PanelContainerStyle}>
               <VideoHeaderField />
             <div className={styles.VideoContainerStyle}>

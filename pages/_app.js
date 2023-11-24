@@ -12,10 +12,16 @@ import * as gtag from "../lib/gtag";
 //   subsets: ["latin"],
 //   weight: ['400']
 // });
-import { Permanent_Marker } from "@next/font/google";
-const permanentMarker = Permanent_Marker({
+// import { Permanent_Marker } from "@next/font/google";
+// const permanentMarker = Permanent_Marker({
+//   subsets: ["latin"],
+//     weight: ['400']
+// });
+
+import { Roboto } from "@next/font/google";
+const roboto = Roboto({
   subsets: ["latin"],
-    weight: ['400']
+    weight: ['700']
 });
 
 const App = ({ Component, pageProps }) => {
@@ -67,7 +73,7 @@ const App = ({ Component, pageProps }) => {
       />
       {/* Google Analytics - End */}
 
-      <main className={permanentMarker.className}>
+      <main className={roboto.className}>
         <Component {...pageProps} />
       </main>
     </>
