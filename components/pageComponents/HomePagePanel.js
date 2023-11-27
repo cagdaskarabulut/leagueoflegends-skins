@@ -2,6 +2,7 @@ import React from "react";
 import HeroesPanel from "../reusableComponents/HeroesPanel";
 import styles from "./HomePagePanel.module.scss";
 import Header from "../mainComponents/Header";
+import HeaderMobile from "../mainComponents/HeaderMobile";
 import { useEffect, useState } from "react";
 import { MOBILE_SCREEN_SIZE } from "../../constants/GeneralConstants";
 import useWindowSize from "@rooks/use-window-size";
@@ -9,7 +10,8 @@ import FooterPanel from "../mainComponents/FooterPanel";
 import MyGrid from "../toolComponents/MyGrid";
 import { Analytics } from "@vercel/analytics/react";
 import Autocomplete from "@mui/material/Autocomplete";
-import { TextField } from "@mui/material";
+import { Button, Link, TextField } from "@mui/material";
+import ArticleIcon from "@mui/icons-material/Article";
 
 const HomePagePanel = ({ allSkinsList }) => {
   const { innerWidth, innerHeight, outerHeight, outerWidth } = useWindowSize();
@@ -26,9 +28,23 @@ const HomePagePanel = ({ allSkinsList }) => {
 
   const HeaderField = () => {
     if (isMobile) {
-      return <Header allSkinsList={allSkinsList} />;
+      return (
+        <HeaderMobile
+          allSkinsList={allSkinsList}
+          middleContent={
+            <Button
+              variant="text"
+              endIcon={<ArticleIcon />}
+              href="#lol-info-section"
+              style={{ color: "black", marginTop: "3vw", fontSize: "12px" }}
+            >
+              Explore
+            </Button>
+          }
+        />
+      );
     } else {
-      return <Header allSkinsList={allSkinsList} />;
+      return <HeaderMobile allSkinsList={allSkinsList} />;
     }
   };
 
@@ -197,28 +213,28 @@ const HomePagePanel = ({ allSkinsList }) => {
           <HeaderField />
         </div>
         <div className={styles.ContentStyle}>
-
-        {!isMobile && (
-          <MyGrid
-            leftContent={<LeftField />}
-            middleContent={<HeroesPanel />}
-            rightContent={<RightField />}
-          />
-        )}
-        {isMobile && (
-          <MyGrid
-          leftContent={<HeroesPanel />}
-          middleContent={<LeftField />}
-          rightContent={<RightField />}
-        />
-        )}
-
-          
+          {!isMobile && (
+            <MyGrid
+              leftContent={<LeftField />}
+              middleContent={<HeroesPanel />}
+              rightContent={<RightField />}
+            />
+          )}
+          {isMobile && (
+            <MyGrid
+              leftContent={<HeroesPanel />}
+              middleContent={
+                <div id="lol-info-section">
+                  <LeftField />
+                </div>
+              }
+              rightContent={<RightField />}
+            />
+          )}
         </div>
         <FooterPanel />
 
         <Analytics />
-        
       </div>
     </>
   );

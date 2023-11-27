@@ -6,6 +6,7 @@ import styles from "./MyGrid.module.scss";
 
 //- Tek kolon varsa sadece "leftContent" girilir.
 //- Kolon tam ekran olacaksa  "isOneFullContent: true" yapılır. Bu seçim yapılmazsa normalde ekranın yarısını kaplarken mobilde tamamını kaplar.
+//- 2 kolon olacaksa sadece leftcontent ve rightcontent girilir.
 //- ContentPosition default değeri start, örneğin footer da center gönderilir
 const MyGrid = ({
   breadcrumbs,
@@ -15,6 +16,7 @@ const MyGrid = ({
   rightContent,
   isOneFullContent,
   contentPosition,
+  forHeader
 }) => {
   //_ MobilePart
   const { innerWidth } = useWindowSize();
@@ -51,20 +53,21 @@ const MyGrid = ({
             <Grid item xs={isMobile ? 12 : 5}>
               {leftContent}
             </Grid>
-            <Grid item xs={isMobile ? 12 : 7}>
+            <Grid item xs={isMobile ? 12 : 7} >
               {rightContent}
             </Grid>
           </>
         )}
+        
         {!isOneFullContent && middleContent && (
           <>
-            <Grid item xs={isMobile ? 12 : 3}>
+            <Grid item xs={isMobile ? (forHeader ? 2 : 12) : 3}>
               {leftContent}
             </Grid>
-            <Grid item xs={isMobile ? 12 : 6}>
+            <Grid item xs={isMobile ? (forHeader ? 4 : 12) : 6}>
               {middleContent}
             </Grid>
-            <Grid item xs={isMobile ? 12 : 3}>
+            <Grid item xs={isMobile ? (forHeader ? 6 : 12) : 3}>
               {rightContent}
             </Grid>
           </>

@@ -4,7 +4,7 @@ import SkinCardItemList from "../toolComponents/SkinCardItemList";
 import HeroDetailInfos from "../reusableComponents/HeroDetailInfos";
 import useWindowSize from "@rooks/use-window-size";
 import { useRouter } from "next/navigation";
-import Header from "../mainComponents/Header";
+import HeaderMobile from "../mainComponents/HeaderMobile";
 import {
   MOBILE_SCREEN_SIZE,
   HUGE_SCREEN_SIZE,
@@ -13,18 +13,22 @@ import FooterPanel from "../mainComponents/FooterPanel";
 import MyGrid from "../toolComponents/MyGrid";
 import { Analytics } from "@vercel/analytics/react";
 import { Permanent_Marker } from "@next/font/google";
-import { Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import DialogItem from "../toolComponents/DialogItem";
+import BackgroundImage from "../reusableComponents/BackgroundImage";
+import Image from "next/image";
+import ArticleIcon from "@mui/icons-material/Article";
+
 const permanentMarker = Permanent_Marker({
   subsets: ["latin"],
-    weight: ['400']
+  weight: ["400"],
 });
 
 const SkinPagePanel = ({
   heroDetailsObject,
   skinVideo,
   activePath,
-  splashPath,
+  splashFullPath,
   skinBigImageObject,
   allSkinsList,
   pageContent,
@@ -51,14 +55,18 @@ const SkinPagePanel = ({
   const LeftField = () => {
     return (
       <div className={styles.PanelContainerStyle}>
-        <HeroDetailInfos heroDetailsObject={heroDetailsObject} skinBigImageObject={skinBigImageObject} pageContent={pageContent} />
+        <HeroDetailInfos
+          heroDetailsObject={heroDetailsObject}
+          skinBigImageObject={skinBigImageObject}
+          pageContent={pageContent}
+        />
       </div>
     );
   };
 
   const RightField = () => {
     return (
-      <div className={styles.PanelContainerStyle}>
+      <div className={styles.PanelContainerStyle} style={{ marginTop: "0px" }}>
         <SkinCardItemList
           skinList={heroDetailsObject.skins}
           heroDetailsObject={heroDetailsObject}
@@ -72,21 +80,22 @@ const SkinPagePanel = ({
   const VideoHeaderField = () => {
     return (
       <div>
-        <MyGrid isOneFullContent leftContent={
-          <div className={styles.VideoHeaderStyle}>
-              {heroDetailsObject?.name != skinBigImageObject?.skinName &&(
+        <MyGrid
+          isOneFullContent
+          leftContent={
+            <div className={styles.VideoHeaderStyle}>
+              {heroDetailsObject?.name != skinBigImageObject?.skinName && (
                 <h1 className={permanentMarker.className}>
                   {heroDetailsObject.name} - {skinBigImageObject.skinName}
                 </h1>
               )}
-              {heroDetailsObject?.name === skinBigImageObject?.skinName &&(
+              {heroDetailsObject?.name === skinBigImageObject?.skinName && (
                 <h1 className={permanentMarker.className}>
                   {heroDetailsObject.name}
                 </h1>
               )}
-              
-              
-{/* <div>
+
+              {/* <div>
       <h3 className={styles.HeaderStyle}>
         {heroDetailsObject.title + " "}(
         {heroDetailsObject.tags
@@ -165,38 +174,25 @@ const SkinPagePanel = ({
         </Grid>
       )}
 </div> */}
-
-
-
-          </div>
-        } />
-        
+            </div>
+          }
+        />
       </div>
     );
   };
 
-
-
   const VideoField = () => {
     return (
-      
       <MyGrid
         isOneFullContent
         leftContent={
           <div>
-
-
-
-
-
-
-
-
-
-              <div className={styles.PanelContainerStyle}>
+            <div
+              className={styles.PanelContainerStyle}
+              style={{ marginTop: "0px" }}
+            >
               <VideoHeaderField />
-            <div className={styles.VideoContainerStyle}>
-                
+              <div className={styles.VideoContainerStyle}>
                 <div className={styles.IframeContainer}>
                   {skinVideo != undefined && skinVideo.videoUrl.length > 0 && (
                     <iframe
@@ -231,58 +227,69 @@ const SkinPagePanel = ({
 
   return (
     <>
+      <BackgroundImage
+        height="50vh"
+        width="100vw"
+        content={
+          <>
+            {/* <div className={styles.ContentStyle}> */}
+            {/* <div className={styles.PanelContainerStyle}> */}
+            <div className={styles.IframeContainer}>
+              {skinVideo != undefined && splashFullPath.length > 0 && (
+                <Image
+                  src={splashFullPath}
+                  alt={heroDetailsObject.skinName}
+                  key={"img_" + heroDetailsObject.skinName}
+                  layout="fill"
+                  objectFit="contain"
+                />
+
+                // <img src={splashFullPath} width={240}
+                // alt={imageName} key={"img_" + imageName}
+                // />
+              )}
+            </div>
+
+            {/* </div></div> */}
+          </>
+        }
+      />
+
       <div className={styles.ContainerPageContainerStyle}>
-        {/* <BackgroundImage
-          height="70vh"
-          content={
-            <>
-              <div className={styles.ContentStyle}>
-                <div className={styles.PanelContainerStyle}>
-                  <div className={styles.IframeContainer}>
-                    {skinVideo != undefined &&
-                      skinVideo.videoUrl.length > 0 && (
-                        <iframe
-                          width={iframeWidth}
-                          height={iframeHeight}
-                          src={`https://www.youtube.com/embed/${skinVideo.videoUrl}?autoplay=1`}
-                          title="YouTube video player"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          allowFullScreen
-                        ></iframe>
-                      )}
-
-                    {skinVideo == undefined ||
-                      (skinVideo.videoUrl.length < 1 && (
-                        <>
-                          <br />
-                          <h3 style={{ textAlign: "center" }}>
-                            Sorry, there is no uploaded video yet...
-                          </h3>
-                          <br />
-                        </>
-                      ))}
-                  </div>
-                </div>
-              </div>
-            </>
-          }
-        /> */}
-
         <div className={styles.HeaderStyle}>
-          <Header allSkinsList={allSkinsList} />
+          {!isMobile && <HeaderMobile allSkinsList={allSkinsList} />}
+          {isMobile && (
+            <HeaderMobile
+              allSkinsList={allSkinsList}
+              middleContent={
+                <Button
+                  variant="text"
+                  endIcon={<ArticleIcon />}
+                  href="#skin-info-section"
+                  style={{ color: "black", marginTop: "3vw", fontSize: "12px" }}
+                >
+                  Explore
+                </Button>
+              }
+            />
+          )}
         </div>
 
         <VideoField />
-
 
         {!isMobile && (
           <MyGrid leftContent={<LeftField />} rightContent={<RightField />} />
         )}
         {isMobile && (
-          <MyGrid leftContent={<RightField />} rightContent={<LeftField />} />
+          <MyGrid
+            leftContent={<RightField />}
+            rightContent={
+              <div id="skin-info-section">
+                <LeftField />
+              </div>
+            }
+          />
         )}
-        
 
         {/* //TODO İlk reklam sayfa başına be sonun eklenecek sonra sağ tarafa Reklam Alınınca tasarım bu şekilde değişecek */}
         {/* <Grid
@@ -351,7 +358,6 @@ const SkinPagePanel = ({
           <FooterPanel />
         </div>
         <Analytics />
-       
       </div>
     </>
   );

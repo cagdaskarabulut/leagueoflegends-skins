@@ -1,13 +1,13 @@
 import Image from "next/image";
 
-const BackgroundImage = ({ content, height }) => {
+const BackgroundImage = ({ content, height, width }) => {
   return (
     <div>
       <div
         style={{
           position: "absolute",
           height: height,
-          width: "100%",
+          width: width,
           clipPath: "inset(0 0 0 0)",
           zIndex: "1",
           color: "red",
@@ -17,7 +17,7 @@ const BackgroundImage = ({ content, height }) => {
           style={{
             position: "fixed",
             height: "100%",
-            width: "100%",
+            width: width,
             left: "0",
             top: "0",
           }}
@@ -30,7 +30,7 @@ const BackgroundImage = ({ content, height }) => {
         style={{
           position: "relative",
           height: height,
-          width: "100%",
+          width: width,
           clipPath: "inset(0 0 0 0)",
         }}
       >
@@ -38,7 +38,7 @@ const BackgroundImage = ({ content, height }) => {
           style={{
             position: "fixed",
             height: "100%",
-            width: "100%",
+            width: width,
             left: "0",
             top: "0",
           }}

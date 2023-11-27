@@ -10305,14 +10305,6 @@
       "videoUrl": "xdphBZfHQ0c"
     },
     {
-      "hero": "f",
-      "heroName": "Xerath",
-      "skin": "DarkStarXerath",
-      "skinName": "Dark Star Xerath",
-      "pageUrl": "Xerath/DarkStarXerath",
-      "videoUrl": "4jq0FrMXMCE"
-    },
-    {
       "hero": "Xerath",
       "heroName": "Xerath",
       "skin": "ArcanaXerath",
@@ -10335,6 +10327,14 @@
       "skinName": "Scorched Earth Xerath",
       "pageUrl": "Xerath/ScorchedEarthXerath",
       "videoUrl": "QMlVcbLVkYw"
+    },
+    {
+      "hero": "Xerath",
+      "heroName": "Xerath",
+      "skin": "DarkStarXerath",
+      "skinName": "Dark Star Xerath",
+      "pageUrl": "Xerath/DarkStarXerath",
+      "videoUrl": "4jq0FrMXMCE"
     },
     {
       "hero": "Nilah",
