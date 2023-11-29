@@ -57,11 +57,18 @@ export default function SkinPage({
         heroDetailsObject={heroDetailsObject}
         skinVideo={skinVideo}
         activePath={activePath}
-        splashFullPath={isMobile ? ("https://ddragon.leagueoflegends.com/cdn/img/champion/loading/"+ splashPath) : ("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + splashPath) }
+        splashFullPath={
+          isMobile
+            ? "https://ddragon.leagueoflegends.com/cdn/img/champion/loading/" +
+              splashPath
+            : "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" +
+              splashPath
+        }
         skinBigImageObject={skinBigImageObject}
         allSkinsList={allSkinsList}
         pageContent={pageContent}
       />
+      <ScrollToTop showBelow={250} />
       <style jsx global>{`
         body {
           margin: 0 !important;
@@ -200,7 +207,7 @@ export async function getStaticProps(ctx) {
           splashPath,
           skinBigImageObject,
           allSkinsList,
-          pageContent
+          pageContent,
         },
         // revalidate: 10, // Next.js will attempt to re-generate the page: // When a request comes in // At most once every 10 seconds
       };
