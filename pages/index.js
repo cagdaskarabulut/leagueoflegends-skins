@@ -3,7 +3,6 @@ import HomePagePanel from "../components/pageComponents/HomePagePanel";
 import fsPromises from "fs/promises";
 import path from "path";
 import ScrollToTop from "../components/reusableComponents/ScrollToTopButton";
-// import { ScrollToTop } from "../components/reusableComponents/ScrollToTopButton";
 export default function HomePage({ allSkinsList }) {
   return (
     <>

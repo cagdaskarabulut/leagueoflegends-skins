@@ -15,7 +15,7 @@ import {
 } from "../../utils/StringUtils";
 import useWindowSize from "@rooks/use-window-size";
 import { MOBILE_SCREEN_SIZE } from "../../constants/GeneralConstants";
-
+import ScrollToTop from "../components/reusableComponents/ScrollToTopButton";
 export default function SkinPage({
   heroDetailsObject,
   skinVideo,
