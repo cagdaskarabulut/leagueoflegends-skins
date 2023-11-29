@@ -2,9 +2,13 @@ import MetaPanel from "../components/mainComponents/MetaPanel";
 import HomePagePanel from "../components/pageComponents/HomePagePanel";
 import fsPromises from "fs/promises";
 import path from "path";
+import ScrollToTop from "../components/reusableComponents/ScrollToTopButton";
+// import { ScrollToTop } from "../components/reusableComponents/ScrollToTopButton";
 export default function HomePage({ allSkinsList }) {
   return (
     <>
+    
+
       <MetaPanel
         title="League of Legends Champion Skins Showcase: Stunning Skin Images and Skin Videos"
         descriptionContent="Explore the little-known stories of all heroes and breathtaking world of League of Legends champion skins through our extensive collection of images and videos. Immerse yourself in the visual splendor of LoL champions as we showcase their incredible skins in action. From legendary to rare, discover the beauty and power of each skin in our curated galleries and videos."
@@ -13,6 +17,8 @@ export default function HomePage({ allSkinsList }) {
         imageAlt="League of Legends Skins"
       />
       <HomePagePanel allSkinsList={allSkinsList}/>
+      {/* <ScrollToTop /> */}
+      <ScrollToTop showBelow={250}/>
       <style jsx global>{`
           body {
             margin: 0 !important;

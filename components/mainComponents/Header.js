@@ -26,7 +26,7 @@ export default function Header({ allSkinsList }) {
     setIsLoading(true);
     let selectedSkin = null;
     allSkinsList?.map((option) =>
-      option.searchField.toLowerCase() == newValue.toLowerCase()
+      option.searchField?.toLowerCase() == newValue?.toLowerCase()
         ? (selectedSkin = option)
         : ""
     );
