@@ -14,6 +14,7 @@
   background-color: $containerBackgroundHeader;
   .header {
 
+    height: 75px !important;
     justify-content: center;
     font-family: permanentMarker !important;
 
@@ -30,8 +31,9 @@
     }
 
     .SearchBoxStyle {
-      margin-top: 5px;
-      margin-bottom: 5px;
+      // margin-top: 5px;
+      // margin-bottom: 5px;
+      // height: 65px !important;
       width: 400px !important;
       justify-content: end;
       float: right;

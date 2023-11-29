@@ -63,7 +63,7 @@ export default function HeaderMobile({ allSkinsList,middleContent }) {
           forHeader={true}
           leftContent={
             <>
-              <h1 className={permanentMarker.className}>
+              <h1 className={permanentMarker.className} style={{marginTop: "5px"}}>
                 <a className={styles.logoStyle} href="/">
                   {!isMobile && "LeagueofLegends-Skins"}
                   {isMobile && "LS"}
@@ -72,7 +72,8 @@ export default function HeaderMobile({ allSkinsList,middleContent }) {
             </>
           }
           middleContent={
-            middleContent
+            <div style={{height: "35px", marginTop: "15px"}}>
+            {middleContent}</div>
           }
           rightContent={
             <>
@@ -82,8 +83,9 @@ export default function HeaderMobile({ allSkinsList,middleContent }) {
                   size="large"
                   style={{
                     fontSize: "24px",
-                    marginRight: "9px",
-                    marginTop: "8px",
+                    // marginRight: "9px",
+                    // marginTop: "8px",
+                    height: "35px", marginTop: "12px" ,
                     color: "black",
                     display: isShowSearchBox ? "none" : "",
                     float: "right",
@@ -101,6 +103,7 @@ export default function HeaderMobile({ allSkinsList,middleContent }) {
                     transition: "opacity .3s ease-in-out",
                     animation:"ease-in-out",
                     display: !isShowSearchBox ? "none" : "",
+                    height: "35px", marginTop: "10px" 
                   }}
                   id="free-solo-demo"
                   freeSolo
