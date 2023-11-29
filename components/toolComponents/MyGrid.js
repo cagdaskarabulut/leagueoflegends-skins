@@ -64,10 +64,10 @@ const MyGrid = ({
             <Grid item xs={isMobile ? (forHeader ? 2 : 12) : 3}>
               {leftContent}
             </Grid>
-            <Grid item xs={isMobile ? (forHeader ? 4 : 12) : 6}>
+            <Grid item xs={isMobile ? (forHeader ? 3 : 12) : 6}>
               {middleContent}
             </Grid>
-            <Grid item xs={isMobile ? (forHeader ? 6 : 12) : 3}>
+            <Grid item xs={isMobile ? (forHeader ? 7 : 12) : 3}>
               {rightContent}
             </Grid>
           </>

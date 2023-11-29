@@ -266,9 +266,9 @@ const SkinPagePanel = ({
                   variant="text"
                   endIcon={<ArticleIcon />}
                   href="#skin-info-section"
-                  style={{ color: "black", marginTop: "3vw", fontSize: "12px" }}
-                >
-                  Explore
+                  style={{ color: "black", fontSize: "12px", paddingTop: "0px", marginTop: "0px", paddingLeft: "0px"}}
+                  >
+                  Read
                 </Button>
               }
             />

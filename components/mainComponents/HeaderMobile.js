@@ -83,7 +83,7 @@ export default function HeaderMobile({ allSkinsList,middleContent }) {
                   size="large"
                   style={{
                     fontSize: "24px",
-                    // marginRight: "9px",
+                    marginRight: "9px",
                     // marginTop: "8px",
                     height: "35px", marginTop: "12px" ,
                     color: "black",
@@ -115,7 +115,7 @@ export default function HeaderMobile({ allSkinsList,middleContent }) {
                   renderInput={(params) => (
                     <TextField
                       {...params}
-                      label="Search hero or skin name"
+                      label="Search hero or skin"
                       size="small"
                       fullWidth
                       InputProps={{

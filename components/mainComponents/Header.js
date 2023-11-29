@@ -68,7 +68,7 @@ export default function Header({ allSkinsList }) {
                 renderInput={(params) => (
                   <TextField
                     {...params}
-                    label="Search hero or skin name"
+                    label="Search hero or skin"
                     fullWidth
                     InputProps={{
                       ...params.InputProps,

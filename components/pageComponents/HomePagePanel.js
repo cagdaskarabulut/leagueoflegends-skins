@@ -38,7 +38,7 @@ const HomePagePanel = ({ allSkinsList }) => {
               href="#lol-info-section"
               style={{ color: "black", fontSize: "12px", paddingTop: "0px", marginTop: "0px", paddingLeft: "0px"}}
             >
-              Explore
+              Read
             </Button>
           }
         />
