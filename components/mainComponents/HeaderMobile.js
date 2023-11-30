@@ -29,14 +29,16 @@ export default function HeaderMobile({ allSkinsList,middleContent }) {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [isShowSearchBox, setIsShowSearchBox] = useState(false);
-
+  const [logoTitle, setLogoTitle] = useState("");
   useEffect(() => {
     if (innerWidth === null) {
       setIsMobile(false);
       setIsShowSearchBox(true);
+      setLogoTitle("");
     } else {
       setIsMobile(innerWidth < MOBILE_SCREEN_SIZE);
       setIsShowSearchBox(!(innerWidth < MOBILE_SCREEN_SIZE));
+      setLogoTitle(innerWidth < MOBILE_SCREEN_SIZE ? "LS" : "LeagueofLegends-Skins")
     }
   }, [innerWidth]);
 
@@ -65,8 +67,7 @@ export default function HeaderMobile({ allSkinsList,middleContent }) {
             <>
               <h1 className={permanentMarker.className} style={{marginTop: "5px"}}>
                 <a className={styles.logoStyle} href="/">
-                  {!isMobile && "LeagueofLegends-Skins"}
-                  {isMobile && "LS"}
+                  {logoTitle}
                 </a>
               </h1>
             </>
