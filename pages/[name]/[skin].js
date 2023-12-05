@@ -142,17 +142,16 @@ export async function getStaticProps(ctx) {
   });
 
   //_ileride - içeren sayfaların indexlemeleri bitince burası kapatılabilir
-  if (!isPageFound) {
-    objectDataList?.map((objectData, index) => {
-      let activeHeroId = objectData.hero;
-      let path = objectData.pageUrl;
-      // if (path === activePath) {
-      if (path.toLowerCase() === activePath.toLowerCase()) {
-        isPageFound = true;
-        heroId = activeHeroId;
-      }
-    });
-  }
+  // if (!isPageFound) {
+  //   objectDataList?.map((objectData, index) => {
+  //     let activeHeroId = objectData.hero;
+  //     let path = objectData.pageUrl;
+  //     if (path.toLowerCase() === activePath.toLowerCase()) {
+  //       isPageFound = true;
+  //       heroId = activeHeroId;
+  //     }
+  //   });
+  // }
 
   if (isPageFound) {
     //_ skin sayfasının contentini getir
@@ -223,34 +222,6 @@ export async function getStaticProps(ctx) {
     };
   }
 }
-
-//- if new version doesn't work, try this
-// export async function getStaticPaths() {
-//   const filePath = path.join(process.cwd(),"data" ,"my_skin_video_db.json");
-//   const jsonData = await fsPromises.readFile(filePath);
-//   const objectDataListAll = JSON.parse(jsonData);
-//   const objectDataList = Object.values(objectDataListAll.data);
-//   let t1 = objectDataList.map((objectData) => {
-//     return {
-//         params: {
-//           name: replaceStringForUrlFormat(objectData.heroName),
-//           skin: replaceStringForUrlFormat(objectData.skinName),
-//         },
-//     };
-//   });
-//   let t2 = objectDataList.map((objectData) => {
-//     return {
-//         params: {
-//           name: objectData.hero,
-//           skin: objectData.skin,
-//         },
-//     };
-//   });
-//     return {
-//       paths: [...t1, ...t2],
-//       fallback: 'blocking',
-//   };
-// }
 
 //-new version
 export async function getStaticPaths() {
