@@ -27,6 +27,7 @@ export default function SkinPage({
   pageContent,
 }) {
   let titleText = "";
+  let descriptionContent = "";
   const { innerWidth } = useWindowSize();
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
@@ -39,17 +40,20 @@ export default function SkinPage({
 
   if (skinVideo.skinName == skinVideo.heroName) {
     titleText = `${skinVideo.heroName} Skins - ${skinVideo.heroName} All Skin Images and Skin Videos: ${skinVideo.heroName} Cinematic / Trailer, Little-known story of the ${skinVideo.heroName}`;
+    descriptionContent = `Explore the little-known story of the ${skinVideo.heroName} and enchanting world of ${skinVideo.heroName} in League of Legends through our captivating collection of skin images and videos. Witness the transformation of this iconic champion with a variety of skins, from classic to legendary. Immerse yourself in the visual delight of ${skinVideo.heroName}'s champion customizations in our comprehensive gallery.`;
   } else if (skinVideo.skinName == "default") {
     titleText = `${skinVideo.heroName} Skin Video: ${skinVideo.heroName} Classic(default) Skin Images and Videos, Little-known story of the ${skinVideo.heroName}'s default skin`;
+    descriptionContent = `Explore the little-known story of the default skins of ${skinVideo.heroName} in League of Legends through our captivating collection of skin images and videos.`;
   } else {
     titleText = `${skinVideo.skinName} Skin Video - ${skinVideo.heroName} : ${skinVideo.heroName} Visual Showcase with Skin Images and Videos, Little-known story of the ${skinVideo.heroName}'s ${skinVideo.skinName} skin`;
+    descriptionContent = `Explore the little-known story of the ${skinVideo.skinName} and enchanting world of ${skinVideo.heroName} in League of Legends through our captivating collection of skin images and videos.`;
   }
 
   return (
     <>
       <MetaPanel
         title={titleText}
-        descriptionContent={`Explore the little-known story of the ${skinVideo.heroName} and enchanting world of ${skinVideo.heroName} in League of Legends through our captivating collection of skin images and videos. Witness the transformation of this iconic champion with a variety of skins, from classic to legendary. Immerse yourself in the visual delight of ${skinVideo.heroName}'s champion customizations in our comprehensive gallery.`}
+        descriptionContent={descriptionContent}
         keywordsContent={`${skinVideo.skinName} skin, ${skinVideo.heroName} skin, ${skinVideo.heroName} Skin, ${skinVideo.heroName} skins, ${skinVideo.skinName} skin videos, ${skinVideo.skinName} skin images, ${skinVideo.skinName} cinematic, ${skinVideo.skinName} trailer, ${skinVideo.skinName} skin chromas, ${skinVideo.heroName} Skins, ${skinVideo.heroName} Champion Skins, ${skinVideo.heroName} Skin Images, ${skinVideo.heroName} Skin Videos, League of Legends ${skinVideo.heroName} Skins, Champion Customization, In-Game Cosmetics, Visual Transformations, Gaming Aesthetics, ${skinVideo.heroName} Cosmetics, ${skinVideo.heroName} Skin Showcase, Video Game Visuals, Rare ${skinVideo.heroName} Skins, Legendary ${skinVideo.heroName} Skins, ${skinVideo.heroName} Skin Gallery, ${skinVideo.heroName} Character Skins, Gaming Artistry, LoL Skin Collection, ${skinVideo.heroName}'s Beauty, little-known story of the ${skinVideo.heroName}, little-known story of the ${skinVideo.skinName}, price of ${skinVideo.skinName}, how many rp ${skinVideo.skinName},${skinVideo.skinName} rp, ${skinVideo.skinName} price`}
         imagePath="/images/lol-skins-icon.ico"
         imageAlt="League of Legends Skins"
