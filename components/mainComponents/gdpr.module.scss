@@ -1,0 +1,63 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/colors.scss";
+@import "../../styles/globals.scss";
+
+
+.ContainerPageContainerStyle {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 98vh !important;
+  margin: 0 !important;
+  color: $font !important;
+  font-size: 14px !important;
+
+  :global {
+    .MuiChip-label {
+      font-size: 14px !important;
+    }
+
+    .MuiTypography-root {
+      font-size: 14px !important;
+    }
+  }
+
+  .HeaderStyle {
+    min-height: 50px !important;
+    background-color: transparent !important;
+
+    h1,
+    h1 a,
+    h2,
+    h2 a {
+      color: $orangeDark !important;
+    }
+
+    @include tablet-or-less {
+      // background: linear-gradient(to top, $white 25%, $blue 50%, $font 90%);
+      min-height: 65px !important;
+    }
+  }
+
+  .ContentStyle {
+    width: 100%;
+    z-index: 2;
+    flex: 1 !important;
+    display: flex;
+    background-color: transparent !important;
+
+    @include tablet-or-less {
+      padding: 0px !important;
+      // margin-top: -px !important;
+
+      :global {
+        .MuiGrid-root {
+          padding-top: 0px !important;
+        }
+      }
+    }
+  }
+}
+
+.HomePageInfoStyle{
+  color: black;
+}
