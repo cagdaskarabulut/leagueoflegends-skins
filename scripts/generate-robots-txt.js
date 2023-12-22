@@ -120,20 +120,6 @@ daily
 0.7
 </priority>
 </url>
-<url>
-<loc>
-${otherSubDomainrootPath}
-</loc>
-<lastmod>
-${now}
-</lastmod>
-<changefreq>
-daily
-</changefreq>
-<priority>
-0.7
-</priority>
-</url>
   `;
 
   let heroList;
