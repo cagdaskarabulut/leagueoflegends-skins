@@ -8,9 +8,11 @@
 1. isManualyAddingSkinVideos = false; yapılır. 
 **Bu fonksiyon sayesinde robots.txt ve sitemap.xml dosyaları dinamik olarak üretilir.**
 
-## Yeni kostüm geldiğinde ;
+## Yeni hero veya kostüm geldiğinde ;
 1. isManualyAddingSkinVideos = false; yapılır.
 **Bu şekilde çalıştırıldığında güncel kahramanlar ve kostümlerinin listesi çekilir.Eskiden dolu olanlar LATEST_my_skin_video_db.json dosyasında "videoUrl": "XXX" şeklinde gelirken, yeni gelen championlar ve önceden boş olanlar "videoUrl": "" şeklinde boş geleceği için tespit edilip düzeltilebilir.**
+
+2. Oluşturulmuş yeni sayfa içeriğini doldurmak için leagueoflegends-skins_content-creator uygulaması kullanılarak içerik oluşturulur
 
 ## Video kaynaklarını güncel tutma, Videosu eksik olan skinleri otomatik güncelleme;
 ### generate-robots-txt.js dosyasındaki generateRobotsTxtAndSitemapXml() fonksiyonunda
