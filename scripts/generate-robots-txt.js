@@ -80,9 +80,9 @@ function returnXXXIfExistingVideoPathByPageUrl(pageUrl){
 function generateRobotsTxtAndSitemapXml() {
 
   //- => Sadece skin videoları için kullanılır bu parametre ve console dan manuel alınıp kopyalanır. api kotası yetmezse yenisi alınır
-  let isManualyAddingSkinVideos = true;
-  let heroIdForManuallyAddingSkinVideos = 'Hwei';
-  let youtubeApiKey = 'AIzaSyDk5A_LVRE1PEf91aeKFiKAjWgAX768zwk';
+  let isManualyAddingSkinVideos = false;
+  let heroIdForManuallyAddingSkinVideos = '';
+  let youtubeApiKey = '';
   //- Common fields
   let rootPath = `https://leagueoflegends-skins.com`;
   let subDomainrootPath = `https://www.leagueoflegends-skins.com`;
