@@ -345,6 +345,14 @@
       "videoUrl": "qCVLRh1y96M"
     },
     {
+      "hero": "Hwei",
+      "heroName": "Hwei",
+      "skin": "Hwei",
+      "skinName": "Hwei",
+      "pageUrl": "Hwei/Hwei",
+      "videoUrl": "G8tL3g-gDjo"
+    },
+    {
       "hero": "Illaoi",
       "heroName": "Illaoi",
       "skin": "Illaoi",
@@ -3623,6 +3631,22 @@
       "skinName": "Piltover Customs Heimerdinger",
       "pageUrl": "Heimerdinger/PiltoverCustomsHeimerdinger",
       "videoUrl": "Ks82mK9NBqo"
+    },
+    {
+      "hero": "Hwei",
+      "heroName": "Hwei",
+      "skin": "default",
+      "skinName": "default",
+      "pageUrl": "Hwei/default",
+      "videoUrl": "ZiLL9ZwaBRE"
+    },
+    {
+      "hero": "Hwei",
+      "heroName": "Hwei",
+      "skin": "Winterblessed-Hwei",
+      "skinName": "Winterblessed Hwei",
+      "pageUrl": "Hwei/WinterblessedHwei",
+      "videoUrl": "PliaBnQ0kKw"
     },
     {
       "hero": "Belveth",

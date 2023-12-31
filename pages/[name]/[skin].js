@@ -120,10 +120,10 @@ export async function getStaticProps(ctx) {
   let splashPath = "";
   let skinBigImageObject = "";
 
-  const filePath = path.join(process.cwd(), "data", "my_skin_video_db.json");
-  const jsonData = await fsPromises.readFile(filePath);
-  const objectDataListAll = JSON.parse(jsonData);
-  const objectDataList = Object.values(objectDataListAll.data);
+  // const filePath = path.join(process.cwd(), "data", "my_skin_video_db.json");
+  // const jsonData = await fsPromises.readFile(filePath);
+  // const objectDataListAll = JSON.parse(jsonData);
+  // const objectDataList = Object.values(objectDataListAll.data);
 
   const filePath2 = path.join(
     process.cwd(),
@@ -137,25 +137,12 @@ export async function getStaticProps(ctx) {
   let heroId = "";
 
   allSkinsList?.map((objectData, index) => {
-    // let activeHeroId = objectData.hero;
     let path = objectData.newPageUrl;
     if (path.toLowerCase() === activePath.toLowerCase()) {
       isPageFound = true;
       heroId = getSkinVideoByOldPageUrl(objectData.pageUrl).hero;
     }
   });
-
-  //_ileride - içeren sayfaların indexlemeleri bitince burası kapatılabilir
-  // if (!isPageFound) {
-  //   objectDataList?.map((objectData, index) => {
-  //     let activeHeroId = objectData.hero;
-  //     let path = objectData.pageUrl;
-  //     if (path.toLowerCase() === activePath.toLowerCase()) {
-  //       isPageFound = true;
-  //       heroId = activeHeroId;
-  //     }
-  //   });
-  // }
 
   if (isPageFound) {
     //_ skin sayfasının contentini getir
@@ -192,7 +179,7 @@ export async function getStaticProps(ctx) {
       let skinVideo;
       let heroIdWithCapitalizedFirstChar = capitalizeFirstChar(heroId);
       await fetch(
-        `https://ddragon.leagueoflegends.com/cdn/13.20.1/data/en_US/champion/${heroIdWithCapitalizedFirstChar}.json`
+        `https://ddragon.leagueoflegends.com/cdn/13.24.1/data/en_US/champion/${heroIdWithCapitalizedFirstChar}.json`
       )
         .then((res) => res.json())
         .then((resData) => {
@@ -245,22 +232,3 @@ export async function getStaticPaths() {
     fallback: "blocking",
   };
 }
-
-//-oldest
-// export async function getStaticPaths() {
-//   const filePath = path.join(process.cwd(),"data" ,"my_skin_video_db.json");
-//   const jsonData = await fsPromises.readFile(filePath);
-//   const objectDataListAll = JSON.parse(jsonData);
-//   const objectDataList = Object.values(objectDataListAll.data);
-//   return {
-//     paths: objectDataList.map((objectData) => {
-//         return {
-//             params: {
-//               name: objectData.hero,
-//               skin: objectData.skin,
-//             },
-//         };
-//     }),
-//     fallback: 'blocking',
-// };
-// }

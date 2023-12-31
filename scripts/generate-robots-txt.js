@@ -80,13 +80,12 @@ function returnXXXIfExistingVideoPathByPageUrl(pageUrl){
 function generateRobotsTxtAndSitemapXml() {
 
   //- => Sadece skin videoları için kullanılır bu parametre ve console dan manuel alınıp kopyalanır. api kotası yetmezse yenisi alınır
-  let isManualyAddingSkinVideos = false;
-  let heroIdForManuallyAddingSkinVideos = '';
-  let youtubeApiKey = '';
+  let isManualyAddingSkinVideos = true;
+  let heroIdForManuallyAddingSkinVideos = 'Hwei';
+  let youtubeApiKey = 'AIzaSyDk5A_LVRE1PEf91aeKFiKAjWgAX768zwk';
   //- Common fields
   let rootPath = `https://leagueoflegends-skins.com`;
   let subDomainrootPath = `https://www.leagueoflegends-skins.com`;
-  let otherSubDomainrootPath = `https://lol-skins.leagueoflegends-skins.com`;
   let mySkinDbFields = "";
   let mySkinBigImagesDbFields = "";
   let now = getNowWithISOFormat();
@@ -126,7 +125,7 @@ daily
   let heroDetailsList;
   let skinList;
   fetch(
-    "http://ddragon.leagueoflegends.com/cdn/13.20.1/data/en_US/champion.json"
+    "http://ddragon.leagueoflegends.com/cdn/13.24.1/data/en_US/champion.json"
   )
     .then((res) => res.json())
     .then((data) => {
@@ -192,7 +191,7 @@ daily
 
 
         fetch(
-          "https://ddragon.leagueoflegends.com/cdn/13.20.1/data/en_US/champion/" +
+          "https://ddragon.leagueoflegends.com/cdn/13.24.1/data/en_US/champion/" +
             champion.id +
             ".json"
         )

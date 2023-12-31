@@ -1,5 +1,5 @@
 {
-  "data": [ 
+  "data": [
     {
       "pageUrl": "Aatrox/Aatrox",
       "newPageUrl": "Aatrox/Aatrox",
@@ -300,6 +300,13 @@
       "skinName": "Heimerdinger",
       "splashNumber": "0",
       "searchField": "Heimerdinger"
+    },
+    {
+      "pageUrl": "Hwei/Hwei",
+      "newPageUrl": "Hwei/Hwei",
+      "skinName": "Hwei",
+      "splashNumber": "0",
+      "searchField": "Hwei"
     },
     {
       "pageUrl": "Illaoi/Illaoi",
@@ -5116,6 +5123,20 @@
         "skinName": "Heimerstinger",
         "splashNumber": "24",
         "searchField": "Heimerdinger - Heimerstinger"
+      },
+      {
+        "pageUrl": "Hwei/default",
+        "newPageUrl": "Hwei/default",
+        "skinName": "default",
+        "splashNumber": "0",
+        "searchField": "Hwei - default"
+      },
+      {
+        "pageUrl": "Hwei/WinterblessedHwei",
+        "newPageUrl": "Hwei/Winterblessed-Hwei",
+        "skinName": "Winterblessed Hwei",
+        "splashNumber": "1",
+        "searchField": "Hwei - Winterblessed Hwei"
       },
       {
         "pageUrl": "Zyra/default",

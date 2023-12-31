@@ -11,8 +11,8 @@ const HeroesPanel = () => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  let URL_imageRootPath = "https://ddragon.leagueoflegends.com/cdn/13.20.1/img/champion/";
-  let URL_allChampionsListPath = "https://ddragon.leagueoflegends.com/cdn/13.20.1/data/en_US/champion.json";
+  let URL_imageRootPath = "https://ddragon.leagueoflegends.com/cdn/13.24.1/img/champion/";
+  let URL_allChampionsListPath = "https://ddragon.leagueoflegends.com/cdn/13.24.1/data/en_US/champion.json";
   useEffect(() => {
     fetch(URL_allChampionsListPath)
       .then((res) => res.json())
