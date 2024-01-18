@@ -1,0 +1,14 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/colors.scss";
+@import "../../styles/globals.scss";
+
+.footerStyle {
+  position: inherit;
+  background: transparent !important;
+  font-weight: bold !important;
+  color: $orangeDark !important;
+  .footerContentStyle {
+    width: 100%;
+    text-align: center;
+  }
+}

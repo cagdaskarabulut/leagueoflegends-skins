@@ -1,0 +1,52 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/colors.scss";
+@import "../../styles/globals.scss";
+
+.header {
+  width: 100%;
+  justify-content: center;
+  display: inline-grid !important;
+  // padding: 30px;
+  padding-bottom: 0px;
+  font-family: permanentMarker !important;
+  @include tablet-or-less {
+    padding-bottom: 30px;
+  }
+  
+  .logoStyle{
+    text-decoration: none;
+    color: $orangeDark;
+    display: flex;
+    justify-content: center;
+  }
+
+  .SearchBoxStyle{
+    width: 600px !important;
+      :global {
+        .MuiOutlinedInput-notchedOutline{
+          border-color:  black !important;
+          border-width: 5px !important;
+        }
+        .MuiInputBase-input {
+          font-family: inherit !important;
+          color: $orangeDark !important;
+        }
+        .MuiSvgIcon-root{
+          color: black !important;
+        }
+        .MuiInputLabel-root {
+          color: black !important;
+          font-family: inherit !important;
+        }
+        .MuiAutocomplete-input{
+          font-family: inherit !important;
+          color: $orangeDark !important;
+        }
+      }
+      @include tablet-or-less {
+        width: 100% !important;
+      }
+      
+  }
+}
+

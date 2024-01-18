@@ -1,0 +1,41 @@
+{
+  "name": "leagueoflegends-skins",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "./scripts/generate-robots-txt;next build",
+    "export": "next export",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@ctrl/react-adsense": "^1.7.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@material-ui/core": "^4.12.4",
+    "@mui/icons-material": "^5.14.13",
+    "@mui/material": "^5.14.13",
+    "@next/font": "^14.0.2",
+    "@rooks/use-window-size": "^4.11.2",
+    "@vercel/analytics": "^1.1.1",
+    "firebase": "^10.4.0",
+    "next": "13.5.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-youtube": "^10.1.0",
+    "rooks": "^7.14.1",
+    "sass": "^1.69.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  }
+}

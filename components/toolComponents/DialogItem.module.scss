@@ -1,0 +1,41 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/colors.scss";
+@import "../../styles/globals.scss";
+
+.menuPanelStyle {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  max-width: 100% !important;
+
+  @include tablet-or-less {
+    align-items: flex-start !important;
+    width: 100% !important;
+    display: inline-grid !important;
+  }
+
+  .menuButtonStyle,
+  .menuButtonStyleSelected {
+    // font-family: 'Times New Roman' !important;
+    font-size: 14px !important;
+    color: $font !important;
+    font-weight: bold !important;
+    border: none !important;
+    background: linear-gradient(90deg, $orangeDark, $orangeDark) !important;
+    background-size: 0% 3px !important;
+    background-repeat: no-repeat !important;
+    background-position: left bottom !important;
+    transition: background-size 300ms ease !important;
+
+    &:hover {
+      background-size: 100% 3px !important;
+      color: $orangeDark !important;
+    }
+  }
+
+  .menuButtonStyleSelected {
+    color: $orangeDark !important;
+    background-size: 100% 3px !important;
+
+  }
+}

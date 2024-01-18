@@ -1,0 +1,25 @@
+@import "./colors.scss";
+
+@mixin desktopHuge {
+  @media (min-width: 1650px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin tablet-or-less {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}

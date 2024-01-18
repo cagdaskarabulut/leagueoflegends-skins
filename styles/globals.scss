@@ -1,0 +1,23 @@
+@import "./colors.scss";
+@import "./mixins.scss";
+
+.logoStyle{
+  color: $blue;
+}
+
+.titleStyle{
+  color: $fontTitle;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.PanelContainerStyle{
+  background-color: $containerBackgroundDesktop;
+  border-radius: 25px; 
+  margin: 10px;
+  padding: 20px;
+  @include tablet-or-less {
+    background-color: $containerBackgroundMobile;
+  }
+}

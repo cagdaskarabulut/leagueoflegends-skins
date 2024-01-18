@@ -1,0 +1,79 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/colors.scss";
+@import "../../styles/globals.scss";
+
+
+.ContainerPageContainerStyle {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 98vh !important;
+  margin: 0 !important;
+  color: $font !important;
+  font-size: 14px !important;
+
+  :global {
+    .MuiChip-label {
+      font-size: 14px !important;
+    }
+
+    .MuiTypography-root {
+      font-size: 14px !important;
+    }
+  }
+
+  .HeaderStyle {
+    background-color: transparent !important;
+
+    h1,
+    h1 a,
+    h2,
+    h2 a {
+      color: $orangeDark !important;
+      //     background:url("https://karabulut-storage.s3.amazonaws.com/leagueoflegends-skins/indexBackground.jpg") !important;
+      // background-clip:text !important;
+      // color:transparent !important;
+    }
+
+    @include tablet-or-less {
+      // min-height: 65px !important;
+    }
+  }
+
+  .VideoContainerStyle {
+    color: $orangeDark !important;
+    @include tablet-or-less {
+      padding: 0px !important;
+      // margin-top: -px !important;
+
+      :global {
+        .MuiGrid-root {
+          padding-top: 0px !important;
+        }
+      }
+    }
+  }
+}
+
+.IframeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+}
+
+.HomePageInfoStyle {
+  color: black;
+}
+
+.VideoHeaderStyle {
+  color: $orangeDark !important;
+  h1,h2,h3,p {
+    margin: 0px !important;
+    padding: 0px !important;  
+  }
+  margin: 0px !important;
+  display: flex;
+  justify-content: center !important;
+}

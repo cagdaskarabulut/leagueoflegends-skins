@@ -1,0 +1,42 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/colors.scss";
+@import "../../styles/globals.scss";
+
+
+.standartSize {
+  width: 200px !important;
+  height: 200px !important;
+  position: relative !important;
+}
+
+.smallSize {
+  width: 75px !important;
+  height: 75px !important;
+  position: relative !important;
+  transition-property: background-image, background-color, color;
+  transition: all 0.5s ease-out;
+  
+}
+
+
+.standartSizeSelected,
+.smallSizeSelected {
+  position: relative !important;
+  padding: 15px !important;
+  margin: -15px !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+@include desktop {
+  .standartSize:hover,
+  .standartSize:focus,
+  .smallSize:hover,
+  .smallSize:focus {
+    position: relative !important;
+    padding: 15px !important;
+    margin: -15px !important;
+    position: relative !important;
+    z-index: 10 !important;
+  }
+}
