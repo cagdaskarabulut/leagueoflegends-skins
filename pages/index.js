@@ -6,8 +6,6 @@ import ScrollToTop from "../components/reusableComponents/ScrollToTopButton";
 export default function HomePage({ allSkinsList }) {
   return (
     <>
-    
-
       <MetaPanel
         title="League of Legends Skins - League of Legends Champion Skins Showcase: Stunning Skin Images and Skin Videos"
         descriptionContent="League of Legends Skins - Explore the little-known stories of all heroes and breathtaking world of League of Legends champion skins through our extensive collection of images and videos. Immerse yourself in the visual splendor of LoL champions as we showcase their incredible skins in action. From legendary to rare, discover the beauty and power of each skin in our curated galleries and videos."
