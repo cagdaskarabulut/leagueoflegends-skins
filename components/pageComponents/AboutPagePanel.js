@@ -11,10 +11,10 @@ import MyGrid from "../toolComponents/MyGrid";
 import { Analytics } from "@vercel/analytics/react";
 import Autocomplete from "@mui/material/Autocomplete";
 import { Button, Link, TextField } from "@mui/material";
-import ArticleIcon from "@mui/icons-material/Article";
+import HomeIcon from "@mui/icons-material/Home";
 import { useRouter } from "next/navigation";
 
-const HomePagePanel = ({ allSkinsList }) => {
+const AboutPagePanel = ({ allSkinsList }) => {
   const { innerWidth, innerHeight, outerHeight, outerWidth } = useWindowSize();
   const [isMobile, setIsMobile] = useState(false);
   const router = useRouter();
@@ -42,9 +42,9 @@ const HomePagePanel = ({ allSkinsList }) => {
           middleContent={
             <Button
               variant="text"
-              startIcon={<ArticleIcon />}
+              startIcon={<HomeIcon />}
               // href="#lol-info-section"
-              onClick={() => router.push("/about")}
+              onClick={() => router.push("/")}
               style={{
                 color: "black",
                 fontSize: "12px",
@@ -54,7 +54,7 @@ const HomePagePanel = ({ allSkinsList }) => {
                 marginLeft: "10px",
               }}
             >
-              Read
+              Home
             </Button>
           }
         />
@@ -133,14 +133,7 @@ const HomePagePanel = ({ allSkinsList }) => {
             </p>
           </div>
         </div>
-      </>
-    );
-  };
 
-  const RightField = () => {
-    // Google Ads
-    return (
-      <>
         <div className={styles.PanelContainerStyle}>
           <div className={styles.HomePageInfoStyle}>
             <h2>Champion Skins and the Art of Personalization</h2>
@@ -229,25 +222,7 @@ const HomePagePanel = ({ allSkinsList }) => {
           <HeaderField />
         </div>
         <div className={styles.ContentStyle}>
-          {!isMobile && (
-            <MyGrid
-              leftContent={<LeftField />}
-              middleContent={<HeroesPanel />}
-              rightContent={<RightField />}
-            />
-          )}
-          {isMobile && (
-            // <MyGrid
-            //   leftContent={<HeroesPanel />}
-            //   middleContent={
-            //     <div id="lol-info-section">
-            //       <LeftField />
-            //     </div>
-            //   }
-            //   rightContent={<RightField />}
-            // />
-            <MyGrid isOneFullContent leftContent={<HeroesPanel />} />
-          )}
+          <MyGrid isOneFullContent leftContent={<LeftField />} />
         </div>
         <FooterPanel />
 
@@ -257,4 +232,4 @@ const HomePagePanel = ({ allSkinsList }) => {
   );
 };
 
-export default HomePagePanel;
+export default AboutPagePanel;
