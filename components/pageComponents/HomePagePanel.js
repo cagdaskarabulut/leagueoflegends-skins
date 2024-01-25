@@ -54,7 +54,7 @@ const HomePagePanel = ({ allSkinsList }) => {
                 marginLeft: "10px",
               }}
             >
-              Read
+              About
             </Button>
           }
         />
