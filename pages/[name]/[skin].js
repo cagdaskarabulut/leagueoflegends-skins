@@ -174,7 +174,7 @@ export async function getStaticProps(ctx) {
       let skinVideo;
       let heroIdWithCapitalizedFirstChar = capitalizeFirstChar(heroId);
       await fetch(
-        `https://ddragon.leagueoflegends.com/cdn/14.1.1/data/en_US/champion/${heroIdWithCapitalizedFirstChar}.json`
+        `https://ddragon.leagueoflegends.com/cdn/14.16.1/data/en_US/champion/${heroIdWithCapitalizedFirstChar}.json`
       )
         .then((res) => res.json())
         .then((resData) => {
@@ -219,8 +219,8 @@ export async function getStaticPaths() {
     paths: objectDataList.map((objectData) => {
       return {
         params: {
-          name:replaceStringForUrlFormat(objectData.heroName),
-          skin:replaceStringForUrlFormat(objectData.skinName),
+          name: replaceStringForUrlFormat(objectData.heroName),
+          skin: replaceStringForUrlFormat(objectData.skinName),
         },
       };
     }),

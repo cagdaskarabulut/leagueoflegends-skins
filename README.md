@@ -30,3 +30,13 @@
 # Genel Bilgiler
 ### Nesne bağlantıları
 1. Sayfa adresleri olarak my_skin_video_db_ForSkinsBigImages dosyasındaki newPageUrl alanları kullanılıyor fakat my_skin_video_db nesnesine bağlantı yapmak için primary key olarak pageUrl alanı kullanıyor.  
+
+
+----------------------------------------------------------------
+
+# Yeni Kayıt Girişi İçin Yeni Yöntem
++ 0. isManualyAddingSkinVideos = false; yapılır ve üretilen LATEST_my_skin_video_db.json dosyasının kopyası oluşturulup onun üzerinde çalışılır.
++ 1. LATEST_my_skin_video_db.json dosyasında  "videoUrl": "XXX" olan nesneler silinir. 
++ 2. Geri kalanlar my_skin_video_db.json dosyasına kopyalanır ve videoUrl alanları youtube spotlight kanalından embed linkindeki key alınarak doldurulur
++ 3. my_skin_video_db_ForSkinsBigImages.json dosyasına giriş yapılıp splashNumber ları https://lol-skin.weblog.vc/ sitesinden kopyalanarak alınır.
+4. Aatrox.json benzeri hero ile alakalı dosyalara (lol - mainpage, skinpage) üzerinden içerikler girilir.
