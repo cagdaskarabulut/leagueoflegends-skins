@@ -3,6 +3,10 @@ import HomePagePanel from "../components/pageComponents/HomePagePanel";
 import fsPromises from "fs/promises";
 import path from "path";
 import ScrollToTop from "../components/reusableComponents/ScrollToTopButton";
+
+export const dynamicParams = true; // true | false,
+export const revalidate = 3600; // 1 hour
+
 export default function HomePage({ allSkinsList }) {
   return (
     <>
@@ -13,60 +17,60 @@ export default function HomePage({ allSkinsList }) {
         imagePath="/images/lol-skins-icon.ico"
         imageAlt="League of Legends Skins"
       />
-      <HomePagePanel allSkinsList={allSkinsList}/>
-      <ScrollToTop showBelow={250}/>
+      <HomePagePanel allSkinsList={allSkinsList} />
+      <ScrollToTop showBelow={250} />
       <style jsx global>{`
-          body {
-            margin: 0 !important;
-            padding: 0 !important;
-            font-size: 14px !important;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100vh;
-            background-size: cover;
-            background-image: url("https://karabulut-storage.s3.amazonaws.com/leagueoflegends-skins/indexBackground1.jpg") !important;
-            // -ms-animation: animate 5s ease infinite alternate;
-            // -webkit-animation: animate 5s ease infinite alternate;
-            // -moz-animation: animate 5s ease infinite alternate;
-          }
-          // body::after {
-          //   content: "";
-          //   background-repeat: no-repeat;
-          //   background-attachment: fixed;
-          //   left: 0;
-          //   top: 0;
-          //   width: 100%;
-          //   height: 100vh;
-          //   background-size: cover;
-          //   background-color: black !important;
-          //   opacity: 0.5 !important;
-          //   position: fixed !important;
-          //   z-index: -1;
-          // }
-          // @keyframes animate {
-          //   0%,
-          //   100% {
-          //     background-image: url("https://karabulut-storage.s3.amazonaws.com/leagueoflegends-skins/indexBackground.jpg") !important;
-          //   }
+        body {
+          margin: 0 !important;
+          padding: 0 !important;
+          font-size: 14px !important;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100vh;
+          background-size: cover;
+          background-image: url("https://karabulut-storage.s3.amazonaws.com/leagueoflegends-skins/indexBackground1.jpg") !important;
+          // -ms-animation: animate 5s ease infinite alternate;
+          // -webkit-animation: animate 5s ease infinite alternate;
+          // -moz-animation: animate 5s ease infinite alternate;
+        }
+        // body::after {
+        //   content: "";
+        //   background-repeat: no-repeat;
+        //   background-attachment: fixed;
+        //   left: 0;
+        //   top: 0;
+        //   width: 100%;
+        //   height: 100vh;
+        //   background-size: cover;
+        //   background-color: black !important;
+        //   opacity: 0.5 !important;
+        //   position: fixed !important;
+        //   z-index: -1;
+        // }
+        // @keyframes animate {
+        //   0%,
+        //   100% {
+        //     background-image: url("https://karabulut-storage.s3.amazonaws.com/leagueoflegends-skins/indexBackground.jpg") !important;
+        //   }
 
-          //   0%{
-          //     background-image: url("https://karabulut-storage.s3.amazonaws.com/leagueoflegends-skins/indexBackground.jpg") !important;
-          //   }
+        //   0%{
+        //     background-image: url("https://karabulut-storage.s3.amazonaws.com/leagueoflegends-skins/indexBackground.jpg") !important;
+        //   }
 
-          //   50% {
-          //     background-image: url("https://karabulut-storage.s3.amazonaws.com/leagueoflegends-skins/indexBackground1.jpg") !important;
-          //   }
+        //   50% {
+        //     background-image: url("https://karabulut-storage.s3.amazonaws.com/leagueoflegends-skins/indexBackground1.jpg") !important;
+        //   }
 
-          //   100% {
-          //     background-image: url("https://karabulut-storage.s3.amazonaws.com/leagueoflegends-skins/indexBackground2.jpg") !important;
-          //   }
-          // }
-        `}</style>
+        //   100% {
+        //     background-image: url("https://karabulut-storage.s3.amazonaws.com/leagueoflegends-skins/indexBackground2.jpg") !important;
+        //   }
+        // }
+      `}</style>
 
-{/* <style jsx global>{`
+      {/* <style jsx global>{`
           body {
             margin: 0 !important;
             padding: 0 !important;

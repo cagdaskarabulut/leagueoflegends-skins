@@ -17,6 +17,9 @@ import useWindowSize from "@rooks/use-window-size";
 import { MOBILE_SCREEN_SIZE } from "../../constants/GeneralConstants";
 import ScrollToTop from "../../components/reusableComponents/ScrollToTopButton";
 
+export const dynamicParams = true; // true | false,
+export const revalidate = 3600; // 1 hour
+
 export default function SkinPage({
   heroDetailsObject,
   skinVideo,
