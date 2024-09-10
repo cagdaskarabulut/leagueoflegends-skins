@@ -101,50 +101,6 @@ const SkinPagePanel = ({
     );
   };
 
-  const VideoField = () => {
-    return (
-      <MyGrid
-        isOneFullContent
-        leftContent={
-          <div>
-            <div
-              className={styles.PanelContainerStyle}
-              style={{ marginTop: "0px" }}
-            >
-              <VideoHeaderField />
-              <div className={styles.VideoContainerStyle}>
-                <div className={styles.IframeContainer}>
-                  {skinVideo != undefined && skinVideo.videoUrl.length > 0 && (
-                    <iframe
-                      width={iframeWidth}
-                      height={iframeHeight}
-                      src={`https://www.youtube.com/embed/${skinVideo.videoUrl}?autoplay=1&mute=1`}
-                      title="YouTube video player"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    ></iframe>
-                  )}
-
-                  {skinVideo == undefined ||
-                    (skinVideo.videoUrl.length < 1 && (
-                      <div>
-                        <br />
-                        <h3 style={{ textAlign: "center" }}>
-                          Sorry, there is no uploaded video yet...
-                        </h3>
-                        <br />
-                      </div>
-                    ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        }
-      />
-    );
-  };
-
   return (
     <>
       <BackgroundImage
@@ -193,7 +149,47 @@ const SkinPagePanel = ({
           )}
         </div>
 
-        <VideoField />
+        {/* VideoField */}
+        <MyGrid
+          isOneFullContent
+          leftContent={
+            <div>
+              <div
+                className={styles.PanelContainerStyle}
+                style={{ marginTop: "0px" }}
+              >
+                <VideoHeaderField />
+                <div className={styles.VideoContainerStyle}>
+                  <div className={styles.IframeContainer}>
+                    {skinVideo != undefined &&
+                      skinVideo.videoUrl.length > 0 && (
+                        <iframe
+                          width={iframeWidth}
+                          height={iframeHeight}
+                          src={`https://www.youtube.com/embed/${skinVideo.videoUrl}?autoplay=1&mute=1`}
+                          title="YouTube video player"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                        ></iframe>
+                      )}
+
+                    {skinVideo == undefined ||
+                      (skinVideo.videoUrl.length < 1 && (
+                        <div>
+                          <br />
+                          <h3 style={{ textAlign: "center" }}>
+                            Sorry, there is no uploaded video yet...
+                          </h3>
+                          <br />
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          }
+        />
 
         {!isMobile && (
           <MyGrid leftContent={<LeftField />} rightContent={<RightField />} />

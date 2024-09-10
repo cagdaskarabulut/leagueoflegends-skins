@@ -29,21 +29,15 @@
     h2,
     h2 a {
       color: $orangeDark !important;
-      //     background:url("https://karabulut-storage.s3.amazonaws.com/leagueoflegends-skins/indexBackground.jpg") !important;
-      // background-clip:text !important;
-      // color:transparent !important;
     }
 
-    @include tablet-or-less {
-      // min-height: 65px !important;
-    }
   }
 
   .VideoContainerStyle {
     color: $orangeDark !important;
+
     @include tablet-or-less {
       padding: 0px !important;
-      // margin-top: -px !important;
 
       :global {
         .MuiGrid-root {
@@ -69,10 +63,15 @@
 
 .VideoHeaderStyle {
   color: $orangeDark !important;
-  h1,h2,h3,p {
+
+  h1,
+  h2,
+  h3,
+  p {
     margin: 0px !important;
-    padding: 0px !important;  
+    padding: 0px !important;
   }
+
   margin: 0px !important;
   display: flex;
   justify-content: center !important;
