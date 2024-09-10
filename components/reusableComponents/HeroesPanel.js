@@ -42,10 +42,7 @@ const HeroesPanel = () => {
         let activeHeroMainImagePath = URL_imageRootPath + hero.image.full;
         let blurb = hero.blurb;
         let activeHeroRoute =
-          "/" +
-          replaceStringForUrlFormat(activeHeroName) +
-          "/" +
-          replaceStringForUrlFormat(activeHeroName);
+          "/" + replaceStringForUrlFormat(activeHeroName) + "/" + "default"; // replaceStringForUrlFormat(activeHeroName);
         return (
           <div key={activeHeroId} className={styles.CardContainerStyle}>
             <CardItem

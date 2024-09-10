@@ -118,7 +118,7 @@ const SkinPagePanel = ({
                     <iframe
                       width={iframeWidth}
                       height={iframeHeight}
-                      src={`https://www.youtube.com/embed/${skinVideo.videoUrl}?autoplay=1`}
+                      src={`https://www.youtube.com/embed/${skinVideo.videoUrl}?autoplay=1&mute=1`}
                       title="YouTube video player"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -178,8 +178,14 @@ const SkinPagePanel = ({
                   variant="text"
                   endIcon={<ArticleIcon />}
                   href="#skin-info-section"
-                  style={{ color: "black", fontSize: "12px", paddingTop: "0px", marginTop: "0px", paddingLeft: "0px"}}
-                  >
+                  style={{
+                    color: "black",
+                    fontSize: "12px",
+                    paddingTop: "0px",
+                    marginTop: "0px",
+                    paddingLeft: "0px",
+                  }}
+                >
                   Read
                 </Button>
               }
