@@ -166,7 +166,7 @@ const SkinPagePanel = ({
                         <iframe
                           width={iframeWidth}
                           height={iframeHeight}
-                          src={`https://www.youtube.com/embed/${skinVideo.videoUrl}?autoplay=1&mute=1`}
+                          src={`https://www.youtube.com/embed/${skinVideo.videoUrl}?autoplay=1&mute=1&loop=1&playlist=${skinVideo.videoUrl}`}
                           title="YouTube video player"
                           frameBorder="0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

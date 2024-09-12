@@ -237,15 +237,6 @@ const HomePagePanel = ({ allSkinsList }) => {
             />
           )}
           {isMobile && (
-            // <MyGrid
-            //   leftContent={<HeroesPanel />}
-            //   middleContent={
-            //     <div id="lol-info-section">
-            //       <LeftField />
-            //     </div>
-            //   }
-            //   rightContent={<RightField />}
-            // />
             <MyGrid isOneFullContent leftContent={<HeroesPanel />} />
           )}
         </div>
