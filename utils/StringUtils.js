@@ -26,6 +26,11 @@ export const oldReplaceStringForUrlFormat = (myString) => {
   return myString;
 };
 
+// Utility function to replace spaces with hyphens
+export const replaceSpacesWithHyphens = (myString) => {
+  return myString.replace(/\s+/g, "-");
+};
+
 export const capitalizeFirstChar = (myString) => {
   return myString.charAt(0).toUpperCase() + myString.slice(1);
 };
