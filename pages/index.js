@@ -27,7 +27,13 @@ export default function HomePage({ allSkinsList }) {
       <HomePagePanel allSkinsList={allSkinsList} />
       <ScrollToTop showBelow={250} />
 
-      {/* YouTube Video Popup */}
+      {/* Admitad */}
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `<!-- verify-admitad: "1e72dd2de0" -->`,
+        }}
+      />
+
       {isPopupVisible && (
         <div className="video-popup">
           <div className="popup-content">
