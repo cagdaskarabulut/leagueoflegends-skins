@@ -27,6 +27,13 @@ export default function HomePage({ allSkinsList }) {
       <HomePagePanel allSkinsList={allSkinsList} />
       <ScrollToTop showBelow={250} />
 
+      {/* impact */}
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `<!-- Impact-Site-Verification: 05e39629-d007-4d92-964d-8e4e61afd4de -->`,
+        }}
+      />
+
       {/* Admitad */}
       <div
         dangerouslySetInnerHTML={{
