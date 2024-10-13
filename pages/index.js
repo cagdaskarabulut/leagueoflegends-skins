@@ -3,14 +3,25 @@ import HomePagePanel from "../components/pageComponents/HomePagePanel";
 import fsPromises from "fs/promises";
 import path from "path";
 import ScrollToTop from "../components/reusableComponents/ScrollToTopButton";
-import { useState } from "react";
+import useWindowSize from "@rooks/use-window-size";
+import { MOBILE_SCREEN_SIZE } from "../constants/GeneralConstants";
+import { useCallback, useContext, useEffect, useState } from "react";
 
 export const dynamicParams = true; // true | false,
 export const revalidate = 3600; // 1 hour
 
 export default function HomePage({ allSkinsList }) {
   const [isPopupVisible, setIsPopupVisible] = useState(true);
-
+  //_ MobilePart
+  const { innerWidth } = useWindowSize();
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    if (innerWidth === null) {
+      setIsMobile(false);
+    } else {
+      setIsMobile(innerWidth < MOBILE_SCREEN_SIZE);
+    }
+  }, [innerWidth]);
   const handleClosePopup = () => {
     setIsPopupVisible(false);
   };
@@ -41,7 +52,7 @@ export default function HomePage({ allSkinsList }) {
         }}
       />
 
-      {isPopupVisible && (
+      {isPopupVisible && !isMobile && (
         <div className="video-popup">
           <div className="popup-content">
             <button className="close-button" onClick={handleClosePopup}>

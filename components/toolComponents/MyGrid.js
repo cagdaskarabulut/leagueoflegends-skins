@@ -16,7 +16,7 @@ const MyGrid = ({
   rightContent,
   isOneFullContent,
   contentPosition,
-  forHeader
+  forHeader,
 }) => {
   //_ MobilePart
   const { innerWidth } = useWindowSize();
@@ -34,7 +34,7 @@ const MyGrid = ({
   return (
     <div>
       {breadcrumbs}
-      {title != undefined && (<h2 className={styles.titleStyle}>{title}</h2>)}
+      {title != undefined && <h2 className={styles.titleStyle}>{title}</h2>}
       <Grid
         spacing={2}
         container
@@ -53,21 +53,21 @@ const MyGrid = ({
             <Grid item xs={isMobile ? 12 : 5}>
               {leftContent}
             </Grid>
-            <Grid item xs={isMobile ? 12 : 7} >
+            <Grid item xs={isMobile ? 12 : 7}>
               {rightContent}
             </Grid>
           </>
         )}
-        
+
         {!isOneFullContent && middleContent && (
           <>
-            <Grid item xs={isMobile ? (forHeader ? 2 : 12) : (forHeader ? 5 : 3)}>
+            <Grid item xs={isMobile ? (forHeader ? 2 : 12) : forHeader ? 5 : 3}>
               {leftContent}
             </Grid>
-            <Grid item xs={isMobile ? (forHeader ? 3 : 12) : (forHeader ? 2 : 6)}>
+            <Grid item xs={isMobile ? (forHeader ? 3 : 12) : forHeader ? 2 : 6}>
               {middleContent}
             </Grid>
-            <Grid item xs={isMobile ? (forHeader ? 7 : 12) : (forHeader ? 5 : 3)}>
+            <Grid item xs={isMobile ? (forHeader ? 7 : 12) : forHeader ? 5 : 3}>
               {rightContent}
             </Grid>
           </>

@@ -1,41 +1,41 @@
 import styles from "./FooterPanel.module.scss";
 import { Grid } from "@mui/material";
-import React from "react";
-import { useCallback, useContext, useEffect, useState } from "react";
-import useWindowSize from "@rooks/use-window-size";
+import React, { useEffect } from "react";
 import { MOBILE_SCREEN_SIZE } from "../../constants/GeneralConstants";
 import MyGrid from "../toolComponents/MyGrid";
+import Link from "next/link";
+import useCommercials from "../../hooks/useCommercials";
 
-const FooterPanel = () => {
-  //_ MobilePart
-  const { innerWidth } = useWindowSize();
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    if (innerWidth === null) {
-      setIsMobile(false);
-    } else {
-      setIsMobile(innerWidth < MOBILE_SCREEN_SIZE);
-    }
-  }, [innerWidth]);
+const FooterPanel = ({ commercialUrl, commercialImage, commercialAlt }) => {
+  const { commercials, isMobile } = useCommercials();
 
   const LeftContent = () => {
     return (
-      <>
-        <div className={styles.PanelContainerStyle}>
-          <div className={styles.footerContentStyle}>
-            © Copyright 2023 leagueoflegends-skins.com
-            {isMobile ? " " : <br />}
-            Designed by Karabulut Software.
-          </div>
+      <div className={styles.PanelContainerStyle}>
+        <div className={styles.footerContentStyle}>
+          © Copyright 2023 leagueoflegends-skins.com
+          {isMobile ? " " : <br />}
+          Designed by Karabulut Software.
         </div>
-      </>
+      </div>
     );
   };
 
   return (
-    <div className={styles.footerStyle}>
-      <MyGrid leftContent={<LeftContent />} isOneFullContent={true} />
-    </div>
+    <>
+      {isMobile && (
+        <Link href={commercials[1].link} passHref target="_blank">
+          <img
+            src={commercials[1].mobileImage}
+            alt={commercials[1].alt}
+            className={styles.fixedImage}
+          />
+        </Link>
+      )}
+      <div className={styles.footerStyle}>
+        <MyGrid leftContent={<LeftContent />} isOneFullContent={true} />
+      </div>
+    </>
   );
 };
 

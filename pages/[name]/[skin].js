@@ -1,6 +1,4 @@
-import { useCallback, useContext, useEffect, useState } from "react";
 import MetaPanel from "../../components/mainComponents/MetaPanel";
-import { useRouter } from "next/router";
 import fsPromises from "fs/promises";
 import path from "path";
 import {
@@ -13,9 +11,8 @@ import {
   capitalizeFirstChar,
   replaceStringForUrlFormat,
 } from "../../utils/StringUtils";
-import useWindowSize from "@rooks/use-window-size";
-import { MOBILE_SCREEN_SIZE } from "../../constants/GeneralConstants";
 import ScrollToTop from "../../components/reusableComponents/ScrollToTopButton";
+import useCommercials from "../../hooks/useCommercials";
 
 export const dynamicParams = true; // true | false,
 export const revalidate = 3600; // 1 hour
@@ -29,17 +26,9 @@ export default function SkinPage({
   allSkinsList,
   pageContent,
 }) {
+  const { commercials, isMobile } = useCommercials();
   let titleText = "";
   let descriptionContent = "";
-  const { innerWidth } = useWindowSize();
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    if (innerWidth === null) {
-      setIsMobile(false);
-    } else {
-      setIsMobile(innerWidth < MOBILE_SCREEN_SIZE);
-    }
-  }, [innerWidth]);
 
   if (skinVideo.skinName == skinVideo.heroName) {
     titleText = `${skinVideo.heroName} Skins - ${skinVideo.heroName} All Skin Images and Skin Videos: ${skinVideo.heroName} Cinematic / Trailer, Little-known story of the ${skinVideo.heroName}`;
