@@ -19,8 +19,8 @@ const useCommercials = () => {
 
   const linkCommercialForUs = [
     "https://fas.st/nNRGb", // Yuplay - ELDEN RING (EMEA)
-    "https://fas.st/4WPf9X", // Yuplay - Rockstar Games
     "https://fas.st/RUepLT", // Yuplay - God of War Ragnarök
+    "https://fas.st/4WPf9X", // Yuplay - Rockstar Games
     "https://fas.st/A5p-Gb", // Yuplay - Frostpunk 2
   ];
 
