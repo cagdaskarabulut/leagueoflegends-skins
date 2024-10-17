@@ -62,13 +62,97 @@
   color: black;
 }
 
+@keyframes snakeAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.PanelContainerStyle {
+  margin-top: 30px;
+  padding: 10px;
+  padding-right: 20px;
+  /* Çerçeve kalınlığı için */
+  border-radius: 15px;
+  /* Köşeleri yuvarlamak için */
+  background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000);
+  background-size: 300%;
+  animation: snakeAnimation 5s linear infinite;
+}
+
+.HomePageInfoStyle img {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  border-radius: 10px;
+
+  border: 5px solid transparent;
+  /* Resmin kendisine kenarlık eklemek için */
+  background: linear-gradient(white, white) padding-box, linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000) border-box;
+  animation: snakeAnimation 5s linear infinite;
+  /* Animasyonu sadece çerçevede uyguluyoruz */
+}
+
+@keyframes snakeAnimationMobile {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes snakeAnimationMobile {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .commercialImageContainerForMobile {
+    animation: simpleAnimation 3s infinite;
+  }
+
+  @keyframes simpleAnimation {
+    0% {
+      background-color: red;
+    }
+
+    50% {
+      background-color: blue;
+    }
+
+    100% {
+      background-color: red;
+    }
+  }
+}
+
 .fixedImage {
   position: fixed;
-  z-index: 9999;
   top: 60px !important;
-  width: 100%;
   height: 10vh;
+  width: 95%;
   object-fit: cover;
-  z-index: 10;
-  border-radius: 20px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 15px;
+  background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000);
+  background-size: 400%;
+  /* Daha geniş animasyon alanı */
+  animation: snakeAnimationMobile 5s linear infinite;
+  z-index: 9999;
+  // padding-right: 50px;
 }

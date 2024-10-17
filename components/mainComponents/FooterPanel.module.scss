@@ -14,11 +14,22 @@
   }
 }
 
+
 .fixedImage {
-  bottom: 60px !important;
-  width: 100%;
+  top: 60px !important;
   height: 10vh;
+  width: 95%;
   object-fit: cover;
-  z-index: 10;
-  border-radius: 20px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 15px;
+  background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000);
+  background-size: 400%;
+  /* Daha geniş animasyon alanı */
+  animation: snakeAnimationMobile 5s linear infinite;
+  z-index: 9999;
+  // padding-right: 50px;
 }
