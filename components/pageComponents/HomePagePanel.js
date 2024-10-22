@@ -38,15 +38,13 @@ const HomePagePanel = ({ allSkinsList }) => {
               </>
             }
           />
-          {isMobile && (
-            <Link href={commercials[0].link} passHref target="_blank">
-              <img
-                src={commercials[0].mobileImage}
-                alt={commercials[0].alt}
-                className={styles.fixedImage} // fixed class is applied here
-              />
-            </Link>
-          )}
+          <Link href={commercials[0].link} passHref target="_blank">
+            <img
+              src={commercials[0].mobileImage}
+              alt={commercials[0].alt}
+              className={styles.fixedImage} // fixed class is applied here
+            />
+          </Link>
         </>
       );
     } else {

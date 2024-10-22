@@ -18,6 +18,8 @@ import DialogItem from "../toolComponents/DialogItem";
 import BackgroundImage from "../reusableComponents/BackgroundImage";
 import Image from "next/image";
 import ArticleIcon from "@mui/icons-material/Article";
+import { Link } from "@mui/material";
+import useCommercials from "../../hooks/useCommercials";
 
 const permanentMarker = Permanent_Marker({
   subsets: ["latin"],
@@ -33,19 +35,17 @@ const SkinPagePanel = ({
   allSkinsList,
   pageContent,
 }) => {
+  const { commercials, isMobile } = useCommercials();
   const router = useRouter();
   const { innerWidth } = useWindowSize();
-  const [isMobile, setIsMobile] = useState(false);
   const [iframeWidth, setIframeWidth] = useState("800");
   const [iframeHeight, setIframeHeight] = useState("400");
 
   useEffect(() => {
     if (innerWidth === null) {
-      setIsMobile(false);
       setIframeWidth("800");
       setIframeHeight("400");
     } else {
-      setIsMobile(innerWidth < MOBILE_SCREEN_SIZE ? true : false);
       let result = innerWidth < MOBILE_SCREEN_SIZE;
       setIframeWidth(result ? "350" : "800");
       setIframeHeight(result ? "200" : "400");
@@ -127,25 +127,34 @@ const SkinPagePanel = ({
         <div className={styles.HeaderStyle}>
           {!isMobile && <HeaderMobile allSkinsList={allSkinsList} />}
           {isMobile && (
-            <HeaderMobile
-              allSkinsList={allSkinsList}
-              middleContent={
-                <Button
-                  variant="text"
-                  endIcon={<ArticleIcon />}
-                  href="#skin-info-section"
-                  style={{
-                    color: "black",
-                    fontSize: "12px",
-                    paddingTop: "0px",
-                    marginTop: "0px",
-                    paddingLeft: "0px",
-                  }}
-                >
-                  Read
-                </Button>
-              }
-            />
+            <>
+              <HeaderMobile
+                allSkinsList={allSkinsList}
+                middleContent={
+                  <Button
+                    variant="text"
+                    endIcon={<ArticleIcon />}
+                    href="#skin-info-section"
+                    style={{
+                      color: "black",
+                      fontSize: "12px",
+                      paddingTop: "0px",
+                      marginTop: "0px",
+                      paddingLeft: "0px",
+                    }}
+                  >
+                    Read
+                  </Button>
+                }
+              />
+              <Link href={commercials[0].link} passHref target="_blank">
+                <img
+                  src={commercials[0].mobileImage}
+                  alt={commercials[0].alt}
+                  className={styles.fixedImage} // fixed class is applied here
+                />
+              </Link>
+            </>
           )}
         </div>
 
