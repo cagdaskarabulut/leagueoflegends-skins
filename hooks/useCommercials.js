@@ -18,59 +18,75 @@ const useCommercials = () => {
   const [commercials, setCommercials] = useState([]);
 
   const linkCommercialForUs = [
+    "https://fas.st/g1I3xs", //www.wtfast.com
+    "https://fas.st/8Bk4x", // Yuplay
     "https://fas.st/nNRGb", // Yuplay - ELDEN RING (EMEA)
     "https://fas.st/RUepLT", // Yuplay - God of War Ragnarök
-    "https://fas.st/4WPf9X", // Yuplay - Rockstar Games
-    "https://fas.st/A5p-Gb", // Yuplay - Frostpunk 2
+    // "https://fas.st/4WPf9X", // Yuplay - Rockstar Games
+    // "https://fas.st/A5p-Gb", // Yuplay - Frostpunk 2
   ];
 
   const altCommercialForUs = [
+    "wtfast",
+    "Yuplay",
     "Yuplay - ELDEN RING (EMEA)",
     "Yuplay - God of War Ragnarök",
-    "Yuplay - Rockstar Games",
-    "Yuplay - Frostpunk 2",
+    // "Yuplay - Rockstar Games",
+    // "Yuplay - Frostpunk 2",
   ];
 
   const imageCommercialForUs = [
+    "/images/wtfast.jpeg",
+    "/images/yuplay.jpeg",
     "/images/elden_ring.jpeg",
     "/images/godofwar_ragnarok.jpeg",
-    "/images/rockstar.jpeg",
-    "/images/frostpunk2.jpeg",
+    // "/images/rockstar.jpeg",
+    // "/images/frostpunk2.jpeg",
   ];
 
   const mobileImageCommercialForUs = [
+    "/images/wtfast-horizontal.jpeg",
+    "/images/yuplay-horizontal.jpeg",
     "/images/elden_ring-horizontal.jpeg",
     "/images/godofwar_ragnarok-horizontal.jpeg",
-    "/images/rockstar-horizontal.jpeg",
-    "/images/frostpunk2.jpeg",
+    // "/images/rockstar-horizontal.jpeg",
+    // "/images/frostpunk2.jpeg",
   ];
 
   const linkCommercialForRussia = [
+    "https://fas.st/g1I3xs", //www.wtfast.com
+    "https://fas.st/a-di-?erid=LatgC2Zh5", //gamersbase
     "https://fas.st/PHCVi?erid=LatgC2Zh5",
     "https://fas.st/bH7Xe?erid=LatgC2Zh5",
-    "https://fas.st/kJHtFx?erid=LatgC2Zh5",
-    "https://fas.st/MlUVH?erid=LatgC2Zh5",
+    // "https://fas.st/kJHtFx?erid=LatgC2Zh5",
+    // "https://fas.st/MlUVH?erid=LatgC2Zh5",
   ];
 
   const altCommercialForRussia = [
-    "GamersBase - RoboCop",
-    "GamersBase - Gangs of Sherwood",
-    "GamersBase - TT Isle Of Man",
+    "wtfast",
+    "GamersBase",
     "GamersBase - Warhammer",
+    "GamersBase - Gangs of Sherwood",
+    // "GamersBase - RoboCop",
+    // "GamersBase - TT Isle Of Man",
   ];
 
   const imageCommercialForRussia = [
-    "/images/robocop.jpeg",
-    "/images/sherwood.jpeg",
-    "/images/tt3.jpeg",
+    "/images/wtfast.jpeg",
+    "/images/gamersbase.jpeg",
     "/images/warhammer.jpeg",
+    "/images/sherwood.jpeg",
+    // "/images/robocop.jpeg",
+    // "/images/tt3.jpeg",
   ];
 
   const mobileImageCommercialForRussia = [
-    "/images/robocop-horizontal.jpeg",
-    "/images/sherwood_horizontal.jpeg",
-    "/images/tt3_horizontal.jpeg",
+    "/images/wtfast-horizontal.jpeg",
+    "/images/gamersbase-horizontal.jpeg",
     "/images/warhammer.jpeg",
+    "/images/sherwood_horizontal.jpeg",
+    // "/images/robocop-horizontal.jpeg",
+    // "/images/tt3_horizontal.jpeg",
   ];
 
   // Handle screen size changes
