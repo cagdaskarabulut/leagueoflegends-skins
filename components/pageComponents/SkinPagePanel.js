@@ -77,6 +77,63 @@ const SkinPagePanel = ({
     );
   };
 
+  const LeftCommercials = () => {
+    if (!isMobile && commercials.length > 0 && commercials[0]) {
+      return (
+        <Link href={commercials[0].link} passHref target="_blank">
+          <div
+            style={{
+              position: "relative",
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <p
+              style={{
+                textAlign: "center",
+                position: "absolute",
+                zIndex: "99",
+                color: "#D34500",
+                fontSize: "20px",
+                lineHeight: "1.5",
+                backgroundColor: "rgba(0, 0, 0, 0.6)", // Adds a semi-transparent background
+                padding: "10px",
+                borderRadius: "8px", // Optional: adds rounded corners to the background
+              }}
+            >
+              WTFast <br />
+              Eliminate Lag Faster <br />
+              Ping Smoother Gaming
+            </p>
+            <img
+              src={commercials[0].image}
+              alt={commercials[0].alt}
+              style={{ width: "100%" }}
+            />
+          </div>
+        </Link>
+      );
+    }
+    return null;
+  };
+
+  const RightCommercials = () => {
+    if (!isMobile && commercials.length > 0 && commercials[1]) {
+      return (
+        <Link href={commercials[1].link} passHref target="_blank">
+          <img
+            src={commercials[1].image}
+            alt={commercials[1].alt}
+            style={{ width: "100%", height: "100%" }}
+          />
+        </Link>
+      );
+    }
+    return null;
+  };
+
   const VideoHeaderField = () => {
     return (
       <div>
@@ -159,46 +216,92 @@ const SkinPagePanel = ({
         </div>
 
         {/* VideoField */}
-        <MyGrid
-          isOneFullContent
-          leftContent={
-            <div>
-              <div
-                className={styles.PanelContainerStyle}
-                style={{ marginTop: "0px" }}
-              >
-                <VideoHeaderField />
-                <div className={styles.VideoContainerStyle}>
-                  <div className={styles.IframeContainer}>
-                    {skinVideo != undefined &&
-                      skinVideo.videoUrl.length > 0 && (
-                        <iframe
-                          width={iframeWidth}
-                          height={iframeHeight}
-                          src={`https://www.youtube.com/embed/${skinVideo.videoUrl}?autoplay=1&mute=1&loop=1&playlist=${skinVideo.videoUrl}`}
-                          title="YouTube video player"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          allowFullScreen
-                        ></iframe>
-                      )}
+        {isMobile && (
+          <MyGrid
+            isOneFullContent
+            leftContent={
+              <div>
+                <div
+                  className={styles.PanelContainerStyle}
+                  style={{ marginTop: "0px" }}
+                >
+                  <VideoHeaderField />
+                  <div className={styles.VideoContainerStyle}>
+                    <div className={styles.IframeContainer}>
+                      {skinVideo != undefined &&
+                        skinVideo.videoUrl.length > 0 && (
+                          <iframe
+                            width={iframeWidth}
+                            height={iframeHeight}
+                            src={`https://www.youtube.com/embed/${skinVideo.videoUrl}?autoplay=1&mute=1&loop=1&playlist=${skinVideo.videoUrl}`}
+                            title="YouTube video player"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen
+                          ></iframe>
+                        )}
 
-                    {skinVideo == undefined ||
-                      (skinVideo.videoUrl.length < 1 && (
-                        <div>
-                          <br />
-                          <h3 style={{ textAlign: "center" }}>
-                            Sorry, there is no uploaded video yet...
-                          </h3>
-                          <br />
-                        </div>
-                      ))}
+                      {skinVideo == undefined ||
+                        (skinVideo.videoUrl.length < 1 && (
+                          <div>
+                            <br />
+                            <h3 style={{ textAlign: "center" }}>
+                              Sorry, there is no uploaded video yet...
+                            </h3>
+                            <br />
+                          </div>
+                        ))}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          }
-        />
+            }
+          />
+        )}
+
+        {!isMobile && (
+          <MyGrid
+            leftContent={<LeftCommercials />}
+            rightContent={<RightCommercials />}
+            middleContent={
+              <div>
+                <div
+                  className={styles.PanelContainerStyle}
+                  style={{ marginTop: "0px" }}
+                >
+                  <VideoHeaderField />
+                  <div className={styles.VideoContainerStyle}>
+                    <div className={styles.IframeContainer}>
+                      {skinVideo != undefined &&
+                        skinVideo.videoUrl.length > 0 && (
+                          <iframe
+                            width={iframeWidth}
+                            height={iframeHeight}
+                            src={`https://www.youtube.com/embed/${skinVideo.videoUrl}?autoplay=1&mute=1&loop=1&playlist=${skinVideo.videoUrl}`}
+                            title="YouTube video player"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen
+                          ></iframe>
+                        )}
+
+                      {skinVideo == undefined ||
+                        (skinVideo.videoUrl.length < 1 && (
+                          <div>
+                            <br />
+                            <h3 style={{ textAlign: "center" }}>
+                              Sorry, there is no uploaded video yet...
+                            </h3>
+                            <br />
+                          </div>
+                        ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            }
+          />
+        )}
 
         {!isMobile && (
           <MyGrid leftContent={<LeftField />} rightContent={<RightField />} />

@@ -27,8 +27,8 @@ const useCommercials = () => {
   ];
 
   const altCommercialForUs = [
-    "wtfast",
-    "Yuplay",
+    "WTFast - Eliminate Lag Faster Ping",
+    "Yuplay - Buy Games With Best Prices",
     "Yuplay - ELDEN RING (EMEA)",
     "Yuplay - God of War Ragnarök",
     // "Yuplay - Rockstar Games",

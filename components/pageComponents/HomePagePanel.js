@@ -135,17 +135,42 @@ const HomePagePanel = ({ allSkinsList }) => {
           <div className={styles.HomePageInfoStyle}>
             {commercials.slice(0, 2).map((commercial, index) => (
               <Link key={index} href={commercial.link} passHref target="_blank">
-                <img
-                  src={commercial.image}
-                  alt={commercial.alt}
+                <div
                   style={{
-                    width: "100%", // Genişlik tamamen dolsun
-                    height: "40vh", // Sayfa yüksekliğinin %40'ı
-                    objectFit: "cover", // Resmin orantılı şekilde kesilmesini sağlar
-                    marginTop: "30px",
-                    borderRadius: "10px",
+                    position: "relative",
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
                   }}
-                />
+                >
+                  <p
+                    style={{
+                      textAlign: "center",
+                      position: "absolute",
+                      zIndex: "99",
+                      color: "#D34500",
+                      fontSize: "16px",
+                      lineHeight: "1.5",
+                      backgroundColor: "rgba(0, 0, 0, 0.6)", // Adds a semi-transparent background
+                      padding: "10px",
+                      borderRadius: "8px", // Optional: adds rounded corners to the background
+                    }}
+                  >
+                    {commercial.alt}
+                  </p>
+                  <img
+                    src={commercial.image}
+                    alt={commercial.alt}
+                    style={{
+                      width: "100%", // Genişlik tamamen dolsun
+                      height: "40vh", // Sayfa yüksekliğinin %40'ı
+                      objectFit: "cover", // Resmin orantılı şekilde kesilmesini sağlar
+                      marginTop: "30px",
+                      borderRadius: "10px",
+                    }}
+                  />
+                </div>
               </Link>
             ))}
           </div>
