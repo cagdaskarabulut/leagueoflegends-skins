@@ -28,6 +28,7 @@ export const oldReplaceStringForUrlFormat = (myString) => {
 
 // Utility function to replace spaces with hyphens
 export const replaceSpacesWithHyphens = (myString) => {
+  myString = myString.replace(/'/g, "");
   return myString.replace(/\s+/g, "-");
 };
 
