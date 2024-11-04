@@ -1,4 +1,4 @@
-/*import MetaPanel from "../../components/mainComponents/MetaPanel";
+import MetaPanel from "../../components/mainComponents/MetaPanel";
 import fsPromises from "fs/promises";
 import path from "path";
 import {
@@ -190,15 +190,11 @@ export async function getStaticProps(ctx) {
         // revalidate: 10, // Next.js will attempt to re-generate the page: // When a request comes in // At most once every 10 seconds
       };
     } catch {
-      console.log("burada 1");
-
       return {
         notFound: true,
       };
     }
   } else {
-    console.log("burada 2");
-
     return {
       notFound: true,
     };
@@ -217,215 +213,6 @@ export async function getStaticPaths() {
         params: {
           name: replaceStringForUrlFormat(objectData.heroName),
           skin: replaceStringForUrlFormat(objectData.skinName),
-        },
-      };
-    }),
-    fallback: "blocking",
-  };
-}
-*/
-
-import MetaPanel from "../../components/mainComponents/MetaPanel";
-import fsPromises from "fs/promises";
-import path from "path";
-import {
-  getSkinVideoByOldPageUrl,
-  getSkinVideoByPageUrl,
-} from "../../data/getSkinVideoByPageUrl";
-import { getBigImageUrlByPageUrl } from "../../data/getBigImageUrlByPageUrl";
-import SkinPagePanel from "../../components/pageComponents/SkinPagePanel";
-import {
-  capitalizeFirstChar,
-  replaceStringForUrlFormat,
-} from "../../utils/StringUtils";
-import ScrollToTop from "../../components/reusableComponents/ScrollToTopButton";
-import useCommercials from "../../hooks/useCommercials";
-
-export const dynamicParams = true; // true | false,
-export const revalidate = 3600; // 1 hour
-
-export default function SkinPage({
-  heroDetailsObject,
-  skinVideo,
-  activePath,
-  splashPath,
-  skinBigImageObject,
-  allSkinsList,
-  pageContent,
-}) {
-  const { commercials, isMobile } = useCommercials();
-  let titleText = "";
-  let descriptionContent = "";
-
-  if (skinVideo.skinName == skinVideo.heroName) {
-    titleText = `${skinVideo.heroName} Skins - ${skinVideo.heroName} All Skin Images and Skin Videos: ${skinVideo.heroName} Cinematic / Trailer, Little-known story of the ${skinVideo.heroName}`;
-    descriptionContent = `Explore the little-known story of the ${skinVideo.heroName} and enchanting world of ${skinVideo.heroName} in League of Legends through our captivating collection of skin images and videos. Witness the transformation of this iconic champion with a variety of skins, from classic to legendary. Immerse yourself in the visual delight of ${skinVideo.heroName}'s champion customizations in our comprehensive gallery.`;
-  } else if (skinVideo.skinName == "default") {
-    titleText = `${skinVideo.heroName} Skin Video: ${skinVideo.heroName} Classic(default) Skin Images and Videos, Little-known story of the ${skinVideo.heroName}'s default skin`;
-    descriptionContent = `Explore the little-known story of the default skins of ${skinVideo.heroName} in League of Legends through our captivating collection of skin images and videos.`;
-  } else {
-    titleText = `${skinVideo.skinName} Skin Video - ${skinVideo.heroName} : ${skinVideo.heroName} Visual Showcase with Skin Images and Videos, Little-known story of the ${skinVideo.heroName}'s ${skinVideo.skinName} skin`;
-    descriptionContent = `Explore the little-known story of the ${skinVideo.skinName} and enchanting world of ${skinVideo.heroName} in League of Legends through our captivating collection of skin images and videos.`;
-  }
-
-  return (
-    <>
-      <MetaPanel
-        title={titleText}
-        descriptionContent={descriptionContent}
-        keywordsContent={`${skinVideo.skinName} skin, ${skinVideo.heroName} skin, ${skinVideo.heroName} Skin, ${skinVideo.heroName} skins, ${skinVideo.skinName} skin videos, ${skinVideo.skinName} skin images, ${skinVideo.skinName} cinematic, ${skinVideo.skinName} trailer, ${skinVideo.skinName} skin chromas, ${skinVideo.heroName} Skins, ${skinVideo.heroName} Champion Skins, ${skinVideo.heroName} Skin Images, ${skinVideo.heroName} Skin Videos, League of Legends ${skinVideo.heroName} Skins, Champion Customization, In-Game Cosmetics, Visual Transformations, Gaming Aesthetics, ${skinVideo.heroName} Cosmetics, ${skinVideo.heroName} Skin Showcase, Video Game Visuals, Rare ${skinVideo.heroName} Skins, Legendary ${skinVideo.heroName} Skins, ${skinVideo.heroName} Skin Gallery, ${skinVideo.heroName} Character Skins, Gaming Artistry, LoL Skin Collection, ${skinVideo.heroName}'s Beauty, little-known story of the ${skinVideo.heroName}, little-known story of the ${skinVideo.skinName}, price of ${skinVideo.skinName}, how many rp ${skinVideo.skinName},${skinVideo.skinName} rp, ${skinVideo.skinName} price`}
-        imagePath="/images/lol-skins-icon.ico"
-        imageAlt="League of Legends Skins"
-      />
-      <SkinPagePanel
-        heroDetailsObject={heroDetailsObject}
-        skinVideo={skinVideo}
-        activePath={activePath}
-        splashFullPath={
-          isMobile
-            ? "https://ddragon.leagueoflegends.com/cdn/img/champion/loading/" +
-              splashPath
-            : "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" +
-              splashPath
-        }
-        skinBigImageObject={skinBigImageObject}
-        allSkinsList={allSkinsList}
-        pageContent={pageContent}
-      />
-      <ScrollToTop showBelow={250} />
-      <style jsx global>{`
-        body {
-          margin: 0 !important;
-          padding: 0 !important;
-          font-size: 14px !important;
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          left: 0;
-          top: 0;
-          width: 100vw;
-          height: 100vh;
-          background-size: cover;
-          background-position: center, center;
-          background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${splashPath}) !important;
-        }
-        @media only screen and (max-width: 1024px) {
-          body {
-            background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${splashPath}) !important;
-          }
-        }
-      `}</style>
-    </>
-  );
-}
-
-export async function getStaticProps(ctx) {
-  // Parametreleri küçük harfe çeviriyoruz
-  const name = ctx.params?.name?.toLowerCase();
-  const skin = ctx.params?.skin?.toLowerCase();
-  const activePath = name + "/" + skin;
-  let splashPath = "";
-  let skinBigImageObject = "";
-  let heroId = "";
-  let isPageFound = false;
-  let pageContent = "";
-
-  // JSON dosyalarını okumaya çalışıyoruz
-  try {
-    const filePath2 = path.join(
-      process.cwd(),
-      "data",
-      "my_skin_video_db_ForSkinsBigImages.json"
-    );
-    const jsonData2 = await fsPromises.readFile(filePath2, "utf-8");
-    const objectDataListAll2 = JSON.parse(jsonData2);
-    const allSkinsList = Object.values(objectDataListAll2.data);
-
-    // İlgili sayfayı bulup bulmadığımızı kontrol ediyoruz
-    allSkinsList.forEach((objectData) => {
-      let path = objectData.newPageUrl.toLowerCase(); // Veri de küçük harfe çevrilmiş
-      if (path === activePath) {
-        isPageFound = true;
-        heroId = getSkinVideoByOldPageUrl(objectData.pageUrl).hero;
-      }
-    });
-
-    // Eğer sayfa bulunamazsa 404 döndür
-    if (!isPageFound) {
-      return {
-        notFound: true,
-      };
-    }
-
-    // İçerik dosyasını okumaya çalışıyoruz
-    const filePathContent = path.join(
-      process.cwd(),
-      "data/pageContent",
-      name + ".json"
-    );
-    const jsonDataContent = await fsPromises.readFile(filePathContent, "utf-8");
-
-    if (jsonDataContent) {
-      const objectDataListAllContent = JSON.parse(jsonDataContent);
-      const allSelectedHeroContentsList = Object.values(
-        objectDataListAllContent.data
-      );
-
-      allSelectedHeroContentsList.forEach((objectData) => {
-        let path = objectData.newPageUrl.toLowerCase(); // Küçük harfe çevirme
-        if (path === activePath) {
-          pageContent = objectData.content;
-        }
-      });
-    }
-
-    // Şimdi veriyi çekip, sayfa içeriklerini hazırlıyoruz
-    let heroDetailsObject;
-    let skinVideo;
-    const heroIdWithCapitalizedFirstChar = capitalizeFirstChar(heroId);
-
-    const response = await fetch(
-      `https://ddragon.leagueoflegends.com/cdn/14.16.1/data/en_US/champion/${heroIdWithCapitalizedFirstChar}.json`
-    );
-    const resData = await response.json();
-
-    heroDetailsObject = Object.values(resData.data)[0];
-    skinVideo = getSkinVideoByPageUrl(activePath);
-    splashPath = `${heroIdWithCapitalizedFirstChar}_${
-      getBigImageUrlByPageUrl(activePath).splashNumber
-    }.jpg`;
-    skinBigImageObject = getBigImageUrlByPageUrl(activePath);
-
-    // Her şey sorunsuz ise props döndür
-    return {
-      props: {
-        heroDetailsObject,
-        skinVideo,
-        activePath,
-        splashPath,
-        skinBigImageObject,
-        allSkinsList,
-        pageContent,
-      },
-    };
-  } catch (error) {
-    console.error("Hata oluştu:", error);
-    return {
-      notFound: true,
-    };
-  }
-}
-
-export async function getStaticPaths() {
-  const filePath = path.join(process.cwd(), "data", "my_skin_video_db.json");
-  const jsonData = await fsPromises.readFile(filePath);
-  const objectDataListAll = JSON.parse(jsonData);
-  const objectDataList = Object.values(objectDataListAll.data);
-  return {
-    paths: objectDataList.map((objectData) => {
-      return {
-        params: {
-          name: replaceStringForUrlFormat(objectData.heroName).toLowerCase(),
-          skin: replaceStringForUrlFormat(objectData.skinName).toLowerCase(),
         },
       };
     }),
