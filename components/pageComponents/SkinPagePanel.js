@@ -20,7 +20,7 @@ import Image from "next/image";
 import ArticleIcon from "@mui/icons-material/Article";
 import { Link } from "@mui/material";
 import useCommercials from "../../hooks/useCommercials";
-
+import useAdClick from "../../hooks/useAdClick";
 const permanentMarker = Permanent_Marker({
   subsets: ["latin"],
   weight: ["400"],
@@ -40,6 +40,7 @@ const SkinPagePanel = ({
   const { innerWidth } = useWindowSize();
   const [iframeWidth, setIframeWidth] = useState("800");
   const [iframeHeight, setIframeHeight] = useState("400");
+  const handleAdClick = useAdClick();
 
   useEffect(() => {
     if (innerWidth === null) {
@@ -80,7 +81,12 @@ const SkinPagePanel = ({
   const LeftCommercials = () => {
     if (!isMobile && commercials.length > 0 && commercials[0]) {
       return (
-        <Link href={commercials[0].link} passHref target="_blank">
+        <Link
+          href={commercials[0].link}
+          passHref
+          target="_blank"
+          onClick={handleAdClick}
+        >
           <div
             style={{
               position: "relative",
@@ -122,7 +128,12 @@ const SkinPagePanel = ({
   const RightCommercials = () => {
     if (!isMobile && commercials.length > 0 && commercials[1]) {
       return (
-        <Link href={commercials[1].link} passHref target="_blank">
+        <Link
+          href={commercials[1].link}
+          passHref
+          target="_blank"
+          onClick={handleAdClick}
+        >
           <img
             src={commercials[1].image}
             alt={commercials[1].alt}
@@ -204,7 +215,12 @@ const SkinPagePanel = ({
                   </Button>
                 }
               />
-              <Link href={commercials[0].link} passHref target="_blank">
+              <Link
+                href={commercials[0].link}
+                passHref
+                target="_blank"
+                onClick={handleAdClick}
+              >
                 <img
                   src={commercials[0].mobileImage}
                   alt={commercials[0].alt}

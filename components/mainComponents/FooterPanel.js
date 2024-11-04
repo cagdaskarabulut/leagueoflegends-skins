@@ -5,9 +5,11 @@ import { MOBILE_SCREEN_SIZE } from "../../constants/GeneralConstants";
 import MyGrid from "../toolComponents/MyGrid";
 import Link from "next/link";
 import useCommercials from "../../hooks/useCommercials";
+import useAdClick from "../../hooks/useAdClick";
 
 const FooterPanel = ({ commercialUrl, commercialImage, commercialAlt }) => {
   const { commercials, isMobile } = useCommercials();
+  const handleAdClick = useAdClick();
 
   const LeftContent = () => {
     return (
@@ -24,7 +26,12 @@ const FooterPanel = ({ commercialUrl, commercialImage, commercialAlt }) => {
   return (
     <>
       {isMobile && (
-        <Link href={commercials[1].link} passHref target="_blank">
+        <Link
+          href={commercials[1].link}
+          passHref
+          target="_blank"
+          onClick={handleAdClick}
+        >
           <img
             src={commercials[1].mobileImage}
             alt={commercials[1].alt}

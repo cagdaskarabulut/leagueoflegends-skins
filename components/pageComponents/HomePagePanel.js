@@ -8,9 +8,11 @@ import { Analytics } from "@vercel/analytics/react";
 import { Button, Link } from "@mui/material";
 import ArticleIcon from "@mui/icons-material/Article";
 import useCommercials from "../../hooks/useCommercials";
+import useAdClick from "../../hooks/useAdClick";
 
 const HomePagePanel = ({ allSkinsList }) => {
   const { commercials, isMobile } = useCommercials();
+  const handleAdClick = useAdClick();
 
   const HeaderField = () => {
     if (isMobile) {
@@ -38,7 +40,12 @@ const HomePagePanel = ({ allSkinsList }) => {
               </>
             }
           />
-          <Link href={commercials[0].link} passHref target="_blank">
+          <Link
+            href={commercials[0].link}
+            passHref
+            target="_blank"
+            onClick={handleAdClick}
+          >
             <img
               src={commercials[0].mobileImage}
               alt={commercials[0].alt}
@@ -134,7 +141,13 @@ const HomePagePanel = ({ allSkinsList }) => {
         >
           <div className={styles.HomePageInfoStyle}>
             {commercials.slice(0, 2).map((commercial, index) => (
-              <Link key={index} href={commercial.link} passHref target="_blank">
+              <Link
+                key={index}
+                href={commercial.link}
+                passHref
+                target="_blank"
+                onClick={handleAdClick}
+              >
                 <div
                   style={{
                     position: "relative",
@@ -188,7 +201,13 @@ const HomePagePanel = ({ allSkinsList }) => {
         >
           <div className={styles.HomePageInfoStyle}>
             {commercials.slice(2, 4).map((commercial, index) => (
-              <Link key={index} href={commercial.link} passHref target="_blank">
+              <Link
+                key={index}
+                href={commercial.link}
+                passHref
+                target="_blank"
+                onClick={handleAdClick}
+              >
                 <img
                   src={commercial.image}
                   alt={commercial.alt}
