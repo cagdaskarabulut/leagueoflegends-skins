@@ -213,18 +213,26 @@ daily
 
                 //_Third Loop
                 skinList.map((skinObject, index3) => {
-                  //-generate
-                  dynamicRobotsTxtFields = `${dynamicRobotsTxtFields}Allow: /${replaceStringForUrlFormat(
-                    champion.id
-                  )}/${replaceStringForUrlFormat(skinObject.name)}
-`;
-
                   let activePath = `${replaceStringForUrlFormat(
                     champion.name
                   )}/${replaceStringForUrlFormat(skinObject.name)}`;
                   let oldActivePath = `${oldReplaceStringForUrlFormat(
                     champion.id
                   )}/${oldReplaceStringForUrlFormat(skinObject.name)}`;
+
+                  //-generate
+                  // dynamicRobotsTxtFields = `${dynamicRobotsTxtFields}Allow: /${replaceStringForUrlFormat(
+                  //   champion.id
+                  // )}/${replaceStringForUrlFormat(skinObject.name)}
+                  dynamicRobotsTxtFields = `${dynamicRobotsTxtFields}Allow: /${activePath}
+`;
+
+                  // let activePath = `${replaceStringForUrlFormat(
+                  //   champion.name
+                  // )}/${replaceStringForUrlFormat(skinObject.name)}`;
+                  // let oldActivePath = `${oldReplaceStringForUrlFormat(
+                  //   champion.id
+                  // )}/${oldReplaceStringForUrlFormat(skinObject.name)}`;
 
                   //-generate
                   dynamicSitemapFields = `${dynamicSitemapFields}

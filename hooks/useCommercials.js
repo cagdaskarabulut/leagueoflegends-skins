@@ -37,7 +37,7 @@ const useCommercials = () => {
 
   const imageCommercialForUs = [
     "/images/wtfast.jpeg",
-    "/images/yuplay.jpeg",
+    "/images/yuplay.jpg",
     "/images/elden_ring.jpeg",
     "/images/godofwar_ragnarok.jpeg",
     // "/images/rockstar.jpeg",
