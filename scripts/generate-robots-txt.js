@@ -155,7 +155,7 @@ daily
           dynamicSitemapFields = `${dynamicSitemapFields}
 <url>
 <loc>
-${rootPath}/${heroBasePath}
+${subDomainrootPath}/${heroBasePath}
 </loc>
 <lastmod>
 ${now}
@@ -230,7 +230,7 @@ daily
                   dynamicSitemapFields = `${dynamicSitemapFields}
 <url>
 <loc>
-${rootPath}/${activePath}
+${subDomainrootPath}/${activePath}
 </loc>
 <lastmod>
 ${now}
