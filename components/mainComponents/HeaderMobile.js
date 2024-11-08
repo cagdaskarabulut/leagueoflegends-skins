@@ -23,7 +23,7 @@ const permanentMarker = Permanent_Marker({
   weight: ["400"],
 });
 
-export default function HeaderMobile({ allSkinsList,middleContent }) {
+export default function HeaderMobile({ allSkinsList, middleContent }) {
   const { innerWidth } = useWindowSize();
   const [isMobile, setIsMobile] = useState(false);
   const router = useRouter();
@@ -38,10 +38,11 @@ export default function HeaderMobile({ allSkinsList,middleContent }) {
     } else {
       setIsMobile(innerWidth < MOBILE_SCREEN_SIZE);
       setIsShowSearchBox(!(innerWidth < MOBILE_SCREEN_SIZE));
-      setLogoTitle(innerWidth < MOBILE_SCREEN_SIZE ? "LS" : "LeagueofLegends-Skins")
+      setLogoTitle(
+        innerWidth < MOBILE_SCREEN_SIZE ? "LS" : "LeagueofLegends-Skins"
+      );
     }
   }, [innerWidth]);
-
 
   async function selectAction(event, newValue) {
     setIsLoading(true);
@@ -65,7 +66,10 @@ export default function HeaderMobile({ allSkinsList,middleContent }) {
           forHeader={true}
           leftContent={
             <>
-              <h1 className={permanentMarker.className} style={{marginTop: "5px"}}>
+              <h1
+                className={permanentMarker.className}
+                style={{ marginTop: "5px" }}
+              >
                 <a className={styles.logoStyle} href="/">
                   {logoTitle}
                 </a>
@@ -73,8 +77,9 @@ export default function HeaderMobile({ allSkinsList,middleContent }) {
             </>
           }
           middleContent={
-            <div style={{height: "35px", marginTop: "15px"}}>
-            {middleContent}</div>
+            <div style={{ height: "35px", marginTop: "15px" }}>
+              {middleContent}
+            </div>
           }
           rightContent={
             <>
@@ -86,7 +91,8 @@ export default function HeaderMobile({ allSkinsList,middleContent }) {
                     fontSize: "24px",
                     marginRight: "9px",
                     // marginTop: "8px",
-                    height: "35px", marginTop: "12px" ,
+                    height: "35px",
+                    marginTop: "12px",
                     color: "black",
                     display: isShowSearchBox ? "none" : "",
                     float: "right",
@@ -97,14 +103,15 @@ export default function HeaderMobile({ allSkinsList,middleContent }) {
                     onClick={() => setIsShowSearchBox(true)}
                   />
                 </IconButton>
-                
+
                 <Autocomplete
                   style={{
                     opacity: !isShowSearchBox ? 0 : 1,
                     transition: "opacity .3s ease-in-out",
-                    animation:"ease-in-out",
+                    animation: "ease-in-out",
                     display: !isShowSearchBox ? "none" : "",
-                    height: "35px", marginTop: "10px" 
+                    height: "35px",
+                    marginTop: "10px",
                   }}
                   id="free-solo-demo"
                   freeSolo
@@ -139,7 +146,8 @@ export default function HeaderMobile({ allSkinsList,middleContent }) {
           sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
           open={isLoading}
         >
-          <CircularProgress color="inherit" />
+          {/* <CircularProgress color="inherit" /> */}
+          <div className={styles.fullScreenLoader}></div>
         </Backdrop>
       </Container>
     </div>

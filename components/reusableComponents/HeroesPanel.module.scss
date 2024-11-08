@@ -2,7 +2,7 @@
 @import "../../styles/colors.scss";
 @import "../../styles/globals.scss";
 
-.PanelContainerStyle{
+.PanelContainerStyle {
   display: flex !important;
   justify-content: center !important;
   flex-wrap: wrap !important;
@@ -11,9 +11,10 @@
   padding-top: 10px !important;
   padding-bottom: 0px !important;
 
-  .CardContainerStyle{
+  .CardContainerStyle {
     padding: 10px !important;
   }
+
   // .CardContainerStyle:hover, 
   // .CardContainerSelectedStyle {
   //   border-width: 5px !important;

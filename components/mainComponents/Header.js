@@ -16,7 +16,7 @@ import MyGrid from "../toolComponents/MyGrid";
 import { Permanent_Marker } from "@next/font/google";
 const permanentMarker = Permanent_Marker({
   subsets: ["latin"],
-    weight: ['400']
+  weight: ["400"],
 });
 
 export default function Header({ allSkinsList }) {
@@ -39,13 +39,12 @@ export default function Header({ allSkinsList }) {
 
   return (
     <div className={styles.PanelContainerStyle}>
-    <Container className={styles.header} maxWidth={100}>
-      
+      <Container className={styles.header} maxWidth={100}>
         <MyGrid
           isOneFullContent
           leftContent={
             <>
-              <h1  className={permanentMarker.className}>
+              <h1 className={permanentMarker.className}>
                 <a className={styles.logoStyle} href="/">
                   LeagueofLegends-Skins
                 </a>
@@ -84,14 +83,15 @@ export default function Header({ allSkinsList }) {
             </div>
           }
         />
-      
-      <Backdrop
-        sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
-        open={isLoading}
-      >
-        <CircularProgress color="inherit" />
-      </Backdrop>
-    </Container>
+
+        <Backdrop
+          sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+          open={isLoading}
+        >
+          {/* <CircularProgress color="inherit" /> */}
+          <div className={styles.fullScreenLoader}></div>
+        </Backdrop>
+      </Container>
     </div>
   );
 }
