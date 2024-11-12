@@ -41,6 +41,14 @@
       "videoUrl": "IzMnCv_lPxI"
     },
     {
+      "hero": "Ambessa",
+      "heroName": "Ambessa",
+      "skin": "Ambessa",
+      "skinName": "Ambessa",
+      "pageUrl": "Ambessa/Ambessa",
+      "videoUrl": "rhTZTy1rZhw"
+    },
+    {
       "hero": "Amumu",
       "heroName": "Amumu",
       "skin": "Amumu",
@@ -2425,6 +2433,22 @@
       "videoUrl": "8bzegy_1pTw"
     },
     {
+      "hero": "Diana",
+      "heroName": "Diana",
+      "skin": "Dark-Cosmic-Diana",
+      "skinName": "Dark Cosmic Diana",
+      "pageUrl": "Diana/DarkCosmicDiana",
+      "videoUrl": "c6wMyAeEQco"
+    },
+    {
+      "hero": "Diana",
+      "heroName": "Diana",
+      "skin": "Prestige-Dark-Cosmic-Diana",
+      "skinName": "Prestige Dark Cosmic Diana",
+      "pageUrl": "Diana/PrestigeDarkCosmicDiana",
+      "videoUrl": "0SB1KOOFY-s"
+    },
+    {
       "hero": "Draven",
       "heroName": "Draven",
       "skin": "SantaDraven",
@@ -2631,6 +2655,14 @@
       "skinName": "Prestige Fuzz Fizz",
       "pageUrl": "Fizz/PrestigeFuzzFizz",
       "videoUrl": "dxE5NoNYMVU"
+    },
+    {
+      "hero": "Garen",
+      "heroName": "Garen",
+      "skin": "Fallen-God-King-Garen",
+      "skinName": "Fallen God-King Garen",
+      "pageUrl": "Garen/FallenGod-KingGaren",
+      "videoUrl": "DZAjtgqQvr8"
     },
     {
       "hero": "Garen",
@@ -3231,6 +3263,22 @@
       "skinName": "Cyber Pop Akshan",
       "pageUrl": "Akshan/CyberPopAkshan",
       "videoUrl": "pWmE3LB2rxc"
+    },
+    {
+      "hero": "Ambessa",
+      "heroName": "Ambessa",
+      "skin": "default",
+      "skinName": "default",
+      "pageUrl": "Ambessa/default",
+      "videoUrl": "pqQ00QqJEys"
+    },
+    {
+      "hero": "Ambessa",
+      "heroName": "Ambessa",
+      "skin": "Chosen-of-the-Wolf-Ambessa",
+      "skinName": "Chosen of the Wolf Ambessa",
+      "pageUrl": "Ambessa/ChosenoftheWolfAmbessa",
+      "videoUrl": "FL4IXgn7K2A"
     },
     {
       "hero": "Amumu",
@@ -4011,6 +4059,14 @@
     {
       "hero": "Azir",
       "heroName": "Azir",
+      "skin": "Attorney-Azir",
+      "skinName": "Attorney Azir",
+      "pageUrl": "Azir/AttorneyAzir",
+      "videoUrl": "pvuCdLe25Uk"
+    },
+    {
+      "hero": "Azir",
+      "heroName": "Azir",
       "skin": "GravelordAzir",
       "skinName": "Gravelord Azir",
       "pageUrl": "Azir/GravelordAzir",
@@ -4143,6 +4199,15 @@
       "skinName": "Prehistoric Cho'Gath",
       "pageUrl": "Chogath/PrehistoricChoGath",
       "videoUrl": "lR2M7RFOcX0"
+    },
+
+    {
+      "hero": "Annie",
+      "heroName": "Annie",
+      "skin": "Battle-Princess-Annie",
+      "skinName": "Battle Princess Annie",
+      "pageUrl": "Annie/BattlePrincessAnnie",
+      "videoUrl": "Pd1X5j0Krzo"
     },
     {
       "hero": "Annie",
@@ -4799,6 +4864,14 @@
       "skinName": "Dragonslayer Braum",
       "pageUrl": "Braum/DragonslayerBraum",
       "videoUrl": "7y7d9dA3xH8"
+    },
+    {
+      "hero": "Darius",
+      "heroName": "Darius",
+      "skin": "Divine-God-King-Darius",
+      "skinName": "Divine God-King Darius",
+      "pageUrl": "Darius/DivineGod-KingDarius",
+      "videoUrl": "cui1gRv4pA8"
     },
     {
       "hero": "Darius",
@@ -16327,6 +16400,222 @@
       "skinName": "Dragonmancer Kassadin",
       "pageUrl": "Kassadin/DragonmancerKassadin",
       "videoUrl": "Y18Bn89zlbA"
+    },
+    {
+      "hero": "Gragas",
+      "heroName": "Gragas",
+      "skin": "Music-Fan-Gragas",
+      "skinName": "Music Fan Gragas",
+      "pageUrl": "Gragas/MusicFanGragas",
+      "videoUrl": "xA3VIIVhYEk"
+    },
+    {
+      "hero": "Fiora",
+      "heroName": "Fiora",
+      "skin": "Battle-Queen-Fiora",
+      "skinName": "Battle Queen Fiora",
+      "pageUrl": "Fiora/BattleQueenFiora",
+      "videoUrl": "VkNd8Yx2tc0"
+    },
+    {
+      "hero": "Kaisa",
+      "heroName": "Kai'Sa",
+      "skin": "Dark-Star-KaiSa",
+      "skinName": "Dark Star Kai'Sa",
+      "pageUrl": "Kaisa/DarkStarKaiSa",
+      "videoUrl": "ScMJMOBUSuU"
+    },
+    {
+      "hero": "Katarina",
+      "heroName": "Katarina",
+      "skin": "Chosen-of-the-Wolf-Katarina",
+      "skinName": "Chosen of the Wolf Katarina",
+      "pageUrl": "Katarina/ChosenoftheWolfKatarina",
+      "videoUrl": "yr4k5v0Tazg"
+    },
+    {
+      "hero": "Kindred",
+      "heroName": "Kindred",
+      "skin": "Chosen-of-the-Wolf-Kindred",
+      "skinName": "Chosen of the Wolf Kindred",
+      "pageUrl": "Kindred/ChosenoftheWolfKindred",
+      "videoUrl": "Q33qNzBT2k4"
+    },
+    {
+      "hero": "Neeko",
+      "heroName": "Neeko",
+      "skin": "Cosplayer-Neeko",
+      "skinName": "Cosplayer Neeko",
+      "pageUrl": "Neeko/CosplayerNeeko",
+      "videoUrl": "x7Kc8NQj4BI"
+    },
+    {
+      "hero": "Pantheon",
+      "heroName": "Pantheon",
+      "skin": "Chosen-of-the-Wolf-Pantheon",
+      "skinName": "Chosen of the Wolf Pantheon",
+      "pageUrl": "Pantheon/ChosenoftheWolfPantheon",
+      "videoUrl": "cQPxIpNXfGs"
+    },
+    {
+      "hero": "MissFortune",
+      "heroName": "Miss Fortune",
+      "skin": "Battle-Queen-Miss-Fortune",
+      "skinName": "Battle Queen Miss Fortune",
+      "pageUrl": "MissFortune/BattleQueenMissFortune",
+      "videoUrl": "hVRRjmFgpYg"
+    },
+    {
+      "hero": "Pyke",
+      "heroName": "Pyke",
+      "skin": "Fright-Night-Pyke",
+      "skinName": "Fright Night Pyke",
+      "pageUrl": "Pyke/FrightNightPyke",
+      "videoUrl": "7XgnFVhBIOo"
+    },
+    {
+      "hero": "Nunu",
+      "heroName": "Nunu & Willump",
+      "skin": "Fright-Night-Nunu--Willump",
+      "skinName": "Fright Night Nunu & Willump",
+      "pageUrl": "Nunu/FrightNightNunuWillump",
+      "videoUrl": "RUQg-g-uHU0"
+    },
+    {
+      "hero": "Shaco",
+      "heroName": "Shaco",
+      "skin": "Fright-Night-Shaco",
+      "skinName": "Fright Night Shaco",
+      "pageUrl": "Shaco/FrightNightShaco",
+      "videoUrl": "AOLoDXroou4"
+    },
+    {
+      "hero": "Swain",
+      "heroName": "Swain",
+      "skin": "Chosen-of-the-Wolf-Swain",
+      "skinName": "Chosen of the Wolf Swain",
+      "pageUrl": "Swain/ChosenoftheWolfSwain",
+      "videoUrl": "lVdC8-_HQk8"
+    },
+    {
+      "hero": "Swain",
+      "heroName": "Swain",
+      "skin": "Prestige-Chosen-of-the-Wolf-Swain",
+      "skinName": "Prestige Chosen of the Wolf Swain",
+      "pageUrl": "Swain/PrestigeChosenoftheWolfSwain",
+      "videoUrl": "PxhKTMzQnZI"
+    },
+    {
+      "hero": "Trundle",
+      "heroName": "Trundle",
+      "skin": "Esports-Fan-Trundle",
+      "skinName": "Esports Fan Trundle",
+      "pageUrl": "Trundle/EsportsFanTrundle",
+      "videoUrl": "muhP8r_miUU"
+    },
+    {
+      "hero": "Sivir",
+      "heroName": "Sivir",
+      "skin": "Ann-Sivir-sary",
+      "skinName": "Ann-Sivir-sary",
+      "pageUrl": "Sivir/Ann-Sivir-sary",
+      "videoUrl": "bqERvUWHL44"
+    },
+    {
+      "hero": "Nautilus",
+      "heroName": "Nautilus",
+      "skin": "Crystalis-Indomitus-Nautilus",
+      "skinName": "Crystalis Indomitus Nautilus",
+      "pageUrl": "Nautilus/CrystalisIndomitusNautilus",
+      "videoUrl": "yWo7IEeudms"
+    },
+    {
+      "hero": "Thresh",
+      "heroName": "Thresh",
+      "skin": "Janitor-Thresh",
+      "skinName": "Janitor Thresh",
+      "pageUrl": "Thresh/JanitorThresh",
+      "videoUrl": "EMtJK9uWR4s"
+    },
+    {
+      "hero": "Veigar",
+      "heroName": "Veigar",
+      "skin": "Fright-Night-Veigar",
+      "skinName": "Fright Night Veigar",
+      "pageUrl": "Veigar/FrightNightVeigar",
+      "videoUrl": "um6nG3bh77c"
+    },
+    {
+      "hero": "Sona",
+      "heroName": "Sona",
+      "skin": "Victorious-Sona",
+      "skinName": "Victorious Sona",
+      "pageUrl": "Sona/VictoriousSona",
+      "videoUrl": "P8ypkb5lR70"
+    },
+    {
+      "hero": "Zoe",
+      "heroName": "Zoe",
+      "skin": "Dark-Star-Zoe",
+      "skinName": "Dark Star Zoe",
+      "pageUrl": "Zoe/DarkStarZoe",
+      "videoUrl": "d9QZOPYIZn8"
+    },
+    {
+      "hero": "Yasuo",
+      "heroName": "Yasuo",
+      "skin": "Genesis-Nightbringer-Yasuo",
+      "skinName": "Genesis Nightbringer Yasuo",
+      "pageUrl": "Yasuo/GenesisNightbringerYasuo",
+      "videoUrl": "J7m-N8yZKLY"
+    },
+    {
+      "hero": "Viego",
+      "heroName": "Viego",
+      "skin": "Worlds-2024-Viego",
+      "skinName": "Worlds 2024 Viego",
+      "pageUrl": "Viego/Worlds2024Viego",
+      "videoUrl": "MxbTwdj6CFI"
+    },
+    {
+      "hero": "Zeri",
+      "heroName": "Zeri",
+      "skin": "Fright-Night-Zeri",
+      "skinName": "Fright Night Zeri",
+      "pageUrl": "Zeri/FrightNightZeri",
+      "videoUrl": "nx72su-LrnM"
+    },
+    {
+      "hero": "Zeri",
+      "heroName": "Zeri",
+      "skin": "Prestige-Fright-Night-Zeri",
+      "skinName": "Prestige Fright Night Zeri",
+      "pageUrl": "Zeri/PrestigeFrightNightZeri",
+      "videoUrl": "hsoy1KHT6Oc"
+    },
+    {
+      "hero": "Yorick",
+      "heroName": "Yorick",
+      "skin": "Dark-Star-Yorick",
+      "skinName": "Dark Star Yorick",
+      "pageUrl": "Yorick/DarkStarYorick",
+      "videoUrl": "VVvKQLCW6jE"
+    },
+    {
+      "hero": "Gwen",
+      "heroName": "Gwen",
+      "skin": "Battle-Queen-Gwen",
+      "skinName": "Battle Queen Gwen",
+      "pageUrl": "Gwen/BattleQueenGwen",
+      "videoUrl": "bI1u97qTxcY"
+    },
+    {
+      "hero": "Sylas",
+      "heroName": "Sylas",
+      "skin": "Dark-Star-Sylas",
+      "skinName": "Dark Star Sylas",
+      "pageUrl": "Sylas/DarkStarSylas",
+      "videoUrl": "QHy0lIBxd70"
     }
   ]
 }
