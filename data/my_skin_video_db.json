@@ -689,6 +689,30 @@
       "videoUrl": "jB1XvMyEBNA"
     },
     {
+      "hero": "Mel",
+      "heroName": "Mel",
+      "skin": "Mel",
+      "skinName": "Mel",
+      "pageUrl": "Mel/Mel",
+      "videoUrl": "qEDPJE_6Nk0"
+    },
+    {
+      "hero": "Mel",
+      "heroName": "Mel",
+      "skin": "default",
+      "skinName": "default",
+      "pageUrl": "Mel/default",
+      "videoUrl": "qEDPJE_6Nk0"
+    },
+    {
+      "hero": "Mel",
+      "heroName": "Mel",
+      "skin": "Arcane-Councilor-Mel",
+      "skinName": "Arcane Councilor Mel",
+      "pageUrl": "Mel/ArcaneCouncilorMel",
+      "videoUrl": "plLjOic8aG0"
+    },
+    {
       "hero": "Milio",
       "heroName": "Milio",
       "skin": "Milio",
@@ -2259,6 +2283,14 @@
     {
       "hero": "Cassiopeia",
       "heroName": "Cassiopeia",
+      "skin": "Prestige-Mythmaker-Cassiopeia",
+      "skinName": "Prestige Mythmaker Cassiopeia",
+      "pageUrl": "Cassiopeia/PrestigeMythmakerCassiopeia",
+      "videoUrl": "28ebYZq6fmk"
+    },
+    {
+      "hero": "Cassiopeia",
+      "heroName": "Cassiopeia",
       "skin": "CovenCassiopeia",
       "skinName": "Coven Cassiopeia",
       "pageUrl": "Cassiopeia/CovenCassiopeia",
@@ -3291,6 +3323,14 @@
     {
       "hero": "Amumu",
       "heroName": "Amumu",
+      "skin": "Dumpling-Darlings-Amumu",
+      "skinName": "Dumpling Darlings Amumu",
+      "pageUrl": "Amumu/DumplingDarlingsAmumu",
+      "videoUrl": "6VGwfCxsS-Q"
+    },
+    {
+      "hero": "Amumu",
+      "heroName": "Amumu",
       "skin": "HeartacheAmumu",
       "skinName": "Heartache Amumu",
       "pageUrl": "Amumu/HeartacheAmumu",
@@ -3520,6 +3560,23 @@
       "pageUrl": "Blitzcrank/LancerRogueBlitzcrank",
       "videoUrl": "sBqDMkhbyaA"
     },
+
+    {
+      "hero": "Ekko",
+      "heroName": "Ekko",
+      "skin": "Arcane-Last-Stand-Ekko",
+      "skinName": "Arcane Last Stand Ekko",
+      "pageUrl": "Ekko/ArcaneLastStandEkko",
+      "videoUrl": "q-fo-jQKmcg"
+    },
+    {
+      "hero": "Ekko",
+      "heroName": "Ekko",
+      "skin": "Arcane-Firelight-Ekko",
+      "skinName": "Arcane Firelight Ekko",
+      "pageUrl": "Ekko/ArcaneFirelightEkko",
+      "videoUrl": "f9svS3KiAFc"
+    },
     {
       "hero": "Ekko",
       "heroName": "Ekko",
@@ -3615,6 +3672,14 @@
       "skinName": "True Damage Ekko",
       "pageUrl": "Ekko/TrueDamageEkko",
       "videoUrl": "lGXYssZ63BU"
+    },
+    {
+      "hero": "Ezreal",
+      "heroName": "Ezreal",
+      "skin": "Masque-of-the-Black-Rose-Ezreal",
+      "skinName": "Masque of the Black Rose Ezreal",
+      "pageUrl": "Ezreal/MasqueoftheBlackRoseEzreal",
+      "videoUrl": "__amuB4kq1s"
     },
     {
       "hero": "Ezreal",
@@ -3851,6 +3916,14 @@
     {
       "hero": "Heimerdinger",
       "heroName": "Heimerdinger",
+      "skin": "Arcane-Professor-Heimerdinger",
+      "skinName": "Arcane Professor Heimerdinger",
+      "pageUrl": "Heimerdinger/ArcaneProfessorHeimerdinger",
+      "videoUrl": "oWoMOlsuw0k"
+    },
+    {
+      "hero": "Heimerdinger",
+      "heroName": "Heimerdinger",
       "skin": "AlienInvaderHeimerdinger",
       "skinName": "Alien Invader Heimerdinger",
       "pageUrl": "Heimerdinger/AlienInvaderHeimerdinger",
@@ -3975,6 +4048,14 @@
       "skinName": "default",
       "pageUrl": "Elise/default",
       "videoUrl": "MhFDRVvfRqk"
+    },
+    {
+      "hero": "Elise",
+      "heroName": "Elise",
+      "skin": "Masque-of-the-Black-Rose-Elise",
+      "skinName": "Masque of the Black Rose Elise",
+      "pageUrl": "Elise/MasqueoftheBlackRoseElise",
+      "videoUrl": "EDMNi6fVbNk"
     },
     {
       "hero": "Elise",
@@ -4336,6 +4417,30 @@
       "skinName": "Frostfire Annie",
       "pageUrl": "Annie/FrostfireAnnie",
       "videoUrl": "6BXiJS48PTY"
+    },
+    {
+      "hero": "Caitlyn",
+      "heroName": "Caitlyn",
+      "skin": "Arcane-Enforcer-Caitlyn",
+      "skinName": "Arcane Enforcer Caitlyn",
+      "pageUrl": "Caitlyn/ArcaneEnforcerCaitlyn",
+      "videoUrl": "zQH6pa_oPGU"
+    },
+    {
+      "hero": "Caitlyn",
+      "heroName": "Caitlyn",
+      "skin": "Arcane-Commander-Caitlyn",
+      "skinName": "Arcane Commander Caitlyn",
+      "pageUrl": "Caitlyn/ArcaneCommanderCaitlyn",
+      "videoUrl": "bSwhZPGUB9o"
+    },
+    {
+      "hero": "Caitlyn",
+      "heroName": "Caitlyn",
+      "skin": "Prestige-Arcane-Commander-Caitlyn",
+      "skinName": "Prestige Arcane Commander Caitlyn",
+      "pageUrl": "Caitlyn/PrestigeArcaneCommanderCaitlyn",
+      "videoUrl": "92PhbwM1b0M"
     },
     {
       "hero": "Caitlyn",
@@ -5652,6 +5757,14 @@
     {
       "hero": "Syndra",
       "heroName": "Syndra",
+      "skin": "Dumpling-Darlings-Syndra",
+      "skinName": "Dumpling Darlings Syndra",
+      "pageUrl": "Syndra/DumplingDarlingsSyndra",
+      "videoUrl": "v4Iqzu_UojU"
+    },
+    {
+      "hero": "Syndra",
+      "heroName": "Syndra",
       "skin": "StarGuardianSyndra",
       "skinName": "Star Guardian Syndra",
       "pageUrl": "Syndra/StarGuardianSyndra",
@@ -5752,6 +5865,14 @@
       "skinName": "default",
       "pageUrl": "Singed/default",
       "videoUrl": "WSoIZT4Qwm8"
+    },
+    {
+      "hero": "Singed",
+      "heroName": "Singed",
+      "skin": "Arcane-Shimmer-Lab-Singed",
+      "skinName": "Arcane Shimmer Lab Singed",
+      "pageUrl": "Singed/ArcaneShimmerLabSinged",
+      "videoUrl": "SvZWbzXYuFA"
     },
     {
       "hero": "Singed",
@@ -5976,6 +6097,14 @@
       "skinName": "Commando Galio",
       "pageUrl": "Galio/CommandoGalio",
       "videoUrl": "rBPttybsMH4"
+    },
+    {
+      "hero": "Shen",
+      "heroName": "Shen",
+      "skin": "Three-Honors-Shen",
+      "skinName": "Three Honors Shen",
+      "pageUrl": "Shen/ThreeHonorsShen",
+      "videoUrl": "dwRsqONhK7I"
     },
     {
       "hero": "Shen",
@@ -6716,6 +6845,14 @@
     {
       "hero": "JarvanIV",
       "heroName": "Jarvan IV",
+      "skin": "Mythmaker-Jarvan-IV",
+      "skinName": "Mythmaker Jarvan IV",
+      "pageUrl": "JarvanIV/MythmakerJarvanIV",
+      "videoUrl": "Ue8UYgu6H0U"
+    },
+    {
+      "hero": "JarvanIV",
+      "heroName": "Jarvan IV",
       "skin": "DragonslayerJarvanIV",
       "skinName": "Dragonslayer Jarvan IV",
       "pageUrl": "JarvanIV/DragonslayerJarvanIV",
@@ -6880,6 +7017,22 @@
       "skinName": "Definitely Not Udyr",
       "pageUrl": "Udyr/DefinitelyNotUdyr",
       "videoUrl": "Zjryz1gIqL4"
+    },
+    {
+      "hero": "Jayce",
+      "heroName": "Jayce",
+      "skin": "Arcane-Inventor-Jayce",
+      "skinName": "Arcane Inventor Jayce",
+      "pageUrl": "Jayce/ArcaneInventorJayce",
+      "videoUrl": "HMH1O-ZLomg"
+    },
+    {
+      "hero": "Jayce",
+      "heroName": "Jayce",
+      "skin": "Arcane-Survivor-Jayce",
+      "skinName": "Arcane Survivor Jayce",
+      "pageUrl": "Jayce/ArcaneSurvivorJayce",
+      "videoUrl": "TpOlXibVxoY"
     },
     {
       "hero": "Jayce",
@@ -7536,6 +7689,14 @@
       "skinName": "Battle Bunny Miss Fortune",
       "pageUrl": "MissFortune/BattleBunnyMissFortune",
       "videoUrl": "pAs1f-o25WA"
+    },
+    {
+      "hero": "Jhin",
+      "heroName": "Jhin",
+      "skin": "Mythmaker-Jhin",
+      "skinName": "Mythmaker Jhin",
+      "pageUrl": "Jhin/MythmakerJhin",
+      "videoUrl": "L32mCChJiy4"
     },
     {
       "hero": "Jhin",
@@ -8644,6 +8805,14 @@
     {
       "hero": "Sett",
       "heroName": "Sett",
+      "skin": "Radiant-Serpent-Sett",
+      "skinName": "Radiant Serpent Sett",
+      "pageUrl": "Sett/RadiantSerpentSett",
+      "videoUrl": "xP_RqcYVTbc"
+    },
+    {
+      "hero": "Sett",
+      "heroName": "Sett",
       "skin": "default",
       "skinName": "default",
       "pageUrl": "Sett/default",
@@ -8896,6 +9065,14 @@
       "skinName": "Bewitching Senna",
       "pageUrl": "Senna/BewitchingSenna",
       "videoUrl": "saAA6Z7em6g"
+    },
+    {
+      "hero": "Seraphine",
+      "heroName": "Seraphine",
+      "skin": "Dumpling-Darlings-Seraphine",
+      "skinName": "Dumpling Darlings Seraphine",
+      "pageUrl": "Seraphine/DumplingDarlingsSeraphine",
+      "videoUrl": "j38RtCHsC94"
     },
     {
       "hero": "Seraphine",
@@ -10980,6 +11157,14 @@
     {
       "hero": "Samira",
       "heroName": "Samira",
+      "skin": "Masque-of-the-Black-Rose-Samira",
+      "skinName": "Masque of the Black Rose Samira",
+      "pageUrl": "Samira/MasqueoftheBlackRoseSamira",
+      "videoUrl": "KbV7oAxhJsM"
+    },
+    {
+      "hero": "Samira",
+      "heroName": "Samira",
       "skin": "HighNoonSamira",
       "skinName": "High Noon Samira",
       "pageUrl": "Samira/HighNoonSamira",
@@ -11412,6 +11597,22 @@
     {
       "hero": "Vi",
       "heroName": "Vi",
+      "skin": "Arcane-Brawler-Vi",
+      "skinName": "Arcane Brawler Vi",
+      "pageUrl": "Vi/ArcaneBrawlerVi",
+      "videoUrl": "zWKaew3IigI"
+    },
+    {
+      "hero": "Vi",
+      "heroName": "Vi",
+      "skin": "Arcane-Undercity-Vi",
+      "skinName": "Arcane Undercity Vi",
+      "pageUrl": "Vi/ArcaneUndercityVi",
+      "videoUrl": "Qd3s9WVJsGc"
+    },
+    {
+      "hero": "Vi",
+      "heroName": "Vi",
       "skin": "default",
       "skinName": "default",
       "pageUrl": "Vi/default",
@@ -11512,6 +11713,14 @@
       "skinName": "default",
       "pageUrl": "Viktor/default",
       "videoUrl": "uZllksq2oGY"
+    },
+    {
+      "hero": "Viktor",
+      "heroName": "Viktor",
+      "skin": "Arcane-Savior-Viktor",
+      "skinName": "Arcane Savior Viktor",
+      "pageUrl": "Viktor/ArcaneSaviorViktor",
+      "videoUrl": "qHqqYAPXxhE"
     },
     {
       "hero": "Viktor",
@@ -12724,6 +12933,14 @@
     {
       "hero": "Warwick",
       "heroName": "Warwick",
+      "skin": "Arcane-Vander-Warwick",
+      "skinName": "Arcane Vander Warwick",
+      "pageUrl": "Warwick/ArcaneVanderWarwick",
+      "videoUrl": "swQ-6WjVaEM"
+    },
+    {
+      "hero": "Warwick",
+      "heroName": "Warwick",
       "skin": "FirefangWarwick",
       "skinName": "Firefang Warwick",
       "pageUrl": "Warwick/FirefangWarwick",
@@ -12948,6 +13165,14 @@
     {
       "hero": "Vladimir",
       "heroName": "Vladimir",
+      "skin": "Masque-of-the-Black-Rose-Vladimir",
+      "skinName": "Masque of the Black Rose Vladimir",
+      "pageUrl": "Vladimir/MasqueoftheBlackRoseVladimir",
+      "videoUrl": "IKwufZGbUCY"
+    },
+    {
+      "hero": "Vladimir",
+      "heroName": "Vladimir",
       "skin": "SoulstealerVladimir",
       "skinName": "Soulstealer Vladimir",
       "pageUrl": "Vladimir/SoulstealerVladimir",
@@ -13096,6 +13321,14 @@
       "skinName": "Pool Party Zac",
       "pageUrl": "Zac/PoolPartyZac",
       "videoUrl": "OywrwjzWWao"
+    },
+    {
+      "hero": "Renata",
+      "heroName": "Renata Glasc",
+      "skin": "Masque-of-the-Black-Rose-Renata-Glasc",
+      "skinName": "Masque of the Black Rose Renata Glasc",
+      "pageUrl": "Renata/MasqueoftheBlackRoseRenataGlasc",
+      "videoUrl": "y0zXjDefbm8"
     },
     {
       "hero": "Renata",
@@ -13980,6 +14213,22 @@
     {
       "hero": "Jinx",
       "heroName": "Jinx",
+      "skin": "Arcane-Enemy-Jinx",
+      "skinName": "Arcane Enemy Jinx",
+      "pageUrl": "Jinx/ArcaneEnemyJinx",
+      "videoUrl": "r0S59lUqbk4"
+    },
+    {
+      "hero": "Jinx",
+      "heroName": "Jinx",
+      "skin": "Arcane-Fractured-Jinx",
+      "skinName": "Arcane Fractured Jinx",
+      "pageUrl": "Jinx/ArcaneFracturedJinx",
+      "videoUrl": "B-Ep-SyztuI"
+    },
+    {
+      "hero": "Jinx",
+      "heroName": "Jinx",
       "skin": "default",
       "skinName": "default",
       "pageUrl": "Jinx/default",
@@ -14548,6 +14797,14 @@
     {
       "hero": "MasterYi",
       "heroName": "Master Yi",
+      "skin": "Victorious-Master-Yi",
+      "skinName": "Victorious Master Yi",
+      "pageUrl": "MasterYi/VictoriousMasterYi",
+      "videoUrl": "cMtjl27fNhk"
+    },
+    {
+      "hero": "MasterYi",
+      "heroName": "Master Yi",
       "skin": "HeavenscaleMasterYi",
       "skinName": "Heavenscale Master Yi",
       "pageUrl": "MasterYi/HeavenscaleMasterYi",
@@ -15012,6 +15269,14 @@
     {
       "hero": "Katarina",
       "heroName": "Katarina",
+      "skin": "Prestige-Masque-of-the-Black-Rose-Katarina",
+      "skinName": "Prestige Masque of the Black Rose Katarina",
+      "pageUrl": "Katarina/PrestigeMasqueoftheBlackRoseKatarina",
+      "videoUrl": "IXXmIkXro6U"
+    },
+    {
+      "hero": "Katarina",
+      "heroName": "Katarina",
       "skin": "PROJECT:Katarina",
       "skinName": "PROJECT: Katarina",
       "pageUrl": "Katarina/PROJECT:Katarina",
@@ -15144,6 +15409,14 @@
       "skinName": "Prestige Faerie Court Katarina",
       "pageUrl": "Katarina/PrestigeFaerieCourtKatarina",
       "videoUrl": "Z7IZ9HsOSbY"
+    },
+    {
+      "hero": "Katarina",
+      "heroName": "Katarina",
+      "skin": "Prestige-Masque-of-the-Black-Rose-Katarina",
+      "skinName": "Prestige Masque of the Black Rose Katarina",
+      "pageUrl": "Katarina/PrestigeMasqueoftheBlackRoseKatarina",
+      "videoUrl": "IXXmIkXro6U"
     },
     {
       "hero": "Lissandra",
@@ -16128,6 +16401,14 @@
       "skinName": "Prestige Battle Academia Lux",
       "pageUrl": "Lux/PrestigeBattleAcademiaLux",
       "videoUrl": "Rv4IZ3a9KpA"
+    },
+    {
+      "hero": "Nami",
+      "heroName": "Nami",
+      "skin": "Mythmaker-Nami",
+      "skinName": "Mythmaker Nami",
+      "pageUrl": "Nami/MythmakerNami",
+      "videoUrl": "CQxxMjez97Y"
     },
     {
       "hero": "Nami",

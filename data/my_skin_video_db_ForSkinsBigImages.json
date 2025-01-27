@@ -568,6 +568,13 @@
       "searchField": "Master Yi"
     },
     {
+      "pageUrl": "Mel/Mel",
+      "newPageUrl": "Mel/Mel",
+      "skinName": "Mel",
+      "splashNumber": "0",
+      "searchField": "Mel"
+    },
+    {
       "pageUrl": "Milio/Milio",
       "newPageUrl": "Milio/Milio",
       "skinName": "Milio",
@@ -1828,6 +1835,13 @@
       "searchField": "Amumu - default"
     },
     {
+      "pageUrl": "Amumu/DumplingDarlingsAmumu",
+      "newPageUrl": "Amumu/Dumpling-Darlings-Amumu",
+      "skinName": "Dumpling Darlings Amumu",
+      "splashNumber": "53",
+      "searchField": "Amumu - Dumpling Darlings Amumu"
+    },
+    {
       "pageUrl": "Amumu/PharaohAmumu",
       "newPageUrl": "Amumu/Pharaoh-Amumu",
       "skinName": "Pharaoh Amumu",
@@ -2696,6 +2710,13 @@
       "searchField": "Elise - default"
     },
     {
+      "pageUrl": "Elise/MasqueoftheBlackRoseElise",
+      "newPageUrl": "Elise/Masque-of-the-Black-Rose-Elise",
+      "skinName": "Masque of the Black Rose Elise",
+      "splashNumber": "34",
+      "searchField": "Elise - Masque of the Black Rose Elise"
+    },
+    {
       "pageUrl": "Elise/DeathBlossomElise",
       "newPageUrl": "Elise/Death-Blossom-Elise",
       "skinName": "Death Blossom Elise",
@@ -2834,6 +2855,27 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Caitlyn - default"
+    },
+    {
+      "pageUrl": "Caitlyn/ArcaneCommanderCaitlyn",
+      "newPageUrl": "Caitlyn/Arcane-Commander-Caitlyn",
+      "skinName": "Arcane Commander Caitlyn",
+      "splashNumber": "50",
+      "searchField": "Caitlyn - Arcane Commander Caitlyn"
+    },
+    {
+      "pageUrl": "Caitlyn/PrestigeArcaneCommanderCaitlyn",
+      "newPageUrl": "Caitlyn/Prestige-Arcane-Commander-Caitlyn",
+      "skinName": "Prestige Arcane Commander Caitlyn",
+      "splashNumber": "51",
+      "searchField": "Caitlyn - Prestige Arcane Commander Caitlyn"
+    },
+    {
+      "pageUrl": "Caitlyn/ArcaneEnforcerCaitlyn",
+      "newPageUrl": "Caitlyn/Arcane-Enforcer-Caitlyn",
+      "skinName": "Arcane Enforcer Caitlyn",
+      "splashNumber": "28",
+      "searchField": "Caitlyn - Arcane Enforcer Caitlyn"
     },
     {
       "pageUrl": "Caitlyn/ResistanceCaitlyn",
@@ -3193,6 +3235,20 @@
       "searchField": "Ekko - default"
     },
     {
+      "pageUrl": "Ekko/ArcaneLastStandEkko",
+      "newPageUrl": "Ekko/Arcane-Last-Stand-Ekko",
+      "skinName": "Arcane Last Stand Ekko",
+      "splashNumber": "57",
+      "searchField": "Ekko - Arcane Last Stand Ekko"
+    },
+    {
+      "pageUrl": "Ekko/ArcaneFirelightEkko",
+      "newPageUrl": "Ekko/Arcane-Firelight-Ekko",
+      "skinName": "Arcane Firelight Ekko",
+      "splashNumber": "36",
+      "searchField": "Ekko - Arcane Firelight Ekko"
+    },
+    {
       "pageUrl": "Ekko/SandstormEkko",
       "newPageUrl": "Ekko/Sandstorm-Ekko",
       "skinName": "Sandstorm Ekko",
@@ -3389,6 +3445,13 @@
       "searchField": "Cassiopeia - default"
     },
     {
+      "pageUrl": "Cassiopeia/PrestigeMythmakerCassiopeia",
+      "newPageUrl": "Cassiopeia/Prestige-Mythmaker-Cassiopeia",
+      "skinName": "Prestige Mythmaker Cassiopeia",
+      "splashNumber": "38",
+      "searchField": "Cassiopeia - Prestige Mythmaker Cassiopeia"
+    },
+    {
       "pageUrl": "Cassiopeia/DesperadaCassiopeia",
       "newPageUrl": "Cassiopeia/Desperada-Cassiopeia",
       "skinName": "Desperada Cassiopeia",
@@ -3541,6 +3604,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Jarvan IV - default"
+    },
+    {
+      "pageUrl": "JarvanIV/MythmakerJarvanIV",
+      "newPageUrl": "Jarvan-IV/Mythmaker-Jarvan-IV",
+      "skinName": "Mythmaker Jarvan IV",
+      "splashNumber": "44",
+      "searchField": "Jarvan IV - Mythmaker Jarvan IV"
     },
     {
       "pageUrl": "JarvanIV/CommandoJarvanIV",
@@ -4180,6 +4250,20 @@
       "searchField": "Jayce - default"
     },
     {
+      "pageUrl": "Jayce/ArcaneInventorJayce",
+      "newPageUrl": "Jayce/Arcane-Inventor-Jayce",
+      "skinName": "Arcane Inventor Jayce",
+      "splashNumber": "24",
+      "searchField": "Jayce - Arcane Inventor Jayce"
+    },
+    {
+      "pageUrl": "Jayce/ArcaneSurvivorJayce",
+      "newPageUrl": "Jayce/Arcane-Survivor-Jayce",
+      "skinName": "Arcane Survivor Jayce",
+      "splashNumber": "35",
+      "searchField": "Jayce - Arcane Survivor Jayce"
+    },
+    {
       "pageUrl": "Jayce/FullMetalJayce",
       "newPageUrl": "Jayce/Full-Metal-Jayce",
       "skinName": "Full Metal Jayce",
@@ -4367,6 +4451,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Heimerdinger - default"
+    },
+    {
+      "pageUrl": "Heimerdinger/ArcaneProfessorHeimerdinger",
+      "newPageUrl": "Heimerdinger/Arcane-Professor-Heimerdinger",
+      "skinName": "Arcane Professor Heimerdinger",
+      "splashNumber": "33",
+      "searchField": "Heimerdinger - Arcane Professor Heimerdinger"
     },
     {
       "pageUrl": "Heimerdinger/AlienInvaderHeimerdinger",
@@ -5139,6 +5230,13 @@
       "searchField": "Kayle - Prestige Empyrean Kayle"
     },
     {
+      "pageUrl": "Ezreal/MasqueoftheBlackRoseEzreal",
+      "newPageUrl": "Ezreal/Masque-of-the-Black-Rose-Ezreal",
+      "skinName": "Masque of the Black Rose Ezreal",
+      "splashNumber": "65",
+      "searchField": "Ezreal - Masque of the Black Rose Ezreal"
+    },
+    {
       "pageUrl": "Ezreal/default",
       "newPageUrl": "Ezreal/default",
       "skinName": "default",
@@ -5466,6 +5564,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Jhin - default"
+    },
+    {
+      "pageUrl": "Jhin/MythmakerJhin",
+      "newPageUrl": "Jhin/Mythmaker-Jhin",
+      "skinName": "Mythmaker Jhin",
+      "splashNumber": "47",
+      "searchField": "Jhin - Mythmaker Jhin"
     },
     {
       "pageUrl": "Jhin/HighNoonJhin",
@@ -6042,6 +6147,20 @@
       "searchField": "Jinx - default"
     },
     {
+      "pageUrl": "Jinx/ArcaneEnemyJinx",
+      "newPageUrl": "Jinx/Arcane-Enemy-Jinx",
+      "skinName": "Arcane Enemy Jinx",
+      "splashNumber": "37",
+      "searchField": "Jinx - Arcane Enemy Jinx"
+    },
+    {
+      "pageUrl": "Jinx/ArcaneFracturedJinx",
+      "newPageUrl": "Jinx/Arcane-Fractured-Jinx",
+      "skinName": "Arcane Fractured Jinx",
+      "splashNumber": "60",
+      "searchField": "Jinx - Arcane Fractured Jinx"
+    },
+    {
       "pageUrl": "Jinx/CrimeCityJinx",
       "newPageUrl": "Jinx/Crime-City-Jinx",
       "skinName": "Crime City Jinx",
@@ -6166,6 +6285,20 @@
       "skinName": "Battle Queen Gwen",
       "splashNumber": "30",
       "searchField": "Gwen - Battle Queen Gwen"
+    },
+    {
+      "pageUrl": "Mel/default",
+      "newPageUrl": "Mel/default",
+      "skinName": "default",
+      "splashNumber": "0",
+      "searchField": "Mel - default"
+    },
+    {
+      "pageUrl": "Mel/ArcaneCouncilorMel",
+      "newPageUrl": "Mel/Arcane-Councilor-Mel",
+      "skinName": "Arcane Councilor Mel",
+      "splashNumber": "1",
+      "searchField": "Mel - Arcane Councilor Mel"
     },
     {
       "pageUrl": "Milio/default",
@@ -6852,6 +6985,13 @@
       "skinName": "Prestige Faerie Court Katarina",
       "splashNumber": "48",
       "searchField": "Katarina - Prestige Faerie Court Katarina"
+    },
+    {
+      "pageUrl": "Katarina/PrestigeMasqueoftheBlackRoseKatarina",
+      "newPageUrl": "Katarina/Prestige-Masque-of-the-Black-Rose-Katarina",
+      "skinName": "Prestige Masque of the Black Rose Katarina",
+      "splashNumber": "60",
+      "searchField": "Katarina - Prestige Masque of the Black Rose Katarina"
     },
     {
       "pageUrl": "Katarina/ChosenoftheWolfKatarina",
@@ -7820,6 +7960,13 @@
       "searchField": "Nami - default"
     },
     {
+      "pageUrl": "Nami/MythmakerNami",
+      "newPageUrl": "Nami/Mythmaker-Nami",
+      "skinName": "Mythmaker Nami",
+      "splashNumber": "58",
+      "searchField": "Nami - Mythmaker Nami"
+    },
+    {
       "pageUrl": "Nami/KoiNami",
       "newPageUrl": "Nami/Koi-Nami",
       "skinName": "Koi Nami",
@@ -8576,6 +8723,13 @@
       "searchField": "Renata Glasc - Admiral Glasc"
     },
     {
+      "pageUrl": "Renata/MasqueoftheBlackRoseRenataGlasc",
+      "newPageUrl": "Renata-Glasc/Masque-of-the-Black-Rose-Renata-Glasc",
+      "skinName": "Masque of the Black Rose Renata Glasc",
+      "splashNumber": "31",
+      "searchField": "Renata Glasc - Masque of the Black Rose Renata Glasc"
+    },
+    {
       "pageUrl": "Renata/FrightNightRenataGlasc",
       "newPageUrl": "Renata-Glasc/Fright-Night-Renata-Glasc",
       "skinName": "Fright Night Renata Glasc",
@@ -8602,6 +8756,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Master Yi - default"
+    },
+    {
+      "pageUrl": "MasterYi/VictoriousMasterYi",
+      "newPageUrl": "Master-Yi/Victorious-Master-Yi",
+      "skinName": "Victorious Master Yi",
+      "splashNumber": "106",
+      "searchField": "Master Yi - Victorious Master Yi"
     },
     {
       "pageUrl": "MasterYi/AssassinMasterYi",
@@ -9022,6 +9183,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Singed - default"
+    },
+    {
+      "pageUrl": "Singed/ArcaneShimmerLabSinged",
+      "newPageUrl": "Singed/Arcane-Shimmer-Lab-Singed",
+      "skinName": "Arcane Shimmer Lab Singed",
+      "splashNumber": "28",
+      "searchField": "Singed - Arcane Shimmer Lab Singed"
     },
     {
       "pageUrl": "Singed/RiotSquadSinged",
@@ -9500,6 +9668,13 @@
       "searchField": "Sett - default"
     },
     {
+      "pageUrl": "Sett/RadiantSerpentSett",
+      "newPageUrl": "Sett/Radiant-Serpent-Sett",
+      "skinName": "Radiant Serpent Sett",
+      "splashNumber": "66",
+      "searchField": "Sett - Radiant Serpent Sett"
+    },
+    {
       "pageUrl": "Sett/MechaKingdomsSett",
       "newPageUrl": "Sett/Mecha-Kingdoms-Sett",
       "skinName": "Mecha Kingdoms Sett",
@@ -9974,6 +10149,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Shen - default"
+    },
+    {
+      "pageUrl": "Shen/ThreeHonorsShen",
+      "newPageUrl": "Shen/Three-Honors-Shen",
+      "skinName": "Three Honors Shen",
+      "splashNumber": "51",
+      "searchField": "Shen - Three Honors Shen"
     },
     {
       "pageUrl": "Shen/FrozenShen",
@@ -11201,6 +11383,13 @@
       "searchField": "Syndra - default"
     },
     {
+      "pageUrl": "Syndra/DumplingDarlingsSyndra",
+      "newPageUrl": "Syndra/Dumpling-Darlings-Syndra",
+      "skinName": "Dumpling Darlings Syndra",
+      "splashNumber": "65",
+      "searchField": "Syndra - Dumpling Darlings Syndra"
+    },
+    {
       "pageUrl": "Syndra/JusticarSyndra",
       "newPageUrl": "Syndra/Justicar-Syndra",
       "skinName": "Justicar Syndra",
@@ -11411,6 +11600,13 @@
       "searchField": "Seraphine - default"
     },
     {
+      "pageUrl": "Seraphine/DumplingDarlingsSeraphine",
+      "newPageUrl": "Seraphine/Dumpling-Darlings-Seraphine",
+      "skinName": "Dumpling Darlings Seraphine",
+      "splashNumber": "50",
+      "searchField": "Seraphine - Dumpling Darlings Seraphine"
+    },
+    {
       "pageUrl": "Seraphine/KDAALLOUTSeraphineIndie",
       "newPageUrl": "Seraphine/KDA-ALL-OUT-Seraphine-Indie",
       "skinName": "K/DA ALL OUT Seraphine Indie",
@@ -11521,6 +11717,20 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Vi - default"
+    },
+    {
+      "pageUrl": "Vi/ArcaneBrawlerVi",
+      "newPageUrl": "Vi/Arcane-Brawler-Vi",
+      "skinName": "Arcane Brawler Vi",
+      "splashNumber": "48",
+      "searchField": "Vi - Arcane Brawler Vi"
+    },
+    {
+      "pageUrl": "Vi/ArcaneUndercityVi",
+      "newPageUrl": "Vi/Arcane-Undercity-Vi",
+      "skinName": "Arcane Undercity Vi",
+      "splashNumber": "29",
+      "searchField": "Vi - Arcane Undercity Vi"
     },
     {
       "pageUrl": "Vi/NeonStrikeVi",
@@ -11724,6 +11934,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Samira - default"
+    },
+    {
+      "pageUrl": "Samira/MasqueoftheBlackRoseSamira",
+      "newPageUrl": "Samira/Masque-of-the-Black-Rose-Samira",
+      "skinName": "Masque of the Black Rose Samira",
+      "splashNumber": "33",
+      "searchField": "Samira - Masque of the Black Rose Samira"
     },
     {
       "pageUrl": "Samira/PsyOpsSamira",
@@ -13455,6 +13672,13 @@
       "searchField": "Viktor - default"
     },
     {
+      "pageUrl": "Viktor/ArcaneSaviorViktor",
+      "newPageUrl": "Viktor/Arcane-Savior-Viktor",
+      "skinName": "Arcane Savior Viktor",
+      "splashNumber": "24",
+      "searchField": "Viktor - Arcane Savior Viktor"
+    },
+    {
       "pageUrl": "Viktor/FullMachineViktor",
       "newPageUrl": "Viktor/Full-Machine-Viktor",
       "skinName": "Full Machine Viktor",
@@ -13572,6 +13796,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Vladimir - default"
+    },
+    {
+      "pageUrl": "Vladimir/MasqueoftheBlackRoseVladimir",
+      "newPageUrl": "Vladimir/Masque-of-the-Black-Rose-Vladimir",
+      "skinName": "Masque of the Black Rose Vladimir",
+      "splashNumber": "48",
+      "searchField": "Vladimir - Masque of the Black Rose Vladimir"
     },
     {
       "pageUrl": "Vladimir/CountVladimir",
@@ -13845,6 +14076,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Warwick - default"
+    },
+    {
+      "pageUrl": "Warwick/ArcaneVanderWarwick",
+      "newPageUrl": "Warwick/Arcane-Vander-Warwick",
+      "skinName": "Arcane Vander Warwick",
+      "splashNumber": "56",
+      "searchField": "Warwick - Arcane Vander Warwick"
     },
     {
       "pageUrl": "Warwick/GreyWarwick",

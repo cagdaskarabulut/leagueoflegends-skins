@@ -166,7 +166,7 @@ export async function getStaticProps(ctx) {
       let skinVideo;
       let heroIdWithCapitalizedFirstChar = capitalizeFirstChar(heroId);
       await fetch(
-        `https://ddragon.leagueoflegends.com/cdn/14.22.1/data/en_US/champion/${heroIdWithCapitalizedFirstChar}.json`
+        `https://ddragon.leagueoflegends.com/cdn/15.2.1/data/en_US/champion/${heroIdWithCapitalizedFirstChar}.json`
       )
         .then((res) => res.json())
         .then((resData) => {
