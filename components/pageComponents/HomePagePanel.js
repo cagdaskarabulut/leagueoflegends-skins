@@ -44,7 +44,7 @@ const HomePagePanel = ({ allSkinsList }) => {
             href={commercials[0].link}
             passHref
             target="_blank"
-            onClick={handleAdClick}
+            // onClick={handleAdClick}
           >
             <img
               src={commercials[0].mobileImage}
@@ -146,7 +146,7 @@ const HomePagePanel = ({ allSkinsList }) => {
                 href={commercial.link}
                 passHref
                 target="_blank"
-                onClick={handleAdClick}
+                // onClick={handleAdClick}
               >
                 <div
                   style={{
@@ -206,7 +206,7 @@ const HomePagePanel = ({ allSkinsList }) => {
                 href={commercial.link}
                 passHref
                 target="_blank"
-                onClick={handleAdClick}
+                // onClick={handleAdClick}
               >
                 <img
                   src={commercial.image}

@@ -85,7 +85,7 @@ const SkinPagePanel = ({
           href={commercials[0].link}
           passHref
           target="_blank"
-          onClick={handleAdClick}
+          // onClick={handleAdClick}
         >
           <div
             style={{
@@ -132,7 +132,7 @@ const SkinPagePanel = ({
           href={commercials[1].link}
           passHref
           target="_blank"
-          onClick={handleAdClick}
+          // onClick={handleAdClick}
         >
           <img
             src={commercials[1].image}
@@ -219,7 +219,7 @@ const SkinPagePanel = ({
                 href={commercials[0].link}
                 passHref
                 target="_blank"
-                onClick={handleAdClick}
+                // onClick={handleAdClick}
               >
                 <img
                   src={commercials[0].mobileImage}

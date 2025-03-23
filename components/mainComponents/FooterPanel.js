@@ -30,7 +30,7 @@ const FooterPanel = ({ commercialUrl, commercialImage, commercialAlt }) => {
           href={commercials[1].link}
           passHref
           target="_blank"
-          onClick={handleAdClick}
+          // onClick={handleAdClick}
         >
           <img
             src={commercials[1].mobileImage}
