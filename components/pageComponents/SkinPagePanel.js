@@ -20,7 +20,7 @@ import Image from "next/image";
 import ArticleIcon from "@mui/icons-material/Article";
 import { Link } from "@mui/material";
 import useCommercials from "../../hooks/useCommercials";
-import useAdClick from "../../hooks/useAdClick";
+// import useAdClick from "../../hooks/useAdClick";
 const permanentMarker = Permanent_Marker({
   subsets: ["latin"],
   weight: ["400"],
@@ -40,7 +40,7 @@ const SkinPagePanel = ({
   const { innerWidth } = useWindowSize();
   const [iframeWidth, setIframeWidth] = useState("800");
   const [iframeHeight, setIframeHeight] = useState("400");
-  const handleAdClick = useAdClick();
+  // const handleAdClick = useAdClick();
 
   useEffect(() => {
     if (innerWidth === null) {

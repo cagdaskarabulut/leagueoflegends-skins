@@ -5,11 +5,11 @@ import { MOBILE_SCREEN_SIZE } from "../../constants/GeneralConstants";
 import MyGrid from "../toolComponents/MyGrid";
 import Link from "next/link";
 import useCommercials from "../../hooks/useCommercials";
-import useAdClick from "../../hooks/useAdClick";
+// import useAdClick from "../../hooks/useAdClick";
 
 const FooterPanel = ({ commercialUrl, commercialImage, commercialAlt }) => {
   const { commercials, isMobile } = useCommercials();
-  const handleAdClick = useAdClick();
+  // const handleAdClick = useAdClick();
 
   const LeftContent = () => {
     return (

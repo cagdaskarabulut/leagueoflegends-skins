@@ -8,11 +8,11 @@ import { Analytics } from "@vercel/analytics/react";
 import { Button, Link } from "@mui/material";
 import ArticleIcon from "@mui/icons-material/Article";
 import useCommercials from "../../hooks/useCommercials";
-import useAdClick from "../../hooks/useAdClick";
+// import useAdClick from "../../hooks/useAdClick";
 
 const HomePagePanel = ({ allSkinsList }) => {
   const { commercials, isMobile } = useCommercials();
-  const handleAdClick = useAdClick();
+  // const handleAdClick = useAdClick();
 
   const HeaderField = () => {
     if (isMobile) {
