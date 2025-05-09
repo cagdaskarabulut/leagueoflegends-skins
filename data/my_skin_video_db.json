@@ -387,6 +387,14 @@
     {
       "hero": "Irelia",
       "heroName": "Irelia",
+      "skin": "Spirit-Blossom-Irelia",
+      "skinName": "Spirit Blossom Irelia",
+      "pageUrl": "Irelia/SpiritBlossomIrelia",
+      "videoUrl": "UemwZkEOzOk"
+    },
+    {
+      "hero": "Irelia",
+      "heroName": "Irelia",
       "skin": "Porcelain-Irelia",
       "skinName": "Porcelain Irelia",
       "pageUrl": "Irelia/PorcelainIrelia",
@@ -2361,6 +2369,14 @@
       "videoUrl": "I1bbd6XRtWQ"
     },
     {
+      "hero": "Draven",
+      "heroName": "Draven",
+      "skin": "Grand-Reckoning-Draven",
+      "skinName": "Grand Reckoning Draven",
+      "pageUrl": "Draven/GrandReckoningDraven",
+      "videoUrl": "D55du9AF0hA"
+    },
+    {
       "hero": "Diana",
       "heroName": "Diana",
       "skin": "HeavenscaleDiana",
@@ -2687,6 +2703,14 @@
       "skinName": "Prestige Fuzz Fizz",
       "pageUrl": "Fizz/PrestigeFuzzFizz",
       "videoUrl": "dxE5NoNYMVU"
+    },
+    {
+      "hero": "Garen",
+      "heroName": "Garen",
+      "skin": "Pengu-Garen",
+      "skinName": "Pengu Garen",
+      "pageUrl": "Garen/PenguGaren",
+      "videoUrl": "wz3blGGZLVU"
     },
     {
       "hero": "Garen",
@@ -4909,6 +4933,14 @@
     {
       "hero": "Braum",
       "heroName": "Braum",
+      "skin": "Grill-Master-Braum",
+      "skinName": "Grill Master Braum",
+      "pageUrl": "Braum/GrillMasterBraum",
+      "videoUrl": "go2iWzrpXZk"
+    },
+    {
+      "hero": "Braum",
+      "heroName": "Braum",
       "skin": "PoolPartyBraum",
       "skinName": "Pool Party Braum",
       "pageUrl": "Braum/PoolPartyBraum",
@@ -4969,6 +5001,14 @@
       "skinName": "Dragonslayer Braum",
       "pageUrl": "Braum/DragonslayerBraum",
       "videoUrl": "7y7d9dA3xH8"
+    },
+    {
+      "hero": "Darius",
+      "heroName": "Darius",
+      "skin": "Prestige-Triumphant-General-Darius",
+      "skinName": "Prestige Triumphant General Darius",
+      "pageUrl": "Darius/PrestigeTriumphantGeneralDarius",
+      "videoUrl": "NE6pLJkpmlc"
     },
     {
       "hero": "Darius",
@@ -5621,6 +5661,14 @@
     {
       "hero": "Bard",
       "heroName": "Bard",
+      "skin": "Spirit-Blossom-Bard",
+      "skinName": "Spirit Blossom Bard",
+      "pageUrl": "Bard/SpiritBlossomBard",
+      "videoUrl": "bD0TKlTy2Mk"
+    },
+    {
+      "hero": "Bard",
+      "heroName": "Bard",
       "skin": "T1Bard",
       "skinName": "T1 Bard",
       "pageUrl": "Bard/T1Bard",
@@ -6261,6 +6309,14 @@
     {
       "hero": "Ashe",
       "heroName": "Ashe",
+      "skin": "Spirit-Blossom-Ashe",
+      "skinName": "Spirit Blossom Ashe",
+      "pageUrl": "Ashe/SpiritBlossomAshe",
+      "videoUrl": "AIDwPEMm1S8"
+    },
+    {
+      "hero": "Ashe",
+      "heroName": "Ashe",
       "skin": "InfernalAshe",
       "skinName": "Infernal Ashe",
       "pageUrl": "Ashe/InfernalAshe",
@@ -6633,6 +6689,23 @@
       "skinName": "Boneclaw Shyvana",
       "pageUrl": "Shyvana/BoneclawShyvana",
       "videoUrl": "9BAVAX44KCE"
+    },
+
+    {
+      "hero": "Shaco",
+      "heroName": "Shaco",
+      "skin": "Fright-Night-Shaco",
+      "skinName": "Fright Night Shaco",
+      "pageUrl": "Shaco/FrightNightShaco",
+      "videoUrl": "AOLoDXroou4"
+    },
+    {
+      "hero": "Shaco",
+      "heroName": "Shaco",
+      "skin": "Cat-in-the-Box-Shaco",
+      "skinName": "Cat-in-the-Box Shaco",
+      "pageUrl": "Shaco/Cat-in-the-BoxShaco",
+      "videoUrl": "pE8AYyvcHoA"
     },
     {
       "hero": "Shaco",
@@ -7125,6 +7198,14 @@
     {
       "hero": "Varus",
       "heroName": "Varus",
+      "skin": "Spirit-Blossom-Varus",
+      "skinName": "Spirit Blossom Varus",
+      "pageUrl": "Varus/SpiritBlossomVarus",
+      "videoUrl": "N8Yn8BuKj5U"
+    },
+    {
+      "hero": "Varus",
+      "heroName": "Varus",
       "skin": "EmpyreanVarus",
       "skinName": "Empyrean Varus",
       "pageUrl": "Varus/EmpyreanVarus",
@@ -7237,6 +7318,14 @@
     {
       "hero": "Ivern",
       "heroName": "Ivern",
+      "skin": "Spirit-Blossom-Ivern",
+      "skinName": "Spirit Blossom Ivern",
+      "pageUrl": "Ivern/SpiritBlossomIvern",
+      "videoUrl": "mtmMv8Ker2s"
+    },
+    {
+      "hero": "Ivern",
+      "heroName": "Ivern",
       "skin": "AstronautIvern",
       "skinName": "Astronaut Ivern",
       "pageUrl": "Ivern/AstronautIvern",
@@ -7273,6 +7362,14 @@
       "skinName": "Old God Ivern",
       "pageUrl": "Ivern/OldGodIvern",
       "videoUrl": "7EvCMaQrhcM"
+    },
+    {
+      "hero": "Urgot",
+      "heroName": "Urgot",
+      "skin": "Urgot-the-Clogfather",
+      "skinName": "Urgot the Clogfather",
+      "pageUrl": "Urgot/UrgottheClogfather",
+      "videoUrl": "T5dbPnqL26E"
     },
     {
       "hero": "Urgot",
@@ -7393,6 +7490,14 @@
       "skinName": "Lil' Slugger Trundle",
       "pageUrl": "Trundle/LilSluggerTrundle",
       "videoUrl": "IkJ5GU_3P3Q"
+    },
+    {
+      "hero": "Taric",
+      "heroName": "Taric",
+      "skin": "Fatebreaker-Taric",
+      "skinName": "Fatebreaker Taric",
+      "pageUrl": "Taric/FatebreakerTaric",
+      "videoUrl": "R1s22r5_V8Y"
     },
     {
       "hero": "Taric",
@@ -8317,6 +8422,14 @@
     {
       "hero": "Talon",
       "heroName": "Talon",
+      "skin": "Grand-Reckoning-Talon",
+      "skinName": "Grand Reckoning Talon",
+      "pageUrl": "Talon/GrandReckoningTalon",
+      "videoUrl": "5ECTUTDB3Yk"
+    },
+    {
+      "hero": "Talon",
+      "heroName": "Talon",
       "skin": "PrimalAmbushTalon",
       "skinName": "Primal Ambush Talon",
       "pageUrl": "Talon/PrimalAmbushTalon",
@@ -8409,6 +8522,14 @@
       "skinName": "Blood Moon Talon",
       "pageUrl": "Talon/BloodMoonTalon",
       "videoUrl": "gUmqqMnzsSE"
+    },
+    {
+      "hero": "TwistedFate",
+      "heroName": "Twisted Fate",
+      "skin": "Victorious-Twisted-Fate",
+      "skinName": "Victorious Twisted Fate",
+      "pageUrl": "TwistedFate/VictoriousTwistedFate",
+      "videoUrl": "cWFN4yaSFAQ"
     },
     {
       "hero": "TwistedFate",
@@ -8877,6 +8998,14 @@
     {
       "hero": "Twitch",
       "heroName": "Twitch",
+      "skin": "Pool-Party-Twitch",
+      "skinName": "Pool Party Twitch",
+      "pageUrl": "Twitch/PoolPartyTwitch",
+      "videoUrl": "7xdL5pkKadY"
+    },
+    {
+      "hero": "Twitch",
+      "heroName": "Twitch",
       "skin": "CheddarChiefTwitch",
       "skinName": "Cheddar Chief Twitch",
       "pageUrl": "Twitch/CheddarChiefTwitch",
@@ -8993,6 +9122,14 @@
       "skinName": "default",
       "pageUrl": "Senna/default",
       "videoUrl": "yUYdSBnmaqQ"
+    },
+    {
+      "hero": "Senna",
+      "heroName": "Senna",
+      "skin": "Masked-Justice-Senna",
+      "skinName": "Masked Justice Senna",
+      "pageUrl": "Senna/MaskedJusticeSenna",
+      "videoUrl": "CYH2cKBic4s"
     },
     {
       "hero": "Senna",
@@ -9877,6 +10014,14 @@
     {
       "hero": "Yone",
       "heroName": "Yone",
+      "skin": "Masked-Justice-Yone",
+      "skinName": "Masked Justice Yone",
+      "pageUrl": "Yone/MaskedJusticeYone",
+      "videoUrl": "JapWurFDaPs"
+    },
+    {
+      "hero": "Yone",
+      "heroName": "Yone",
       "skin": "PeacemakerHighNoonYone",
       "skinName": "Peacemaker High Noon Yone",
       "pageUrl": "Yone/PeacemakerHighNoonYone",
@@ -10557,6 +10702,14 @@
     {
       "hero": "Sion",
       "heroName": "Sion",
+      "skin": "Grand-Reckoning-Sion",
+      "skinName": "Grand Reckoning Sion",
+      "pageUrl": "Sion/GrandReckoningSion",
+      "videoUrl": "ARG9_EUKn8M"
+    },
+    {
+      "hero": "Sion",
+      "heroName": "Sion",
       "skin": "HextechSion",
       "skinName": "Hextech Sion",
       "pageUrl": "Sion/HextechSion",
@@ -10805,6 +10958,14 @@
     {
       "hero": "Xayah",
       "heroName": "Xayah",
+      "skin": "Battle-Academia-Xayah",
+      "skinName": "Battle Academia Xayah",
+      "pageUrl": "Xayah/BattleAcademiaXayah",
+      "videoUrl": ""
+    },
+    {
+      "hero": "Xayah",
+      "heroName": "Xayah",
       "skin": "BrokenCovenantXayah",
       "skinName": "Broken Covenant Xayah",
       "pageUrl": "Xayah/BrokenCovenantXayah",
@@ -10889,6 +11050,14 @@
       "skinName": "Star Guardian Xayah",
       "pageUrl": "Xayah/StarGuardianXayah",
       "videoUrl": "6PjnWJ5MGzQ"
+    },
+    {
+      "hero": "Zyra",
+      "heroName": "Zyra",
+      "skin": "Spirit-Blossom-Zyra",
+      "skinName": "Spirit Blossom Zyra",
+      "pageUrl": "Zyra/SpiritBlossomZyra",
+      "videoUrl": "-AQq7xwYKBo"
     },
     {
       "hero": "Zyra",
@@ -11305,6 +11474,14 @@
       "skinName": "default",
       "pageUrl": "Zed/default",
       "videoUrl": "XYzyqTJPR_M"
+    },
+    {
+      "hero": "Zed",
+      "heroName": "Zed",
+      "skin": "Quantum-Galaxy-Slayer-Zed",
+      "skinName": "Quantum Galaxy Slayer Zed",
+      "pageUrl": "Zed/QuantumGalaxySlayerZed",
+      "videoUrl": "d9MDl1EFnTY"
     },
     {
       "hero": "Zed",
@@ -11765,6 +11942,14 @@
     {
       "hero": "Rell",
       "heroName": "Rell",
+      "skin": "Grand-Reckoning-Rell",
+      "skinName": "Grand Reckoning Rell",
+      "pageUrl": "Rell/GrandReckoningRell",
+      "videoUrl": "Q8j1qzaL2Cw"
+    },
+    {
+      "hero": "Rell",
+      "heroName": "Rell",
       "skin": "HighNoonRell",
       "skinName": "High Noon Rell",
       "pageUrl": "Rell/HighNoonRell",
@@ -12033,6 +12218,14 @@
       "skinName": "default",
       "pageUrl": "Rakan/default",
       "videoUrl": "4M5vXKF2h9Y"
+    },
+    {
+      "hero": "Rakan",
+      "heroName": "Rakan",
+      "skin": "Battle-Academia-Rakan",
+      "skinName": "Battle Academia Rakan",
+      "pageUrl": "Rakan/BattleAcademiaRakan",
+      "videoUrl": "fuZ71hxJyDU"
     },
     {
       "hero": "Rakan",
@@ -12697,6 +12890,15 @@
       "skinName": "Heartseeker Quinn",
       "pageUrl": "Quinn/HeartseekerQuinn",
       "videoUrl": "WVKWWgeEPMA"
+    },
+
+    {
+      "hero": "Malzahar",
+      "heroName": "Malzahar",
+      "skin": "Fatebreaker-Malzahar",
+      "skinName": "Fatebreaker Malzahar",
+      "pageUrl": "Malzahar/FatebreakerMalzahar",
+      "videoUrl": "EBrg9Bz9o3E"
     },
     {
       "hero": "Malzahar",
@@ -13589,6 +13791,14 @@
     {
       "hero": "Qiyana",
       "heroName": "Qiyana",
+      "skin": "Prestige-Battle-Academia-Qiyana",
+      "skinName": "Prestige Battle Academia Qiyana",
+      "pageUrl": "Qiyana/PrestigeBattleAcademiaQiyana",
+      "videoUrl": "nL5C2SYKmMY"
+    },
+    {
+      "hero": "Qiyana",
+      "heroName": "Qiyana",
       "skin": "ShockbladeQiyana",
       "skinName": "Shockblade Qiyana",
       "pageUrl": "Qiyana/ShockbladeQiyana",
@@ -13769,6 +13979,14 @@
       "skinName": "Ocean Song Zeri",
       "pageUrl": "Zeri/OceanSongZeri",
       "videoUrl": "hfoD8JEVyHw"
+    },
+    {
+      "hero": "Nasus",
+      "heroName": "Nasus",
+      "skin": "Fatemaker-Nasus",
+      "skinName": "Fatemaker Nasus",
+      "pageUrl": "Nasus/FatemakerNasus",
+      "videoUrl": "7XtQAwjZZXQ"
     },
     {
       "hero": "Nasus",
@@ -14089,6 +14307,14 @@
       "skinName": "Bewitching Morgana",
       "pageUrl": "Morgana/BewitchingMorgana",
       "videoUrl": "66jMif3L6us"
+    },
+    {
+      "hero": "Malphite",
+      "heroName": "Malphite",
+      "skin": "Pool-Party-Malphite",
+      "skinName": "Pool Party Malphite",
+      "pageUrl": "Malphite/PoolPartyMalphite",
+      "videoUrl": "tEnRcDPUah4"
     },
     {
       "hero": "Malphite",
@@ -14593,6 +14819,14 @@
       "skinName": "Guardian of the Sands Kha'Zix",
       "pageUrl": "Khazix/GuardianoftheSandsKhaZix",
       "videoUrl": "Kaj_I-cJ1Qk"
+    },
+    {
+      "hero": "Mordekaiser",
+      "heroName": "Mordekaiser",
+      "skin": "Sahn-Uzal-Mordekaiser",
+      "skinName": "Sahn-Uzal Mordekaiser",
+      "pageUrl": "Mordekaiser/Sahn-UzalMordekaiser",
+      "videoUrl": "vEJ3z2QqKf8"
     },
     {
       "hero": "Mordekaiser",
@@ -15241,6 +15475,14 @@
       "skinName": "Jade Dragon Wukong",
       "pageUrl": "MonkeyKing/JadeDragonWukong",
       "videoUrl": "1vqGprK_SGM"
+    },
+    {
+      "hero": "Naafiri",
+      "heroName": "Naafiri",
+      "skin": "Glizzy-Naafiri",
+      "skinName": "Glizzy Naafiri",
+      "pageUrl": "Naafiri/GlizzyNaafiri",
+      "videoUrl": "9ub8EEUqHyk"
     },
     {
       "hero": "Naafiri",
@@ -15901,6 +16143,14 @@
     {
       "hero": "Kayn",
       "heroName": "Kayn",
+      "skin": "Battle-Academia-Kayn",
+      "skinName": "Battle Academia Kayn",
+      "pageUrl": "Kayn/BattleAcademiaKayn",
+      "videoUrl": "NUsKtUlm8ig"
+    },
+    {
+      "hero": "Kayn",
+      "heroName": "Kayn",
       "skin": "SoulhunterKayn",
       "skinName": "Soulhunter Kayn",
       "pageUrl": "Kayn/SoulhunterKayn",
@@ -16069,6 +16319,14 @@
     {
       "hero": "Lucian",
       "heroName": "Lucian",
+      "skin": "Masked-Justice-Lucian",
+      "skinName": "Masked Justice Lucian",
+      "pageUrl": "Lucian/MaskedJusticeLucian",
+      "videoUrl": "YYKbfZPIfN4"
+    },
+    {
+      "hero": "Lucian",
+      "heroName": "Lucian",
       "skin": "PrestigePulsefireLucian",
       "skinName": "Prestige Pulsefire Lucian",
       "pageUrl": "Lucian/PrestigePulsefireLucian",
@@ -16233,6 +16491,14 @@
       "skinName": "Prestige Star Guardian Neeko (2022)",
       "pageUrl": "Neeko/PrestigeStarGuardianNeeko2022",
       "videoUrl": "d0VaZ74wfBI"
+    },
+    {
+      "hero": "Lux",
+      "heroName": "Lux",
+      "skin": "Prestige-Spirit-Blossom-Lux",
+      "skinName": "Prestige Spirit Blossom Lux",
+      "pageUrl": "Lux/PrestigeSpiritBlossomLux",
+      "videoUrl": "2QWoYTlEOvw"
     },
     {
       "hero": "Lux",
@@ -16761,14 +17027,6 @@
       "skinName": "Fright Night Nunu & Willump",
       "pageUrl": "Nunu/FrightNightNunuWillump",
       "videoUrl": "RUQg-g-uHU0"
-    },
-    {
-      "hero": "Shaco",
-      "heroName": "Shaco",
-      "skin": "Fright-Night-Shaco",
-      "skinName": "Fright Night Shaco",
-      "pageUrl": "Shaco/FrightNightShaco",
-      "videoUrl": "AOLoDXroou4"
     },
     {
       "hero": "Swain",

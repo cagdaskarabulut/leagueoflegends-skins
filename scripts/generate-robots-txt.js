@@ -127,7 +127,7 @@ daily
   let heroDetailsList;
   let skinList;
   fetch(
-    "http://ddragon.leagueoflegends.com/cdn/15.2.1/data/en_US/champion.json"
+    "http://ddragon.leagueoflegends.com/cdn/15.9.1/data/en_US/champion.json"
   )
     .then((res) => res.json())
     .then((data) => {
@@ -197,7 +197,7 @@ daily
   },`;
 
           fetch(
-            "https://ddragon.leagueoflegends.com/cdn/15.2.1/data/en_US/champion/" +
+            "https://ddragon.leagueoflegends.com/cdn/15.9.1/data/en_US/champion/" +
               champion.id +
               ".json"
           )

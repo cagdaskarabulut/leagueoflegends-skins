@@ -1940,6 +1940,13 @@
       "searchField": "Ashe - default"
     },
     {
+      "pageUrl": "Ashe/SpiritBlossomAshe",
+      "newPageUrl": "Ashe/Spirit-Blossom-Ashe",
+      "skinName": "Spirit Blossom Ashe",
+      "splashNumber": "76",
+      "searchField": "Ashe - Spirit Blossom Ashe"
+    },
+    {
       "pageUrl": "Ashe/FreljordAshe",
       "newPageUrl": "Ashe/Freljord-Ashe",
       "skinName": "Freljord Ashe",
@@ -2253,6 +2260,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Bard - default"
+    },
+    {
+      "pageUrl": "Bard/SpiritBlossomBard",
+      "newPageUrl": "Bard/Spirit-Blossom-Bard",
+      "skinName": "Spirit Blossom Bard",
+      "splashNumber": "37",
+      "searchField": "Bard - Spirit Blossom Bard"
     },
     {
       "pageUrl": "Bard/ElderwoodBard",
@@ -2652,6 +2666,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Braum - default"
+    },
+    {
+      "pageUrl": "Braum/GrillMasterBraum",
+      "newPageUrl": "Braum/Grill-Master-Braum",
+      "skinName": "Grill Master Braum",
+      "splashNumber": "42",
+      "searchField": "Braum - Grill Master Braum"
     },
     {
       "pageUrl": "Braum/DragonslayerBraum",
@@ -3333,6 +3354,13 @@
       "searchField": "Garen - default"
     },
     {
+      "pageUrl": "Garen/PenguGaren",
+      "newPageUrl": "Garen/Pengu-Garen",
+      "skinName": "Pengu Garen",
+      "splashNumber": "43",
+      "searchField": "Garen - Pengu Garen"
+    },
+    {
       "pageUrl": "Garen/SanguineGaren",
       "newPageUrl": "Garen/Sanguine-Garen",
       "skinName": "Sanguine Garen",
@@ -3954,6 +3982,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Darius - default"
+    },
+    {
+      "pageUrl": "Darius/PrestigeTriumphantGeneralDarius",
+      "newPageUrl": "Darius/Prestige-Triumphant-General-Darius",
+      "skinName": "Prestige Triumphant General Darius",
+      "splashNumber": "65",
+      "searchField": "Darius - Prestige Triumphant General Darius"
     },
     {
       "pageUrl": "Darius/LordDarius",
@@ -4908,6 +4943,13 @@
       "searchField": "Irelia - default"
     },
     {
+      "pageUrl": "Irelia/SpiritBlossomIrelia",
+      "newPageUrl": "Irelia/Spirit-Blossom-Irelia",
+      "skinName": "Spirit Blossom Irelia",
+      "splashNumber": "55",
+      "searchField": "Irelia - Spirit Blossom Irelia"
+    },
+    {
       "pageUrl": "Irelia/NightbladeIrelia",
       "newPageUrl": "Irelia/Nightblade-Irelia",
       "skinName": "Nightblade Irelia",
@@ -5531,6 +5573,13 @@
       "searchField": "Ivern - default"
     },
     {
+      "pageUrl": "Ivern/SpiritBlossomIvern",
+      "newPageUrl": "Ivern/Spirit-Blossom-Ivern",
+      "skinName": "Spirit Blossom Ivern",
+      "splashNumber": "30",
+      "searchField": "Ivern - Spirit Blossom Ivern"
+    },
+    {
       "pageUrl": "Ivern/CandyKingIvern",
       "newPageUrl": "Ivern/Candy-King-Ivern",
       "skinName": "Candy King Ivern",
@@ -5858,6 +5907,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Draven - default"
+    },
+    {
+      "pageUrl": "Draven/GrandReckoningDraven",
+      "newPageUrl": "Draven/Grand-Reckoning-Draven",
+      "skinName": "Grand Reckoning Draven",
+      "splashNumber": "58",
+      "searchField": "Draven - Grand Reckoning Draven"
     },
     {
       "pageUrl": "Draven/SoulReaverDraven",
@@ -6329,6 +6385,13 @@
       "searchField": "Malphite - default"
     },
     {
+      "pageUrl": "Malphite/PoolPartyMalphite",
+      "newPageUrl": "Malphite/Pool-Party-Malphite",
+      "skinName": "Pool Party Malphite",
+      "splashNumber": "48",
+      "searchField": "Malphite - Pool Party Malphite"
+    },
+    {
       "pageUrl": "Malphite/ShamrockMalphite",
       "newPageUrl": "Malphite/Shamrock-Malphite",
       "skinName": "Shamrock Malphite",
@@ -6425,6 +6488,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Kayn - default"
+    },
+    {
+      "pageUrl": "Kayn/BattleAcademiaKayn",
+      "newPageUrl": "Kayn/Battle-Academia-Kayn",
+      "skinName": "Battle Academia Kayn",
+      "splashNumber": "26",
+      "searchField": "Kayn - Battle Academia Kayn"
     },
     {
       "pageUrl": "Kayn/SoulhunterKayn",
@@ -7008,6 +7078,13 @@
       "searchField": "Mordekaiser - default"
     },
     {
+      "pageUrl": "Mordekaiser/Sahn-UzalMordekaiser",
+      "newPageUrl": "Mordekaiser/Sahn-Uzal-Mordekaiser",
+      "skinName": "Sahn-Uzal Mordekaiser",
+      "splashNumber": "54",
+      "searchField": "Mordekaiser - Sahn-Uzal Mordekaiser"
+    },
+    {
       "pageUrl": "Mordekaiser/DragonKnightMordekaiser",
       "newPageUrl": "Mordekaiser/Dragon-Knight-Mordekaiser",
       "skinName": "Dragon Knight Mordekaiser",
@@ -7090,6 +7167,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Malzahar - default"
+    },
+    {
+      "pageUrl": "Malzahar/FatebreakerMalzahar",
+      "newPageUrl": "Malzahar/Fatebreaker-Malzahar",
+      "skinName": "Fatebreaker Malzahar",
+      "splashNumber": "49",
+      "searchField": "Malzahar - Fatebreaker Malzahar"
     },
     {
       "pageUrl": "Malzahar/VizierMalzahar",
@@ -7554,6 +7638,13 @@
       "searchField": "Nasus - default"
     },
     {
+      "pageUrl": "Nasus/FatemakerNasus",
+      "newPageUrl": "Nasus/Fatemaker-Nasus",
+      "skinName": "Fatemaker Nasus",
+      "splashNumber": "54",
+      "searchField": "Nasus - Fatemaker Nasus"
+    },
+    {
       "pageUrl": "Nasus/GalacticNasus",
       "newPageUrl": "Nasus/Galactic-Nasus",
       "skinName": "Galactic Nasus",
@@ -7757,6 +7848,13 @@
       "searchField": "Rakan - default"
     },
     {
+      "pageUrl": "Rakan/BattleAcademiaRakan",
+      "newPageUrl": "Rakan/Battle-Academia-Rakan",
+      "skinName": "Battle Academia Rakan",
+      "splashNumber": "47",
+      "searchField": "Rakan - Battle Academia Rakan"
+    },
+    {
       "pageUrl": "Rakan/CosmicDawnRakan",
       "newPageUrl": "Rakan/Cosmic-Dawn-Rakan",
       "skinName": "Cosmic Dawn Rakan",
@@ -7939,6 +8037,13 @@
       "searchField": "Naafiri - default"
     },
     {
+      "pageUrl": "Naafiri/GlizzyNaafiri",
+      "newPageUrl": "Naafiri/Glizzy-Naafiri",
+      "skinName": "Glizzy Naafiri",
+      "splashNumber": "20",
+      "searchField": "Naafiri - Glizzy Naafiri"
+    },
+    {
       "pageUrl": "Naafiri/SoulFighterNaafiri",
       "newPageUrl": "Naafiri/Soul-Fighter-Naafiri",
       "skinName": "Soul Fighter Naafiri",
@@ -8119,6 +8224,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Lux - default"
+    },
+    {
+      "pageUrl": "Lux/PrestigeSpiritBlossomLux",
+      "newPageUrl": "Lux/Prestige-Spirit-Blossom-Lux",
+      "skinName": "Prestige Spirit Blossom Lux",
+      "splashNumber": "70",
+      "searchField": "Lux - Prestige Spirit Blossom Lux"
     },
     {
       "pageUrl": "Lux/SorceressLux",
@@ -9353,6 +9465,13 @@
       "searchField": "Rell - default"
     },
     {
+      "pageUrl": "Rell/GrandReckoningRell",
+      "newPageUrl": "Rell/Grand-Reckoning-Rell",
+      "skinName": "Grand Reckoning Rell",
+      "splashNumber": "30",
+      "searchField": "Rell - Grand Reckoning Rell"
+    },
+    {
       "pageUrl": "Rell/BattleQueenRell",
       "newPageUrl": "Rell/Battle-Queen-Rell",
       "skinName": "Battle Queen Rell",
@@ -9561,6 +9680,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Shaco - default"
+    },
+    {
+      "pageUrl": "Shaco/Cat-in-the-BoxShaco",
+      "newPageUrl": "Shaco/Cat-in-the-Box-Shaco",
+      "skinName": "Cat-in-the-Box Shaco",
+      "splashNumber": "64",
+      "searchField": "Shaco - Cat-in-the-Box Shaco"
     },
     {
       "pageUrl": "Shaco/MadHatterShaco",
@@ -10368,6 +10494,13 @@
       "searchField": "Senna - default"
     },
     {
+      "pageUrl": "Senna/MaskedJusticeSenna",
+      "newPageUrl": "Senna/Masked-Justice-Senna",
+      "skinName": "Masked Justice Senna",
+      "splashNumber": "63",
+      "searchField": "Senna - Masked Justice Senna"
+    },
+    {
       "pageUrl": "Senna/TrueDamageSenna",
       "newPageUrl": "Senna/True-Damage-Senna",
       "skinName": "True Damage Senna",
@@ -10436,6 +10569,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Twitch - default"
+    },
+    {
+      "pageUrl": "Twitch/PoolPartyTwitch",
+      "newPageUrl": "Twitch/Pool-Party-Twitch",
+      "skinName": "Pool Party Twitch",
+      "splashNumber": "64",
+      "searchField": "Twitch - Pool Party Twitch"
     },
     {
       "pageUrl": "Twitch/KingpinTwitch",
@@ -11033,6 +11173,13 @@
       "searchField": "Qiyana - default"
     },
     {
+      "pageUrl": "Qiyana/PrestigeBattleAcademiaQiyana",
+      "newPageUrl": "Qiyana/Prestige-Battle-Academia-Qiyana",
+      "skinName": "Prestige Battle Academia Qiyana",
+      "splashNumber": "50",
+      "searchField": "Qiyana - Prestige Battle Academia Qiyana"
+    },
+    {
       "pageUrl": "Qiyana/BattleBossQiyana",
       "newPageUrl": "Qiyana/Battle-Boss-Qiyana",
       "skinName": "Battle Boss Qiyana",
@@ -11222,6 +11369,13 @@
       "searchField": "Lucian - default"
     },
     {
+      "pageUrl": "Lucian/MaskedJusticeLucian",
+      "newPageUrl": "Lucian/Masked-Justice-Lucian",
+      "skinName": "Masked Justice Lucian",
+      "splashNumber": "62",
+      "searchField": "Lucian - Masked Justice Lucian"
+    },
+    {
       "pageUrl": "Lucian/HiredGunLucian",
       "newPageUrl": "Lucian/Hired-Gun-Lucian",
       "skinName": "Hired Gun Lucian",
@@ -11311,6 +11465,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Sion - default"
+    },
+    {
+      "pageUrl": "Sion/GrandReckoningSion",
+      "newPageUrl": "Sion/Grand-Reckoning-Sion",
+      "skinName": "Grand Reckoning Sion",
+      "splashNumber": "49",
+      "searchField": "Sion - Grand Reckoning Sion"
     },
     {
       "pageUrl": "Sion/HextechSion",
@@ -12118,6 +12279,13 @@
       "searchField": "Twisted Fate - default"
     },
     {
+      "pageUrl": "TwistedFate/VictoriousTwistedFate",
+      "newPageUrl": "Twisted-Fate/Victorious-Twisted-Fate",
+      "skinName": "Victorious Twisted Fate",
+      "splashNumber": "45",
+      "searchField": "Twisted Fate - Victorious Twisted Fate"
+    },
+    {
       "pageUrl": "TwistedFate/PAXTwistedFate",
       "newPageUrl": "Twisted-Fate/PAX-Twisted-Fate",
       "skinName": "PAX Twisted Fate",
@@ -12228,6 +12396,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Varus - default"
+    },
+    {
+      "pageUrl": "Varus/SpiritBlossomVarus",
+      "newPageUrl": "Varus/Spirit-Blossom-Varus",
+      "skinName": "Spirit Blossom Varus",
+      "splashNumber": "60",
+      "searchField": "Varus - Spirit Blossom Varus"
     },
     {
       "pageUrl": "Varus/BlightCrystalVarus",
@@ -12657,6 +12832,13 @@
       "searchField": "Urgot - default"
     },
     {
+      "pageUrl": "Urgot/UrgottheClogfather",
+      "newPageUrl": "Urgot/Urgot-the-Clogfather",
+      "skinName": "Urgot the Clogfather",
+      "splashNumber": "32",
+      "searchField": "Urgot - Urgot the Clogfather"
+    },
+    {
       "pageUrl": "Urgot/GiantEnemyCrabgot",
       "newPageUrl": "Urgot/Giant-Enemy-Crabgot",
       "skinName": "Giant Enemy Crabgot",
@@ -12811,6 +12993,13 @@
       "searchField": "Taric - default"
     },
     {
+      "pageUrl": "Taric/FatebreakerTaric",
+      "newPageUrl": "Taric/Fatebreaker-Taric",
+      "skinName": "Fatebreaker Taric",
+      "splashNumber": "27",
+      "searchField": "Taric - Fatebreaker Taric"
+    },
+    {
       "pageUrl": "Taric/EmeraldTaric",
       "newPageUrl": "Taric/Emerald-Taric",
       "skinName": "Emerald Taric",
@@ -12942,6 +13131,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Yone - default"
+    },
+    {
+      "pageUrl": "Yone/MaskedJusticeYone",
+      "newPageUrl": "Yone/Masked-Justice-Yone",
+      "skinName": "Masked Justice Yone",
+      "splashNumber": "65",
+      "searchField": "Yone - Masked Justice Yone"
     },
     {
       "pageUrl": "Yone/SpiritBlossomYone",
@@ -13586,6 +13782,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Xayah - default"
+    },
+    {
+      "pageUrl": "Xayah/BattleAcademiaXayah",
+      "newPageUrl": "Xayah/Battle-Academia-Xayah",
+      "skinName": "Battle Academia Xayah",
+      "splashNumber": "57",
+      "searchField": "Xayah - Battle Academia Xayah"
     },
     {
       "pageUrl": "Xayah/CosmicDuskXayah",
@@ -14302,6 +14505,13 @@
       "searchField": "Zyra - default"
     },
     {
+      "pageUrl": "Zyra/SpiritBlossomZyra",
+      "newPageUrl": "Zyra/Spirit-Blossom-Zyra",
+      "skinName": "Spirit Blossom Zyra",
+      "splashNumber": "64",
+      "searchField": "Zyra - Spirit Blossom Zyra"
+    },
+    {
       "pageUrl": "Zyra/WildfireZyra",
       "newPageUrl": "Zyra/Wildfire-Zyra",
       "skinName": "Wildfire Zyra",
@@ -14435,6 +14645,13 @@
       "searchField": "Zed - default"
     },
     {
+      "pageUrl": "Zed/QuantumGalaxySlayerZed",
+      "newPageUrl": "Zed/Quantum-Galaxy-Slayer-Zed",
+      "skinName": "Quantum Galaxy Slayer Zed",
+      "splashNumber": "68",
+      "searchField": "Zed - Quantum Galaxy Slayer Zed"
+    },
+    {
       "pageUrl": "Zed/ShockbladeZed",
       "newPageUrl": "Zed/Shockblade-Zed",
       "skinName": "Shockblade Zed",
@@ -14524,6 +14741,13 @@
       "skinName": "default",
       "splashNumber": "0",
       "searchField": "Talon - default"
+    },
+    {
+      "pageUrl": "Talon/GrandReckoningTalon",
+      "newPageUrl": "Talon/Grand-Reckoning-Talon",
+      "skinName": "Grand Reckoning Talon",
+      "splashNumber": "59",
+      "searchField": "Talon - Grand Reckoning Talon"
     },
     {
       "pageUrl": "Talon/RenegadeTalon",
